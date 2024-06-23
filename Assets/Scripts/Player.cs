@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.D)) Rotate(Direction.East);
         if (!isMoving)
         {
-            //SnapPosition();
+            SnapPosition();
         }
     }
 
