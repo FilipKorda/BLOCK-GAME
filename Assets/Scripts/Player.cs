@@ -14,18 +14,20 @@ public class Player : MonoBehaviour
     private Vector3 forceDirectionSouth = new Vector3(0, -5, -5);
     private Vector3 forceDirectionEast = new Vector3(5, -5, 0);
     private Vector3 forceDirectionWest = new Vector3(-5, -5, 0);
+    [SerializeField] private LayerMask collisionLayerMask;
 
     void Start()
     {
         isMoving = false;
         canMove = true;
         scale = transform.localScale / 2f;
+        rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
     }
 
     void Update()
     {
-        if(canMove)
+        if (canMove)
         {
             if (isMoving)
             {
@@ -46,10 +48,10 @@ public class Player : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.D)) Rotate(Direction.East);
             if (!isMoving)
             {
-              //  SnapPosition();
+                //  SnapPosition();
             }
         }
-      
+
     }
 
     void Rotate(Direction direction)
@@ -100,28 +102,34 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Vector3 collisionDirection = rb.velocity.normalized;
+        if ((collisionLayerMask.value & (1 << collision.gameObject.layer)) == 0)
+        {
+            return;
+        }
+
+        ContactPoint contact = collision.contacts[0];
+        Vector3 collisionDirection = contact.normal;
         Debug.Log("Collision Direction: " + collisionDirection);
 
-        if (collisionDirection == Direction.North)
+        if (IsInRange(collisionDirection, new Vector3(0, 0.01f, 0.01f), new Vector3(0, 1f, 1f))) // to dzia³a na przycisk S
         {
             canMove = false;
             UnfreezeRotation();
             rb.AddForce(forceDirectionNorth * 10, ForceMode.Impulse);
         }
-        else if (collisionDirection == Direction.South)
+        if (IsInRange(collisionDirection, new Vector3(0.1f, 0.1f, 0f), new Vector3(1f, 1f, 0f)))// to dzia³a na przycisk A
         {
             canMove = false;
             UnfreezeRotation();
             rb.AddForce(forceDirectionSouth * 10, ForceMode.Impulse);
         }
-        else if (collisionDirection == Direction.West)
+        if (IsInRange(collisionDirection, new Vector3(0f, 0.1f, -1f), new Vector3(0, 1f, 0f)))// to dzia³a na przycisk W
         {
             canMove = false;
             UnfreezeRotation();
             rb.AddForce(forceDirectionWest * 10, ForceMode.Impulse);
         }
-        else if (collisionDirection == Direction.East)
+        if (IsInRange(collisionDirection, new Vector3(-1f, 0.1f, 0f), new Vector3(0, 1f, 0f)))// to dzia³a na przycisk W
         {
             canMove = false;
             UnfreezeRotation();
@@ -129,7 +137,7 @@ public class Player : MonoBehaviour
         }
     }
 
-   void FreezeAllAxes()
+    void FreezeAllAxes()
     {
         rb.constraints = RigidbodyConstraints.FreezeAll;
     }
@@ -139,6 +147,12 @@ public class Player : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
     }
 
+    bool IsInRange(Vector3 value, Vector3 min, Vector3 max)
+    {
+        return value.x >= min.x && value.x <= max.x &&
+               value.y >= min.y && value.y <= max.y &&
+               value.z >= min.z && value.z <= max.z;
+    }
 }
 
 public enum Direction

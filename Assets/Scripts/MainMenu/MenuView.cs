@@ -1,10 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Components;
-using UnityEngine.Localization.Events;
 
 namespace UI
 {
@@ -14,8 +10,6 @@ namespace UI
 
         [SerializeField] private bool setHeaderActive;
         [SerializeField] private string headerText;
-
-        [SerializeField] private LocalizeStringEvent headerLocalization;
 
         [SerializeField] private UnityEvent onActive;
         [SerializeField] private UnityEvent onDisable;
@@ -32,12 +26,6 @@ namespace UI
                 menuViewsController.SetHeaderText(headerText);
             }
 
-            if (headerLocalization)
-            {
-                headerLocalization.enabled = true;
-                headerLocalization.RefreshString();
-            }
-
             if (elementsToDisable is { Length: > 0 })
                 foreach (var elementToDisable in elementsToDisable)
                 {
@@ -50,9 +38,6 @@ namespace UI
         [ContextMenu("Set as current view", true, 0)]
         public void SetAsCurrentMenuView()
         {
-            if (resetUsersToLastActive)
-                PlayerSelect.ResetSlotsAndConnectLastActive();
-
             if (menuViewsController)
                 menuViewsController.SetCurrentView(this);
         }
@@ -75,9 +60,6 @@ namespace UI
                 menuViewsController.SetHeaderActive(false);
                 menuViewsController.SetHeaderText("");
             }
-
-            if (headerLocalization)
-                headerLocalization.enabled = false;
 
             if (elementsToDisable is { Length: > 0 })
                 foreach (var elementToDisable in elementsToDisable)

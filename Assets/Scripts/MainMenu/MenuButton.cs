@@ -1,15 +1,9 @@
-using Core;
-using Core.Audio;
-using DG.Tweening;
-using NS;
-using NS.Audio;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.Localization.Settings;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class MenuButton : GameButton, IPointerDownHandler, IDeselectHandler
 {
@@ -90,15 +84,7 @@ public class MenuButton : GameButton, IPointerDownHandler, IDeselectHandler
         if (selected)
         {
             textMesh.fontWeight = onSelectWeight;
-            textMesh.fontSizeMax = onSelectFontSize;
-
-            var test = !LanguagesHelper.IsCurrentLocalAsian();
-            if (useItalic && !LanguagesHelper.IsCurrentLocalAsian())
-            {
-                textMesh.fontStyle = FontStyles.Bold |
-                                     FontStyles.Italic |
-                                     FontStyles.UpperCase;
-            }
+            textMesh.fontSizeMax = onSelectFontSize;   
 
             if (onSelectTextMaterial) textMesh.fontSharedMaterial = onSelectTextMaterial;
         }

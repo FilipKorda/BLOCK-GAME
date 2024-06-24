@@ -1,7 +1,4 @@
 using System;
-using Core;
-using Core.Audio;
-using NS.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
