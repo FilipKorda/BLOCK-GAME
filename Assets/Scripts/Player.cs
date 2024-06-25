@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -18,6 +19,10 @@ public class Player : MonoBehaviour
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
 
+    [Header("TextMeshPro Field")]
+    public TextMeshProUGUI textMeshPro;
+    private int moveCount = 0;
+
     void Start()
     {
         isRotating = false;
@@ -25,6 +30,7 @@ public class Player : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
+        textMeshPro.text = $"Moves: {moveCount}"; 
     }
 
     void Update()
@@ -38,6 +44,8 @@ public class Player : MonoBehaviour
                 {
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
+                    moveCount++;
+                    textMeshPro.text = $"Moves: {moveCount}";
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);

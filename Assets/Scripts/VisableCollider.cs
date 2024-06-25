@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class VisableCollider : MonoBehaviour
 {
+    public bool isMeta;
+    public bool isCollider;
+    public bool isTrappedPlatre;
+
     private void OnDrawGizmos()
     {
         Transform tr = transform;
@@ -35,6 +39,18 @@ public class VisableCollider : MonoBehaviour
     }
     void DrawEdge(Vector3 startPoint, Vector3 endPoint)
     {
-        Debug.DrawLine(startPoint, endPoint, Color.gray, 0f, false);
+        if (isMeta)
+        {
+            Debug.DrawLine(startPoint, endPoint, Color.blue, 0f, false);
+        }
+        else if (isCollider)
+        {
+            Debug.DrawLine(startPoint, endPoint, Color.gray, 0f, false);
+        }
+        else if (isTrappedPlatre)
+        {
+            Debug.DrawLine(startPoint, endPoint, Color.red, 0f, false);
+        }
+
     }
 }
