@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1368608292178519893}
   - component: {fileID: 2201656616724886156}
   - component: {fileID: 5617971655109837648}
+  - component: {fileID: 8290744129080264510}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -106,6 +107,7 @@ MonoBehaviour:
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  textMeshPro: {fileID: 0}
 --- !u!65 &2201656616724886156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154,3 +156,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8290744129080264510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707956682101690904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f95fd7fc3d68a4a996434121bacaa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5

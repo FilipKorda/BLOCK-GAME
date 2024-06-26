@@ -311,6 +311,7 @@ MonoBehaviour:
   moveSpeed: 4
   targetPosition: {fileID: 2758731031200851703}
   spiralMovement: {fileID: 7890476977103972085}
+  disappearAnimation: {fileID: 8455805039170823708}
 --- !u!1 &6407078538234791377
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +558,7 @@ MonoBehaviour:
   acceleration: 2
   centerPoint: {x: 0, y: 0, z: 0}
   delayBeetweenPlates: 0.025
-  startDelay: 0.5
+  startDelay: 0.7
 --- !u!1 &6858907271113583154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1001,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4707956682101690904, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
   m_PrefabInstance: {fileID: 457025451613757730}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8455805039170823708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8290744129080264510, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
+  m_PrefabInstance: {fileID: 457025451613757730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5116559297477161786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f95fd7fc3d68a4a996434121bacaa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &458017292592348748
 PrefabInstance:
   m_ObjectHideFlags: 0

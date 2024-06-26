@@ -7,6 +7,7 @@ public class Meta : VisableCollider
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private Transform targetPosition;
     [SerializeField] private SpiralMovement spiralMovement;
+    [SerializeField] private DisappearAnimation disappearAnimation;
 
     private Collider thisCollider;
     private Collider targetCollider;
@@ -37,6 +38,7 @@ public class Meta : VisableCollider
         {
             Debug.Log("Go to the Next Level");
             spiralMovement.Play();
+            disappearAnimation.PlayDisappearAnimationart();
             player.canMove = false;
             isMatched = true;
         }

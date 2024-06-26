@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     private readonly float rotationSpeed = 750f;
     private float totalRotation;
-    private bool isRotating;  
+    private bool isRotating;
     private Direction rotationDirection;
     private Vector3 pivot, axis, scale;
     private Rigidbody rb;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
-        textMeshPro.text = $"Moves: {moveCount}"; 
+        textMeshPro.text = $"Moves: {moveCount}";
     }
 
     void Update()
@@ -126,14 +126,14 @@ public class Player : MonoBehaviour
         {
             canMove = false;
             UnfreezeRotation();
-            rb.AddForce(forceDirection_W, ForceMode.Impulse);        
+            rb.AddForce(forceDirection_W, ForceMode.Impulse);
         }
         if (IsInRange(collisionDirection, new Vector3(-1f, -1f, -1f), new Vector3(0f, 0f, 1f)))// to dzia³a na przycisk A
         {
             canMove = false;
-            UnfreezeRotation();                 
+            UnfreezeRotation();
             rb.AddForce(forceDirection_A, ForceMode.Impulse);
-        }              
+        }
         if (IsInRange(collisionDirection, new Vector3(-1f, -1f, -1f), new Vector3(1f, 0f, 0f))) // to dzia³a na przycisk S
         {
             canMove = false;
