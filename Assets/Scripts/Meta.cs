@@ -1,11 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class Meta : VisableCollider
 {
     [SerializeField] private GameObject targetPlayer;
     [SerializeField] private Player player;
-    [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private Transform targetPosition;
     [SerializeField] private SpiralMovement spiralMovement;
     [SerializeField] private DisappearAnimation disappearAnimation;
 
@@ -26,10 +25,8 @@ public class Meta : VisableCollider
         }
         else
         {
-
-            MovePlayerDown();
-
-
+            disappearAnimation.PlayDisappearAnimation();
+      
         }
     }
     void CheckForMatch()
@@ -38,7 +35,6 @@ public class Meta : VisableCollider
         {
             Debug.Log("Go to the Next Level");
             spiralMovement.Play();
-            disappearAnimation.PlayDisappearAnimationart();
             player.canMove = false;
             isMatched = true;
         }
@@ -51,10 +47,4 @@ public class Meta : VisableCollider
     {
         return col1.bounds.center == col2.bounds.center && col1.bounds.size == col2.bounds.size;
     }
-    void MovePlayerDown()
-    {
-        float step = moveSpeed * Time.deltaTime;
-        targetPlayer.transform.position = Vector3.Lerp(targetPlayer.transform.position, targetPosition.position, step);
-    }
-
 }

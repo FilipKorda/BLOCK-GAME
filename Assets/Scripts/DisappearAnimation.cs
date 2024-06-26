@@ -3,40 +3,48 @@ using System.Collections;
 
 public class DisappearAnimation : MonoBehaviour
 {
-    public float duration = 1.0f;
-
+    public float speed = 1.0f; // Now using speed instead of duration
     private Vector3 initialScale;
     private Vector3 targetScale;
     private Vector3 initialPosition;
-    private Vector3 targetPosition;
+    private Vector3 targetAnimPosition;
+    [SerializeField] private Transform endPosition;
 
-    public void PlayDisappearAnimationart()
+    private bool isAnimating = false; // Flag to control the animation
+
+    public void PlayDisappearAnimation()
     {
-        initialScale = transform.localScale;
-        targetScale = new Vector3(transform.localScale.x, 0.0f, transform.localScale.z);
-        initialPosition = transform.localPosition;
-        targetPosition = new Vector3(transform.localPosition.x, -1.0f, transform.localPosition.z);
-
+        isAnimating = true;
         StartCoroutine(AnimateDisappear());
+
+        if (isAnimating)
+        {
+            initialScale = transform.localScale;
+            targetScale = new Vector3(transform.localScale.x, 0.0f, transform.localScale.z);
+            initialPosition = transform.localPosition;
+            targetAnimPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - 1.0f, transform.localPosition.z);
+        }        
     }
 
     private IEnumerator AnimateDisappear()
     {
-        float elapsedTime = 0;
-
-        while (elapsedTime < duration)
+        while (isAnimating)
         {
-            transform.localPosition = Vector3.Lerp(initialPosition, targetPosition, elapsedTime / duration);
+            float step = speed * Time.deltaTime;
 
-            float newYScale = Mathf.Lerp(initialScale.y, targetScale.y, elapsedTime / duration);
-            transform.localScale = new Vector3(initialScale.x, newYScale, initialScale.z);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetAnimPosition, step);
+            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, step);
 
-            elapsedTime += Time.deltaTime;
+            if (Vector3.Distance(transform.localPosition, targetAnimPosition) < 0.001f || transform.position == endPosition.position)
+            {
+                isAnimating = false;
+                Debug.Log("!!!!!!!!");
+            }
+
             yield return null;
         }
 
-        transform.localPosition = targetPosition;
+        transform.localPosition = targetAnimPosition;
         transform.localScale = targetScale;
-        gameObject.SetActive(false);
     }
 }
