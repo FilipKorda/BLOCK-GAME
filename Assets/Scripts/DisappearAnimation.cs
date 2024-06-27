@@ -1,50 +1,35 @@
-using UnityEngine;
+using DG.Tweening;
 using System.Collections;
+using UnityEngine;
 
 public class DisappearAnimation : MonoBehaviour
 {
-    public float speed = 1.0f; // Now using speed instead of duration
-    private Vector3 initialScale;
-    private Vector3 targetScale;
-    private Vector3 initialPosition;
-    private Vector3 targetAnimPosition;
-    [SerializeField] private Transform endPosition;
-
-    private bool isAnimating = false; // Flag to control the animation
+    [SerializeField] private float speed = 0.1f;
+    [SerializeField] private float fallDownSpeed = 0.04f;
 
     public void PlayDisappearAnimation()
     {
-        isAnimating = true;
-        StartCoroutine(AnimateDisappear());
-
-        if (isAnimating)
-        {
-            initialScale = transform.localScale;
-            targetScale = new Vector3(transform.localScale.x, 0.0f, transform.localScale.z);
-            initialPosition = transform.localPosition;
-            targetAnimPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - 1.0f, transform.localPosition.z);
-        }        
+        StartCoroutine(DealyDisappearAnimation());
     }
 
-    private IEnumerator AnimateDisappear()
+    private IEnumerator DealyDisappearAnimation()
     {
-        while (isAnimating)
+        yield return new WaitForSeconds(0.3f);
+        Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(transform.DOMoveY(-2.2f, fallDownSpeed));
+        mySequence.Join(transform.DOScaleY(0, speed));
+        mySequence.Append(transform.DOMoveY(-1f, speed));
+        mySequence.SetEase(Ease.InOutQuad);
+        mySequence.Play();
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("DisableSetActiveCollider") && transform.position.y < -2.199f)
         {
-            float step = speed * Time.deltaTime;
-
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetAnimPosition, step);
-            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, step);
-
-            if (Vector3.Distance(transform.localPosition, targetAnimPosition) < 0.001f || transform.position == endPosition.position)
-            {
-                isAnimating = false;
-                Debug.Log("!!!!!!!!");
-            }
-
-            yield return null;
+            Debug.Log("Collided with DisableSetActiveCollider and position Y is less than -2f");
+            gameObject.SetActive(false);
         }
 
-        transform.localPosition = targetAnimPosition;
-        transform.localScale = targetScale;
     }
 }
