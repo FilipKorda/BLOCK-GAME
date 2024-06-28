@@ -227,12 +227,13 @@ MonoBehaviour:
   isMeta: 0
   isCollider: 0
   isTrappedPlatre: 1
-  targetPlate: {fileID: 1149428104463563185}
-  targetPlatePosition: {fileID: 7883796379192939720}
-  moveSpeedTrappedPlate: 6
   targetPlayer: {fileID: 0}
-  targetPosition: {fileID: 7883796379192939720}
-  moveSpeed: 4
+  moveDistance: 5
+  moveDuration: 1
+  targetPlate: {fileID: 4047843717016942211}
+  movePlateDistance: 6
+  movePlateDuration: 1
+  rotateDuration: 10
   player: {fileID: 0}
 --- !u!1 &4072897543396750846
 GameObject:
@@ -293,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 8297782747808082799}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5972829, y: -2.8771453, z: -0.2555356}
+  m_LocalPosition: {x: -0.5972829, y: -18.377146, z: -0.2555356}
   m_LocalScale: {x: 1, y: 0.19999999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -324,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 8973389017824589998}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5972829, y: -2.8771453, z: -0.2555356}
+  m_LocalPosition: {x: -0.5972829, y: -19.479, z: -0.2555356}
   m_LocalScale: {x: 1, y: 0.19999999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

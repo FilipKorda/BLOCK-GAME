@@ -1,14 +1,16 @@
 using UnityEngine;
-
+using DG.Tweening;
 public class TrappedPlate : VisableCollider
 {
-    [SerializeField] private GameObject targetPlate;
-    [SerializeField] private Transform targetPlatePosition;
-    [SerializeField] private float moveSpeedTrappedPlate = 6f;
+   
+    [SerializeField] private Transform targetPlayer;
+    [SerializeField] private float moveDistance = 5f; 
+    [SerializeField] private float moveDuration = 1f;
 
-    [SerializeField] private GameObject targetPlayer;
-    [SerializeField] private Transform targetPosition;
-    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private Transform targetPlate;
+    [SerializeField] private float movePlateDistance = 2f;
+    [SerializeField] private float movePlateDuration = 1f;
+    [SerializeField] private float rotateDuration = 1f;
 
     [SerializeField] private Player player;
     private Collider thisCollider;
@@ -52,12 +54,15 @@ public class TrappedPlate : VisableCollider
     }
     void MovePlateDown()
     {
-        float step = moveSpeedTrappedPlate * Time.deltaTime;
-        targetPlate.transform.position = Vector3.Lerp(targetPlate.transform.position, targetPlatePosition.position, step);
+        Vector3 endPosition = targetPlate.position - Vector3.up * movePlateDistance;
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(targetPlate.DOMove(endPosition, movePlateDuration)); 
+        sequence.Join(targetPlate.DORotate(new Vector3(180f, 180f, -180f), rotateDuration, RotateMode.LocalAxisAdd));
+        sequence.Play();
     }
     void MovePlayerDown()
     {
-        float step = moveSpeed * Time.deltaTime;
-        targetPlayer.transform.position = Vector3.Lerp(targetPlayer.transform.position, targetPosition.position, step);
+        Vector3 endPosition = targetPlayer.position - Vector3.up * moveDistance;
+        targetPlayer.DOMove(endPosition, moveDuration);
     }
 }

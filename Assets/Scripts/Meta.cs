@@ -1,21 +1,26 @@
-using System.Collections;
 using UnityEngine;
 
 public class Meta : VisableCollider
 {
     [SerializeField] private GameObject targetPlayer;
     [SerializeField] private Player player;
-    [SerializeField] private SpiralMovement spiralMovement;
-    [SerializeField] private DisappearAnimation disappearAnimation;
 
     private Collider thisCollider;
     private Collider targetCollider;
+    private DisappearAnimation disappearAnimation;
+    private SpiralMovement spiralMovement;
     private bool isMatched = false;
 
     void Start()
     {
         thisCollider = GetComponent<Collider>();
         targetCollider = targetPlayer.GetComponent<Collider>();
+        if (transform.childCount > 0)
+        {
+            Transform childTransform = transform.GetChild(0);
+            disappearAnimation = childTransform.GetComponent<DisappearAnimation>();
+        }
+        spiralMovement = GetComponent<SpiralMovement>();
     }
     void Update()
     {
@@ -26,7 +31,7 @@ public class Meta : VisableCollider
         else
         {
             disappearAnimation.PlayDisappearAnimation();
-      
+
         }
     }
     void CheckForMatch()
