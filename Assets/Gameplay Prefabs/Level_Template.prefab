@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 1538482506943472136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.63, y: -1.49, z: 0}
+  m_LocalPosition: {x: 3.75, y: -1.49, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 3.0000346}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -310,8 +310,6 @@ MonoBehaviour:
   isTrappedPlatre: 0
   targetPlayer: {fileID: 5116559297477161786}
   player: {fileID: 1488980393954920055}
-  spiralMovement: {fileID: 6449964952983652613}
-  disappearAnimation: {fileID: 4836176027974315615}
 --- !u!114 &6449964952983652613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +480,7 @@ Transform:
   m_GameObject: {fileID: 6407078538234791377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.65, y: -1.49, z: 0}
+  m_LocalPosition: {x: -5.69, y: -1.49, z: 0.19}
   m_LocalScale: {x: 1, y: 1, z: 3.0000346}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -685,8 +683,8 @@ Transform:
   m_GameObject: {fileID: 6858907271113583154}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0020000935, y: -1.49, z: -2.17}
-  m_LocalScale: {x: 5.999841, y: 1, z: 1}
+  m_LocalPosition: {x: -1.0054, y: -1.49, z: -1.93}
+  m_LocalScale: {x: 8.014588, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 537591179411612464}
@@ -833,7 +831,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -19, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalScale: {x: 30, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8932118076430167062}
@@ -898,6 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed006f45ae6b24d429e5bf5cb21c66e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 5116559297477161786}
   objectsToMove:
   - {fileID: 1980378390151256935}
   - {fileID: 1326891037623076253}
@@ -921,6 +920,7 @@ MonoBehaviour:
   - {fileID: 366896600253577845}
   - {fileID: 2130335575941309557}
   - {fileID: 4332267267132682597}
+  - {fileID: 279997215847795484}
 --- !u!1 &8672369994555839822
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +946,7 @@ Transform:
   m_GameObject: {fileID: 8672369994555839822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 7.33}
+  m_LocalPosition: {x: 0, y: 0, z: -0.17000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -986,8 +986,8 @@ Transform:
   m_GameObject: {fileID: 8706493629086100514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0020000935, y: -1.49, z: 2.216}
-  m_LocalScale: {x: 5.9999495, y: 1, z: 1}
+  m_LocalPosition: {x: -0.9988, y: -1.49, z: 2.38}
+  m_LocalScale: {x: 8.001533, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 537591179411612464}
@@ -1115,7 +1115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 347822873513603274, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 347822873513603274, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2609,7 +2609,7 @@ PrefabInstance:
     - target: {fileID: 7304417470266864082, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: targetPlatePosition
       value: 
-      objectReference: {fileID: 364150149970467925}
+      objectReference: {fileID: 0}
     - target: {fileID: 7883796379192939720, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_LocalPosition.y
       value: -44.377144
@@ -2619,11 +2619,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
---- !u!4 &364150149970467925 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5135322206617084362, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+--- !u!114 &279997215847795484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4731967146866243203, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
   m_PrefabInstance: {fileID: 4776609427307576735}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848511465461270625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f4c64d0966c6040999911bb7fd7067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1950340076480011239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6438198033707411064, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}

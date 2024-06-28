@@ -13,6 +13,7 @@ public class TrappedPlate : VisableCollider
     [SerializeField] private float rotateDuration = 1f;
 
     [SerializeField] private Player player;
+    [SerializeField] private Collider thisSecomdCollider;
     private Collider thisCollider;
     private Collider targetCollider;
     private bool isMatched = false;
@@ -39,7 +40,9 @@ public class TrappedPlate : VisableCollider
     {
         if (IsColliderMatched(thisCollider, targetCollider))
         {
-            Debug.Log("You got trapped"); 
+            Debug.Log("You got trapped");
+            thisCollider.enabled = false;
+            thisSecomdCollider.enabled = false;
             player.canMove = false;
             isMatched = true;
         }

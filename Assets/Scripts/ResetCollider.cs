@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ResetCollider : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private PlateMoveDown[] objectsToMove;
 
     private void OnCollisionEnter(Collision collision)
     {
         StartCoroutine(ResetDealy());
+
+        player.SetActive(false);
 
         if (collision.gameObject.CompareTag("Player"))
         {

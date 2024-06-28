@@ -5,7 +5,7 @@ public class PlateMoveDown : MonoBehaviour
 {
     [SerializeField] private Transform targetObject;
     [SerializeField] private float moveDownDistance = 15f;
-    [SerializeField] private float moveDownDuration = 10f;
+    [SerializeField] private float moveDownDuration = 1f;
 
     public void MovePlateDown()
     {
