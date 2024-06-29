@@ -199,7 +199,6 @@ GameObject:
   - component: {fileID: 845832212734889685}
   - component: {fileID: 949385824262210723}
   - component: {fileID: 6449964952983652613}
-  - component: {fileID: 1737775986899184336}
   m_Layer: 0
   m_Name: Meta
   m_TagString: Untagged
@@ -354,23 +353,6 @@ MonoBehaviour:
   centerPoint: {x: 0, y: 0, z: 0}
   delayBeetweenPlates: 0.025
   startDelay: 2
---- !u!114 &1737775986899184336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3100400172178024220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fedd3dfac2cb1242b962049804f0adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneLevelInfo:
-    sceneName: 'TestScene '
-    buildIndex: 4
-    thisSceneName: TestScene
-    thisBuildIndex: 3
 --- !u!1 &4759715067153528054
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +365,7 @@ GameObject:
   - component: {fileID: 2622749378773030356}
   - component: {fileID: 3882826299418668840}
   - component: {fileID: 4836176027974315615}
+  - component: {fileID: 3935015246599661279}
   m_Layer: 0
   m_Name: DisableSetActiveCollider
   m_TagString: Untagged
@@ -468,6 +451,23 @@ MonoBehaviour:
   player: {fileID: 5116559297477161786}
   speed: 0.1
   fallDownSpeed: 0.05
+--- !u!114 &3935015246599661279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4759715067153528054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fedd3dfac2cb1242b962049804f0adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneLevelInfo:
+    sceneName: TestScene 1
+    buildIndex: 4
+    thisSceneName: TestScene
+    thisBuildIndex: 3
 --- !u!1 &6407078538234791377
 GameObject:
   m_ObjectHideFlags: 0

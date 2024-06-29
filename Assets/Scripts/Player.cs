@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -18,10 +19,12 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector3 forceDirection_D = new(10, -10, 0);
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
+    private MovesManager movesManager;
 
-    [Header("TextMeshPro Field")]
-    public TextMeshProUGUI textMeshPro;
-    private int moveCount = 0;
+    private void Awake()
+    {
+        StartCoroutine(LoadLoadingScreenAndFindSystem());
+    }
 
     void Start()
     {
@@ -30,7 +33,22 @@ public class Player : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
-        textMeshPro.text = $"Moves: {moveCount}";
+        movesManager.textMeshPro.gameObject.SetActive(true);
+
+    }
+
+    private IEnumerator LoadLoadingScreenAndFindSystem()
+    {
+        var movesManagerObject = FindObjectOfType<MovesManager>();
+        if (movesManagerObject != null)
+        {
+            movesManager = movesManagerObject;
+        }
+        else
+        {
+            Debug.LogError("LoadingSystem not found in LevelConector");
+        }
+        yield return null;
     }
 
     void Update()
@@ -44,8 +62,8 @@ public class Player : MonoBehaviour
                 {
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
-                    moveCount++;
-                    textMeshPro.text = $"Moves: {moveCount}";
+                    movesManager.moveCount++;
+                    movesManager.textMeshPro.text = $"Moves: {movesManager.moveCount}";
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);

@@ -2,33 +2,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class LoadingSystem : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
-
     private LevelConector levelConector;
-
-    private IEnumerator LoadLoadingScreenAndFindSystem()
-    {
-        var levelConectorObject = FindObjectOfType<LevelConector>();
-        if (levelConectorObject != null)
-        {
-            levelConector = levelConectorObject;
-        }
-        else
-        {
-            Debug.LogError("LoadingSystem not found in LevelConector");
-        }
-        yield return null;
-    }
-
 
     public void LoadStartScene()
     {
-        StartCoroutine(LoadStartSceneAsync());
-    
+        StartCoroutine(LoadStartSceneAsync());    
     }
 
     private IEnumerator LoadStartSceneAsync()
@@ -70,6 +54,19 @@ public class LoadingSystem : MonoBehaviour
         yield return StartCoroutine(FadeToClear());
     }
 
+    private IEnumerator LoadLoadingScreenAndFindSystem()
+    {
+        var levelConectorObject = FindObjectOfType<LevelConector>();
+        if (levelConectorObject != null)
+        {
+            levelConector = levelConectorObject;
+        }
+        else
+        {
+            Debug.LogError("LoadingSystem not found in LevelConector");
+        }
+        yield return null;
+    }
 
     private IEnumerator FadeToBlack()
     {
