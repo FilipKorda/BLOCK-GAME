@@ -35,6 +35,7 @@ public class ResetCollider : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(currentSceneIndex);
         SceneManager.LoadScene(currentSceneIndex);
     }
 }

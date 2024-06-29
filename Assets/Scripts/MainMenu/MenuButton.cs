@@ -79,12 +79,12 @@ public class MenuButton : GameButton, IPointerDownHandler, IDeselectHandler
         if (arrow) arrow.gameObject.SetActive(selected);
     }
 
-    protected virtual void FormatText(bool selected)
+    void FormatText(bool selected)
     {
         if (selected)
         {
             textMesh.fontWeight = onSelectWeight;
-            textMesh.fontSizeMax = onSelectFontSize;   
+            textMesh.fontSizeMax = onSelectFontSize;
 
             if (onSelectTextMaterial) textMesh.fontSharedMaterial = onSelectTextMaterial;
         }

@@ -9,6 +9,7 @@ public class Meta : VisableCollider
     private Collider targetCollider;
     private DisappearAnimation disappearAnimation;
     private SpiralMovement spiralMovement;
+    private LevelConector levelConector;
     private bool isMatched = false;
 
     void Start()
@@ -21,6 +22,7 @@ public class Meta : VisableCollider
             disappearAnimation = childTransform.GetComponent<DisappearAnimation>();
         }
         spiralMovement = GetComponent<SpiralMovement>();
+        levelConector = GetComponent<LevelConector>();
     }
     void Update()
     {
@@ -39,6 +41,7 @@ public class Meta : VisableCollider
         if (IsColliderMatched(thisCollider, targetCollider))
         {
             Debug.Log("Go to the Next Level");
+            levelConector.LoadNextLexel();
             spiralMovement.Play();
             player.canMove = false;
             isMatched = true;
