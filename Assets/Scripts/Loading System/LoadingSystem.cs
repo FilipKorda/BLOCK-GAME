@@ -95,6 +95,7 @@ public class LoadingSystem : MonoBehaviour
 
     private IEnumerator FadeToBlack()
     {
+        yield return new WaitForSeconds(0.5f);
         if (fadeImage != null)
         {
             float elapsedTime = 0f;
