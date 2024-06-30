@@ -4,7 +4,8 @@ public class VisableCollider : MonoBehaviour
 {
     public bool isMeta;
     public bool isCollider;
-    public bool isTrappedPlatre;
+    public bool isTrappedPlate;
+    public bool isBridgePlate;
 
     private void OnDrawGizmos()
     {
@@ -47,9 +48,13 @@ public class VisableCollider : MonoBehaviour
         {
             Debug.DrawLine(startPoint, endPoint, Color.gray, 0f, false);
         }
-        else if (isTrappedPlatre)
+        else if (isTrappedPlate)
         {
             Debug.DrawLine(startPoint, endPoint, Color.red, 0f, false);
+        }
+        else if(isBridgePlate)
+        {
+            Debug.DrawLine(startPoint, endPoint, Color.yellow, 0f, false);
         }
 
     }

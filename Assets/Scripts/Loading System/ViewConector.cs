@@ -31,4 +31,9 @@ public class ViewConector : MonoBehaviour
             loadingSystem.LoadStartScene();
         }
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
