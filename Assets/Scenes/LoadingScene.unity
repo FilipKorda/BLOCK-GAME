@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 818667743}
+  canvas: {fileID: 1445017200}
   fadeDuration: 1
 --- !u!4 &970449622
 Transform:
@@ -354,8 +355,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 818667742}
   - {fileID: 1446792519}
+  - {fileID: 818667742}
   m_Father: {fileID: 970449622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -7,12 +7,14 @@ using TMPro;
 public class LoadingSystem : MonoBehaviour
 {
     public Image fadeImage;
+    public Canvas canvas;
     public float fadeDuration = 1f;
     private LevelConector levelConector;
 
     public void LoadStartScene()
     {
         StartCoroutine(LoadStartSceneAsync());
+        canvas.sortingOrder = 2;
     }
 
     private IEnumerator LoadStartSceneAsync()
