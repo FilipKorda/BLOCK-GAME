@@ -12,7 +12,7 @@ public class LoadingSystem : MonoBehaviour
 
     public void LoadStartScene()
     {
-        StartCoroutine(LoadStartSceneAsync());    
+        StartCoroutine(LoadStartSceneAsync());
     }
 
     private IEnumerator LoadStartSceneAsync()
@@ -42,7 +42,7 @@ public class LoadingSystem : MonoBehaviour
     {
         yield return StartCoroutine(FadeToBlack());
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelConector.nextSceneLevelInfo.buildIndex, LoadSceneMode.Additive);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelConector.nextSceneLevelInfo.sceneName, LoadSceneMode.Additive);
 
         while (!asyncLoad.isDone)
         {
@@ -52,6 +52,8 @@ public class LoadingSystem : MonoBehaviour
         SceneManager.UnloadSceneAsync(levelConector.nextSceneLevelInfo.thisSceneName);
 
         yield return StartCoroutine(FadeToClear());
+
+        StartCoroutine(LoadLoadingScreenAndFindSystem());
     }
 
     private IEnumerator LoadLoadingScreenAndFindSystem()
@@ -66,6 +68,29 @@ public class LoadingSystem : MonoBehaviour
             Debug.LogError("LoadingSystem not found in LevelConector");
         }
         yield return null;
+    }
+
+    public void ResetThisLevel()
+    {
+        StartCoroutine(ResetCurretLevel());
+    }
+
+    private IEnumerator ResetCurretLevel()
+    {
+        yield return StartCoroutine(FadeToBlack());
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelConector.nextSceneLevelInfo.thisBuildIndex, LoadSceneMode.Additive);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        SceneManager.UnloadSceneAsync(levelConector.nextSceneLevelInfo.thisSceneName);      
+
+        yield return StartCoroutine(FadeToClear());
+
+        StartCoroutine(LoadLoadingScreenAndFindSystem());
     }
 
     private IEnumerator FadeToBlack()

@@ -7,6 +7,7 @@ public class ResetCollider : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private PlateMoveDown[] objectsToMove;
+    [SerializeField] private LevelConector levelConector;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -34,8 +35,6 @@ public class ResetCollider : MonoBehaviour
     private IEnumerator ResetDealy()
     {
         yield return new WaitForSeconds(2f);
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(currentSceneIndex);
-        SceneManager.LoadScene(currentSceneIndex);
+        levelConector.ResetThisLevel();
     }
 }

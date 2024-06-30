@@ -358,6 +358,30 @@ PrefabInstance:
       propertyPath: textMeshPro
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.sceneName
+      value: 'TestScene '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.buildIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.thisSceneName
+      value: TestScene 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.thisBuildIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.resetToSceneName
+      value: TestScene 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.resetToBuildIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8932118076430167062, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

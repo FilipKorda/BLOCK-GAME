@@ -34,6 +34,14 @@ public class LevelConector : MonoBehaviour
             loadingSystem.LoadNextLexel();
         }
     }
+
+    public void ResetThisLevel()
+    {
+        if (loadingSystem != null)
+        {
+            loadingSystem.ResetThisLevel();
+        }
+    }
 }
 [Serializable]
 public class NextLevelInfo
@@ -44,4 +52,5 @@ public class NextLevelInfo
     [Header("===========   Scene To Unload   ===========")]
     public string thisSceneName;
     public int thisBuildIndex;
+
 }
