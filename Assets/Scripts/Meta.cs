@@ -23,6 +23,7 @@ public class Meta : VisableCollider
         }
         spiralMovement = GetComponent<SpiralMovement>();
     }
+
     void Update()
     {
         if (!isMatched)

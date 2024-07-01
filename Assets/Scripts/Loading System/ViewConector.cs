@@ -24,7 +24,7 @@ public class ViewConector : MonoBehaviour
         yield return null;
     }
 
-    public void OnLoadNextSceneButtonClicked()
+    public void PlayButton()
     {
         if (loadingSystem != null)
         {

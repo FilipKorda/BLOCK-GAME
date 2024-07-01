@@ -168,10 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
-  - sceneName: LoadingScene
-    buildIndex: 1
-  - sceneName: MainMenu
-    buildIndex: 2
+  - {fileID: 11400000, guid: f4eac0e8ec27d2c4a8687b021910844c, type: 2}
+  - {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
+  thisRootSceneToUnload: {fileID: 11400000, guid: 495de75a65f87694f825172467ce9cd2, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

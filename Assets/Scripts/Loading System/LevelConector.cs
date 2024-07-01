@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class LevelConector : MonoBehaviour
 {
-    public NextLevelInfo nextSceneLevelInfo;
-    private LoadingSystem loadingSystem;
+    [Header("===========  Scene To Load  ===========")]
+    public SceneData sceneData;
+    [Header("===========   Scene To Unload   ===========")]
+    public SceneData thisSceneData;
+    [Header("===========   Main Menu To Load   ===========")]
+    public SceneData mainMenuSceneData;
 
+    [SerializeField] private Player player;
+    private LoadingSystem loadingSystem;
+    public PauseMenu pauseMenu;
 
     private void Start()
     {
@@ -42,15 +49,13 @@ public class LevelConector : MonoBehaviour
             loadingSystem.ResetThisLevel();
         }
     }
-}
-[Serializable]
-public class NextLevelInfo
-{
-    [Header("===========  Scene To Load  ===========")]
-    public string sceneName;
-    public int buildIndex;
-    [Header("===========   Scene To Unload   ===========")]
-    public string thisSceneName;
-    public int thisBuildIndex;
 
+    public void ReturnToMainMenu()
+    {
+        if (loadingSystem != null)
+        {
+            player.canMove = false;
+            loadingSystem.GoBackToMainMenu();
+        }
+    }
 }

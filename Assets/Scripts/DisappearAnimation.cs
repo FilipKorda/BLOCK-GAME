@@ -7,12 +7,7 @@ public class DisappearAnimation : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float speed = 0.1f;
     [SerializeField] private float fallDownSpeed = 0.04f;
-    private LevelConector levelConector;
-
-    private void Start()
-    {
-        levelConector = GetComponent<LevelConector>();
-    }
+    [SerializeField] private LevelConector levelConector;
 
     public void PlayDisappearAnimation()
     {

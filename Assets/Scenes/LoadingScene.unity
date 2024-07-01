@@ -231,6 +231,9 @@ MonoBehaviour:
   fadeImage: {fileID: 818667743}
   canvas: {fileID: 1445017200}
   fadeDuration: 1
+  movesManager: {fileID: 970449623}
+  sceneData: {fileID: 11400000, guid: b1253733f4e090841a1d39a9b6566781, type: 2}
+  mainMenuSceneData: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
 --- !u!4 &970449622
 Transform:
   m_ObjectHideFlags: 0

@@ -28,13 +28,12 @@ public class BridgeButtonTwo : VisableCollider
             {
                 Debug.Log("You open bridge");
                 ToggleObject();
-                isBridgeOpened = true;  // Ustaw flagê, aby wskazaæ, ¿e most zosta³ otwarty
+                isBridgeOpened = true; 
             }
         }
         else
         {
-            Debug.Log("You close bridge");
-            isBridgeOpened = false;  // Zresetuj flagê, gdy kolizja nie pasuje
+            isBridgeOpened = false; 
         }
     }
 

@@ -940,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnLoadNextSceneButtonClicked
+      value: PlayButton
       objectReference: {fileID: 0}
     - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

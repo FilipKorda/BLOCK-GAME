@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System;
 using System.Collections.Generic;
 
 public class Root : MonoBehaviour
 {
-    public List<SceneInfo> scenesToLoad = new();
+    public List<SceneData> scenesToLoad = new();
+    public SceneData thisRootSceneToUnload;
 
     public void Start()
     {
@@ -17,16 +17,9 @@ public class Root : MonoBehaviour
     {
         foreach (var sceneInfo in scenesToLoad)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneInfo.buildIndex, LoadSceneMode.Additive);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneInfo.sceneName, LoadSceneMode.Additive);
             yield return asyncLoad;
         }
+        SceneManager.UnloadSceneAsync(thisRootSceneToUnload.sceneName);
     }
-
-
-}
-[Serializable]
-public class SceneInfo
-{
-    public string sceneName;
-    public int buildIndex;
 }
