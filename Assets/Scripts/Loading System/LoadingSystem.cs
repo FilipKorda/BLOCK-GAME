@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class LoadingSystem : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class LoadingSystem : MonoBehaviour
     public float fadeDuration = 1f;
     private LevelConector levelConector;
     [SerializeField] private MovesManager movesManager;
+    [SerializeField] private GameObject loadingHandel;
+    [SerializeField] private TextMeshProUGUI stageText;
     [Header("===========  Scene To Load  ===========")]
     public SceneData sceneData;
     [Header("===========   Scene To Unload   ===========")]
@@ -42,13 +45,13 @@ public class LoadingSystem : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
         asyncLoad.allowSceneActivation = false;
 
-        float minimumLoadTime = 1f; 
+        float minimumLoadTime = 1f;
         float loadStartTime = Time.time;
 
         Debug.Log("Rozpoczêto ³adowanie sceny: " + Time.time);
 
         while ((Time.time - loadStartTime) < minimumLoadTime)
-        {       
+        {
             yield return null;
         }
 
@@ -65,8 +68,10 @@ public class LoadingSystem : MonoBehaviour
 
         StartCoroutine(LoadLoadingScreenAndFindSystem());
 
+        stageText.gameObject.SetActive(true);
+
         yield return StartCoroutine(FadeToClear());
-   
+
     }
 
     public void LoadNextLexel()
@@ -195,6 +200,7 @@ public class LoadingSystem : MonoBehaviour
     private IEnumerator FadeToBlack()
     {
         yield return new WaitForSeconds(0.5f);
+
         if (fadeImage != null)
         {
             float elapsedTime = 0f;
@@ -204,6 +210,14 @@ public class LoadingSystem : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
                 fadeImage.color = new Color(0f, 0f, 0f, alpha);
+
+                loadingHandel.SetActive(true);
+
+
+                stageText.gameObject.SetActive(true);
+                stageText.text = levelConector.sceneData.stageString;
+
+
                 yield return null;
             }
         }
@@ -220,6 +234,11 @@ public class LoadingSystem : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 float alpha = Mathf.Clamp01(1f - (elapsedTime / fadeDuration));
                 fadeImage.color = new Color(0f, 0f, 0f, alpha);
+
+                loadingHandel.SetActive(false);
+                stageText.text = "";
+                stageText.gameObject.SetActive(false);
+
                 yield return null;
             }
         }

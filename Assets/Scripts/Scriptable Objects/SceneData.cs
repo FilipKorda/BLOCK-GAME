@@ -4,5 +4,6 @@ using UnityEngine;
 public class SceneData : ScriptableObject
 {
     public string sceneName;
-    public int sceneIndex;  
+    public int sceneIndex; 
+    public string stageString;
 }

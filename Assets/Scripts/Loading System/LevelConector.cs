@@ -55,6 +55,8 @@ public class LevelConector : MonoBehaviour
         if (loadingSystem != null)
         {
             player.canMove = false;
+            PauseMenu.GameIsPaused = false;
+            pauseMenu.pauseMenuUI.SetActive(false);
             loadingSystem.GoBackToMainMenu();
         }
     }
