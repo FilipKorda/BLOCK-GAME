@@ -214,8 +214,8 @@ public class LoadingSystem : MonoBehaviour
                 loadingHandel.SetActive(true);
 
 
-                stageText.gameObject.SetActive(true);
-                stageText.text = levelConector.sceneData.stageString;
+                //stageText.gameObject.SetActive(true);
+                //stageText.text = levelConector.sceneData.stageString;
 
 
                 yield return null;

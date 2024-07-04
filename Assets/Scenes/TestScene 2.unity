@@ -354,6 +354,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_Template
       objectReference: {fileID: 0}
+    - target: {fileID: 1488980393954920055, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: textMeshPro
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.sceneName
+      value: 'TestScene '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.buildIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.thisSceneName
+      value: TestScene 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.thisBuildIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.resetToSceneName
+      value: TestScene 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935015246599661279, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: nextSceneLevelInfo.resetToBuildIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467491475890243390, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
+    - target: {fileID: 4467491475890243390, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: thisSceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c8754b5c0cc3ce408e2a7495a27703b, type: 2}
     - target: {fileID: 8932118076430167062, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
