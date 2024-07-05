@@ -39,7 +39,7 @@ public class LoadingSystem : MonoBehaviour
     }
 
     private IEnumerator LoadStartSceneAsync(SceneData sceneData, SceneData mainMenuSceneData)
-    {
+    {   
         yield return StartCoroutine(FadeToBlack());
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
@@ -213,10 +213,8 @@ public class LoadingSystem : MonoBehaviour
 
                 loadingHandel.SetActive(true);
 
-
-                //stageText.gameObject.SetActive(true);
-                //stageText.text = levelConector.sceneData.stageString;
-
+                stageText.gameObject.SetActive(true);
+                ShowCurrentStage();
 
                 yield return null;
             }
@@ -241,6 +239,25 @@ public class LoadingSystem : MonoBehaviour
 
                 yield return null;
             }
+        }
+    }
+
+    private void ShowCurrentStage()
+    {
+        bool isMainMenuLoaded = false;
+        if (SceneManager.sceneCount > 1)
+        {
+            Scene secondScene = SceneManager.GetSceneAt(1);
+            if (secondScene.name == "MainMenu")
+            {
+                isMainMenuLoaded = true;
+            }
+        }
+
+        if (!isMainMenuLoaded)
+        {
+            stageText.gameObject.SetActive(true);
+            stageText.text = levelConector.sceneData.stageString;
         }
     }
 }
