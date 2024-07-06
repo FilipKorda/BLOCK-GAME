@@ -458,7 +458,7 @@ MonoBehaviour:
   movesManager: {fileID: 970449623}
   loadingHandel: {fileID: 1330419578}
   stageText: {fileID: 1312435828}
-  sceneData: {fileID: 11400000, guid: b1253733f4e090841a1d39a9b6566781, type: 2}
+  sceneData: {fileID: 11400000, guid: 0bd34fd1903a40443b768f9222d5ef21, type: 2}
   mainMenuSceneData: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
 --- !u!4 &970449622
 Transform:
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STAGE 1
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
