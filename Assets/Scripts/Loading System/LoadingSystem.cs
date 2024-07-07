@@ -39,7 +39,7 @@ public class LoadingSystem : MonoBehaviour
     }
 
     private IEnumerator LoadStartSceneAsync(SceneData sceneData, SceneData mainMenuSceneData)
-    {   
+    {
         yield return StartCoroutine(FadeToBlack());
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
@@ -149,6 +149,8 @@ public class LoadingSystem : MonoBehaviour
 
         yield return StartCoroutine(FadeToClear());
 
+        levelConector.isResetingLevel = false;
+
     }
 
     public void GoBackToMainMenu()
@@ -244,6 +246,7 @@ public class LoadingSystem : MonoBehaviour
 
     private void ShowCurrentStage()
     {
+
         bool isMainMenuLoaded = false;
         if (SceneManager.sceneCount > 1)
         {
@@ -256,8 +259,17 @@ public class LoadingSystem : MonoBehaviour
 
         if (!isMainMenuLoaded)
         {
-            stageText.gameObject.SetActive(true);
-            stageText.text = levelConector.sceneData.stageString;
+            if (levelConector.isResetingLevel)
+            {
+                stageText.gameObject.SetActive(true);
+                stageText.text = levelConector.thisSceneData.stageString;
+            }
+            else
+            {
+                stageText.gameObject.SetActive(true);
+                stageText.text = levelConector.sceneData.stageString;
+            }
         }
     }
 }
+

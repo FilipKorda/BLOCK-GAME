@@ -14,6 +14,7 @@ public class LevelConector : MonoBehaviour
     [SerializeField] private Player player;
     private LoadingSystem loadingSystem;
     public PauseMenu pauseMenu;
+    public bool isResetingLevel;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class LevelConector : MonoBehaviour
     {
         if (loadingSystem != null)
         {
+            isResetingLevel = true;
             loadingSystem.ResetThisLevel();
         }
     }
