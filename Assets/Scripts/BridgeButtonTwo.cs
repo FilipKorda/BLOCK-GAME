@@ -5,6 +5,7 @@ public class BridgeButtonTwo : VisableCollider
     [SerializeField] private Transform targetPlayer;
     [SerializeField] private Player player;
     [SerializeField] private GameObject bridge;
+    [SerializeField] private GameObject restetCollider;
     private Collider thisCollider;
     private Collider targetCollider;
     private bool isBridgeOpened = false;  // Flaga do kontrolowania stanu mostu
@@ -44,9 +45,10 @@ public class BridgeButtonTwo : VisableCollider
 
     private void ToggleObject()
     {
-        if (bridge != null)
+        if (bridge != null && restetCollider != null)
         {
             bridge.SetActive(!bridge.activeSelf);
+            restetCollider.SetActive(!bridge.activeSelf);
         }
     }
 }

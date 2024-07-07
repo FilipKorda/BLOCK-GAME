@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ResetCollider : MonoBehaviour
 {
+    [SerializeField] private GameObject ground;
     [SerializeField] private GameObject player;
     [SerializeField] private PlateMoveDown[] objectsToMove;
     [SerializeField] private LevelConector levelConector;
@@ -35,5 +36,34 @@ public class ResetCollider : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         levelConector.ResetThisLevel();
+    }
+
+    [ContextMenu("Add PlateMoveDown To Move Objects")]
+    private void AddObjectsToMove()
+    {
+        if (ground == null)
+        {
+            Debug.LogError("Ground object is not assigned!");
+            return;
+        }
+
+        // Pobierz wszystkie dzieci obiektu ground
+        int childCount = ground.transform.childCount;
+        objectsToMove = new PlateMoveDown[childCount];
+        for (int i = 0; i < childCount; i++)
+        {
+            GameObject child = ground.transform.GetChild(i).gameObject;
+            
+            if (child.TryGetComponent<PlateMoveDown>(out var plateMoveDown))
+            {
+                objectsToMove[i] = plateMoveDown;
+            }
+            else
+            {
+                Debug.LogWarning($"Child {child.name} does not have a PlateMoveDown component.");
+            }
+        }
+
+        Debug.Log("Objects to move populated with PlateMoveDown components from children of ground.");
     }
 }

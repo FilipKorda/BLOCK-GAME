@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SpiralMovement : MonoBehaviour
 {
+    [SerializeField] private GameObject ground;
     [SerializeField] private GameObject[] objectsToMove;
     [SerializeField] private float initialSpiralSpeed = 0.05f;
     [SerializeField] private float initialAngleSpeed = 4f;
@@ -68,5 +69,25 @@ public class SpiralMovement : MonoBehaviour
             }
         }
 
+    }
+
+    [ContextMenu("Add Objects To Move")]
+    private void PopulateObjectsToMove()
+    {
+        if (ground == null)
+        {
+            Debug.LogError("Ground object is not assigned!");
+            return;
+        }
+
+        // Pobierz wszystkie dzieci obiektu ground
+        int childCount = ground.transform.childCount;
+        objectsToMove = new GameObject[childCount];
+        for (int i = 0; i < childCount; i++)
+        {
+            objectsToMove[i] = ground.transform.GetChild(i).gameObject;
+        }
+
+        Debug.Log("Objects to move populated with children of ground.");
     }
 }

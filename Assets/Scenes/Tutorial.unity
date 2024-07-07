@@ -333,11 +333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fedd3dfac2cb1242b962049804f0adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneData: {fileID: 11400000, guid: b1253733f4e090841a1d39a9b6566781, type: 2}
+  sceneData: {fileID: 11400000, guid: e6b1571570fc8004d9e89e03be0e20a3, type: 2}
   thisSceneData: {fileID: 11400000, guid: 0bd34fd1903a40443b768f9222d5ef21, type: 2}
   mainMenuSceneData: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
   player: {fileID: 0}
   pauseMenu: {fileID: 0}
+  isResetingLevel: 0
+  goingBackToMainMenu: 0
 --- !u!4 &831758517
 Transform:
   m_ObjectHideFlags: 0
