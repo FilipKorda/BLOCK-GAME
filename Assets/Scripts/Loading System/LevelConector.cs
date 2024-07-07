@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -15,6 +14,7 @@ public class LevelConector : MonoBehaviour
     private LoadingSystem loadingSystem;
     public PauseMenu pauseMenu;
     public bool isResetingLevel;
+    public bool goingBackToMainMenu;
 
     private void Start()
     {
@@ -56,6 +56,7 @@ public class LevelConector : MonoBehaviour
     {
         if (loadingSystem != null && player != null && pauseMenu != null)
         {
+            goingBackToMainMenu = true;
             player.canMove = false;
             PauseMenu.GameIsPaused = false;
             pauseMenu.pauseMenuUI.SetActive(false);

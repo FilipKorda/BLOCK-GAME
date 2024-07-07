@@ -197,6 +197,8 @@ public class LoadingSystem : MonoBehaviour
 
         yield return StartCoroutine(FadeToClear());
 
+        levelConector.goingBackToMainMenu = false;
+
     }
 
     private IEnumerator FadeToBlack()
@@ -215,7 +217,6 @@ public class LoadingSystem : MonoBehaviour
 
                 loadingHandel.SetActive(true);
 
-                stageText.gameObject.SetActive(true);
                 ShowCurrentStage();
 
                 yield return null;
@@ -263,6 +264,11 @@ public class LoadingSystem : MonoBehaviour
             {
                 stageText.gameObject.SetActive(true);
                 stageText.text = levelConector.thisSceneData.stageString;
+            }
+            else if(levelConector.goingBackToMainMenu)
+            {
+                stageText.gameObject.SetActive(false);
+                stageText.text = "";
             }
             else
             {

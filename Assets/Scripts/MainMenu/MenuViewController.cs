@@ -28,8 +28,6 @@ namespace UI
             if (currentMenuView) currentMenuView.gameObject.SetActive(false);
             currentMenuView = view;
 
-
-
             if (currentMenuView) currentMenuView.gameObject.SetActive(true);
         }
 

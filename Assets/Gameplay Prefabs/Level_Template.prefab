@@ -724,6 +724,7 @@ MonoBehaviour:
   mainMenuSceneData: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
   player: {fileID: 1488980393954920055}
   pauseMenu: {fileID: 2480001751889133588}
+  isResetingLevel: 0
 --- !u!1 &6407078538234791377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1730,15 +1731,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1770,11 +1771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -539.8033
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1792,9 +1793,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7009482685085846107, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -116.9
+      objectReference: {fileID: 0}
     - target: {fileID: 7820055280000801030, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_text
-      value: MAIN MENU
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 9169285432014651650, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2016,7 +2021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2024,15 +2029,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2064,11 +2069,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -634.8033
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2086,9 +2091,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7009482685085846107, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 29.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7820055280000801030, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_text
-      value: EXIT
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 9169285432014651650, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3540,7 +3549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3548,15 +3557,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3588,11 +3597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -444.80328
       objectReference: {fileID: 0}
     - target: {fileID: 500175239584387129, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3612,9 +3621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7820055280000801030, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_text
-      value: 'RETUN
-
-'
+      value: Return
       objectReference: {fileID: 0}
     - target: {fileID: 7974202762880928822, guid: ea6ac1d20820c204ba88b6eced1a6214, type: 3}
       propertyPath: m_IsActive
