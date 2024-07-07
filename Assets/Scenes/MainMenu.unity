@@ -217,7 +217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3652039080470217743, guid: b76d9396ae70cb444943162359e23634, type: 3}
       propertyPath: m_text
-      value: EXIT
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252760051031090607, guid: b76d9396ae70cb444943162359e23634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6194521582128739307, guid: b76d9396ae70cb444943162359e23634, type: 3}
       propertyPath: onInteractable.m_PersistentCalls.m_Calls.Array.size
@@ -578,7 +582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3652039080470217743, guid: b76d9396ae70cb444943162359e23634, type: 3}
       propertyPath: m_text
-      value: SETTINGS
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252760051031090607, guid: b76d9396ae70cb444943162359e23634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -922,34 +930,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+    - target: {fileID: 5252760051031090607, guid: b76d9396ae70cb444943162359e23634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 392686635}
-    - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ViewConector, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7907645656234638103, guid: b76d9396ae70cb444943162359e23634, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

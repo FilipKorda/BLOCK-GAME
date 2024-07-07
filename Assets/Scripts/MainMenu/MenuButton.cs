@@ -13,7 +13,7 @@ public class MenuButton : GameButton, IPointerDownHandler, IDeselectHandler
 
 
     [SerializeField] private RectTransform selector;
-    [SerializeField] private RectTransform arrow;
+    [SerializeField] private RectTransform dot;
 
     [SerializeField] private TextMeshProUGUI textMesh;
 
@@ -76,7 +76,7 @@ public class MenuButton : GameButton, IPointerDownHandler, IDeselectHandler
     {
         if (selector) selector.gameObject.SetActive(selected);
         if (selector) MoveSelector(selected);
-        if (arrow) arrow.gameObject.SetActive(selected);
+        if (dot) dot.gameObject.SetActive(selected);
     }
 
     void FormatText(bool selected)
@@ -92,7 +92,7 @@ public class MenuButton : GameButton, IPointerDownHandler, IDeselectHandler
         {
             textMesh.fontWeight = basicWeight;
             textMesh.fontSizeMax = basicFontSize;
-            textMesh.fontStyle = FontStyles.UpperCase;
+            //textMesh.fontStyle = FontStyles.UpperCase;
             if (textBaseMaterial) textMesh.fontSharedMaterial = textBaseMaterial;
         }
     }

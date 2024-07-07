@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
                     movesManager.moveCount++;
-                    movesManager.textMeshPro.text = $"Moves: {movesManager.moveCount}";
+                    movesManager.textMeshPro.text = $"{movesManager.moveCount}";
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);

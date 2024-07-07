@@ -165,7 +165,7 @@ public class LoadingSystem : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuSceneData.sceneIndex, LoadSceneMode.Additive);
 
         movesManager.moveCount = 0;
-        movesManager.textMeshPro.text = $"Moves: {movesManager.moveCount}";
+        movesManager.textMeshPro.text = $"{movesManager.moveCount}";
         movesManager.textMeshPro.gameObject.SetActive(false);
         canvas.sortingOrder = 0;
         levelConector.pauseMenu.pauseMenuUI.SetActive(false);
