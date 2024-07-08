@@ -7,7 +7,7 @@ public class DisappearAnimation : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float speed = 0.1f;
     [SerializeField] private float fallDownSpeed = 0.04f;
-    [SerializeField] private LevelConector levelConector;
+    [SerializeField] private LoadingSystem loadingSystem;
 
     public void PlayDisappearAnimation()
     {
@@ -31,7 +31,7 @@ public class DisappearAnimation : MonoBehaviour
         {
             Debug.Log("Collided with DisableSetActiveCollider and position Y is less than -2f");
             player.SetActive(false);
-            levelConector.LoadNextLexel();
+            loadingSystem.LoadNextLexel();
         }
     }
 

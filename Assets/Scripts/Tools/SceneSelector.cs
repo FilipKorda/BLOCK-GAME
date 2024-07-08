@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class SceneSelector : EditorWindow
 {
+
     void OnGUI()
     {
         GUILayout.BeginHorizontal();
@@ -26,6 +28,7 @@ public class SceneSelector : EditorWindow
 
     void SwitchToScene(string sceneName)
     {
+
         if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
         {
             string scenePath = EditorBuildSettings.scenes.FirstOrDefault(s => System.IO.Path.GetFileNameWithoutExtension(s.path) == sceneName)?.path;
@@ -34,11 +37,15 @@ public class SceneSelector : EditorWindow
                 EditorSceneManager.OpenScene(scenePath);
             }
         }
+
     }
 
     [MenuItem("Tools/Custom Build Settings Window")]
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow(typeof(SceneSelector), false, "Build Settings");
+        GetWindow(typeof(SceneSelector), false, "Build Settings");
     }
+
+
 }
+#endif

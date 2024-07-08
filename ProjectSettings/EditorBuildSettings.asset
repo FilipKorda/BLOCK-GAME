@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Root.unity
     guid: 6d77eb1b345519648a4c2133044be93c
   - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
-    guid: 490b34222be620d42823ae5c7e496806
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9a2a826b43b558043aa51ad7bcf63a3d
   - enabled: 1
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 9f5cfc3ba4d45ce45a608617000d442f
+  - enabled: 1
+    path: Assets/Scenes/FadeScene.unity
+    guid: 392e2a3b6c56a8e4398363ab26341c0e
   m_configObjects: {}

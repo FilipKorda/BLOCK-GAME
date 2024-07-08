@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -21,11 +20,6 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask collisionLayerMask;
     private MovesManager movesManager;
 
-    private void Awake()
-    {
-        StartCoroutine(LoadLoadingScreenAndFindSystem());
-    }
-
     void Start()
     {
         isRotating = false;
@@ -33,22 +27,8 @@ public class Player : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
-        movesManager.textMeshPro.gameObject.SetActive(true);
+        //movesManager.textMeshPro.gameObject.SetActive(true);
 
-    }
-
-    private IEnumerator LoadLoadingScreenAndFindSystem()
-    {
-        var movesManagerObject = FindObjectOfType<MovesManager>();
-        if (movesManagerObject != null)
-        {
-            movesManager = movesManagerObject;
-        }
-        else
-        {
-            Debug.LogError("LoadingSystem not found in LevelConector");
-        }
-        yield return null;
     }
 
     void Update()
@@ -62,8 +42,8 @@ public class Player : MonoBehaviour
                 {
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
-                    movesManager.moveCount++;
-                    movesManager.textMeshPro.text = $"{movesManager.moveCount}";
+                    //movesManager.moveCount++;
+                   // movesManager.textMeshPro.text = $"{movesManager.moveCount}";
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);

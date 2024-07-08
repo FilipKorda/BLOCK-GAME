@@ -1,11 +1,11 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Root : MonoBehaviour
 {
-    public List<SceneData> scenesToLoad = new();
+    public SceneData sceneToLoad;
+    //public SceneData fadeSceneToLoad;
     public SceneData thisRootSceneToUnload;
 
     public void Start()
@@ -15,11 +15,23 @@ public class Root : MonoBehaviour
 
     private IEnumerator LoadScenes()
     {
-        foreach (var sceneInfo in scenesToLoad)
+        // Asynchroniczne ³adowanie scen
+        AsyncOperation loadScene = SceneManager.LoadSceneAsync(sceneToLoad.sceneIndex, LoadSceneMode.Additive);
+       // AsyncOperation loadfadeScene = SceneManager.LoadSceneAsync(fadeSceneToLoad.sceneIndex, LoadSceneMode.Additive);
+
+        // Czekaj, a¿ sceny zostana za³adowane
+        while (!loadScene.isDone)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneInfo.sceneName, LoadSceneMode.Additive);
-            yield return asyncLoad;
+            yield return null;
         }
-        SceneManager.UnloadSceneAsync(thisRootSceneToUnload.sceneName);
+
+        // Asynchroniczne wy³adowanie bie¿¹cej sceny
+        AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(thisRootSceneToUnload.sceneIndex);
+
+        // Czekaj, a¿ scena zostanie wy³adowana
+        while (!unloadOperation.isDone)
+        {
+            yield return null;
+        }
     }
 }

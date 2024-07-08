@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SceneData_TestScene
   m_EditorClassIdentifier: 
   sceneName: TestScene
-  sceneIndex: 3
+  sceneIndex: 2
   stageString: Stage 1

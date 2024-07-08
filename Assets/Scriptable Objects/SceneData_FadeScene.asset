@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2a163716d71de4fa7cc3c4f61e899b, type: 3}
-  m_Name: SceneData_LoadingScene
+  m_Name: SceneData_FadeScene
   m_EditorClassIdentifier: 
-  sceneName: LoadingScene
-  sceneIndex: 1
+  sceneName: FadeScene
+  sceneIndex: 6
+  stageString: 

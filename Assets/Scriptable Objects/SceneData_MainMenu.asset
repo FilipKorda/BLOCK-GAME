@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SceneData_MainMenu
   m_EditorClassIdentifier: 
   sceneName: MainMenu
-  sceneIndex: 2
+  sceneIndex: 1
+  stageString: 

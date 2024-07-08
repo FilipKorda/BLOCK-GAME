@@ -167,9 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e00277af8f42e4ca947f89ecfe9ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenesToLoad:
-  - {fileID: 11400000, guid: f4eac0e8ec27d2c4a8687b021910844c, type: 2}
-  - {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
+  sceneToLoad: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
+  fadeSceneToLoad: {fileID: 11400000, guid: 642f029c4bbe3244bb64d2d9ce6baa7f, type: 2}
   thisRootSceneToUnload: {fileID: 11400000, guid: 495de75a65f87694f825172467ce9cd2, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

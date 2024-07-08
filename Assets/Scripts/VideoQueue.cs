@@ -7,7 +7,7 @@ public class VideoQueue : MonoBehaviour
     public VideoPlayer videoPlayer;
     public VideoClip[] videoClips;
     public TextMeshProUGUI numberText;
-    public LevelConector levelConector;
+    public LoadingSystem loadingSystem;
     private int currentVideoIndex = 0;
     private bool loadNextLevelCalled = false;
 
@@ -65,9 +65,9 @@ public class VideoQueue : MonoBehaviour
         if (!loadNextLevelCalled)
         {
             loadNextLevelCalled = true;
-            if (levelConector != null)
+            if (loadingSystem != null)
             {
-                levelConector.LoadNextLexel();
+                loadingSystem.LoadNextLexel();
             }
         }
     }

@@ -7,7 +7,7 @@ public class ResetCollider : MonoBehaviour
     [SerializeField] private GameObject ground;
     [SerializeField] private GameObject player;
     [SerializeField] private PlateMoveDown[] objectsToMove;
-    [SerializeField] private LevelConector levelConector;
+    [SerializeField] private LoadingSystem loadingSystem;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -35,7 +35,7 @@ public class ResetCollider : MonoBehaviour
     private IEnumerator ResetDealy()
     {
         yield return new WaitForSeconds(2f);
-        levelConector.ResetThisLevel();
+        loadingSystem.ResetThisLevel();
     }
 
     [ContextMenu("Add PlateMoveDown To Move Objects")]

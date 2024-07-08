@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SceneData_Level_2
   m_EditorClassIdentifier: 
   sceneName: Level 2
-  sceneIndex: 6
+  sceneIndex: 5
   stageString: Stage 2
