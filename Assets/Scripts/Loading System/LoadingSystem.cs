@@ -55,7 +55,6 @@ public class LoadingSystem : MonoBehaviour
 
         SceneManager.UnloadSceneAsync(thisSceneName.sceneIndex);
 
-       // yield return StartCoroutine(FadeToClear());
     }
 
     public void ResetThisLevel()
@@ -65,7 +64,7 @@ public class LoadingSystem : MonoBehaviour
 
     private IEnumerator ResetCurretLevel(SceneData sceneData, SceneData thisSceneData)
     {
-
+        yield return StartCoroutine(FadeToBlack());
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
         asyncLoad.allowSceneActivation = false;
 
@@ -98,7 +97,7 @@ public class LoadingSystem : MonoBehaviour
     private IEnumerator ReturnToMainMenu(SceneData mainMenuSceneData, SceneData thisSceneData)
     {
         Time.timeScale = 1f;
-
+        yield return StartCoroutine(FadeToBlack());
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuSceneData.sceneIndex, LoadSceneMode.Additive);
 

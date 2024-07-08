@@ -2,27 +2,12 @@ using UnityEngine;
 
 public class Meta : VisableCollider
 {
-    [SerializeField] private GameObject targetPlayer;
     [SerializeField] private Player player;
-
-    private Collider thisCollider;
-    private Collider targetCollider;
-    private DisappearAnimation disappearAnimation;
-    private SpiralMovement spiralMovement;
-
+    [SerializeField] private Collider thisCollider;
+    [SerializeField] private Collider playerCollider;
+    [SerializeField] private DisappearAnimation disappearAnimation;
+    [SerializeField] private SpiralMovement spiralMovement;
     private bool isMatched = false;
-
-    void Start()
-    {
-        thisCollider = GetComponent<Collider>();
-        targetCollider = targetPlayer.GetComponent<Collider>();
-        if (transform.childCount > 0)
-        {
-            Transform childTransform = transform.GetChild(0);
-            disappearAnimation = childTransform.GetComponent<DisappearAnimation>();
-        }
-        spiralMovement = GetComponent<SpiralMovement>();
-    }
 
     void Update()
     {
@@ -38,7 +23,7 @@ public class Meta : VisableCollider
     }
     void CheckForMatch()
     {
-        if (IsColliderMatched(thisCollider, targetCollider))
+        if (IsColliderMatched(thisCollider, playerCollider))
         {
             Debug.Log("Go to the Next Level");
             spiralMovement.Play();
