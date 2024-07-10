@@ -285,11 +285,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &933920074 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8700458848709682688, guid: 75702492078adce4d925c2b238228657, type: 3}
-  m_PrefabInstance: {fileID: 5852963350110798847}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1298624574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,22 +322,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1904273413908580208, guid: 75702492078adce4d925c2b238228657, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2148172415985674354, guid: 75702492078adce4d925c2b238228657, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316110395360512973, guid: 75702492078adce4d925c2b238228657, type: 3}
-      propertyPath: marginOfError
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316110395360512973, guid: 75702492078adce4d925c2b238228657, type: 3}
-      propertyPath: targetPosition
-      value: 
-      objectReference: {fileID: 933920074}
     - target: {fileID: 4688428937381274977, guid: 75702492078adce4d925c2b238228657, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

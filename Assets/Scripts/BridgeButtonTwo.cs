@@ -6,7 +6,7 @@ public class BridgeButtonTwo : VisableCollider
     [SerializeField] private GameObject bridge;
     [SerializeField] private GameObject restetCollider;
     private bool bridgeIsOpen = false;
-    private readonly float delayBeforeMatch = 0.15f;
+    private readonly float delayBeforeMatch = 0.11f;
     private float timeSinceMatched = 0f;
     private readonly float positionMarginOfError = 0.001f;
     private readonly float rotationMarginOfError = 0.001f;
