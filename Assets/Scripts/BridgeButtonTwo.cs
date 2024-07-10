@@ -2,45 +2,59 @@ using UnityEngine;
 
 public class BridgeButtonTwo : VisableCollider
 {
-    [SerializeField] private Transform targetPlayer;
-    [SerializeField] private Player player;
+    [SerializeField] private Transform player;
     [SerializeField] private GameObject bridge;
     [SerializeField] private GameObject restetCollider;
-    private Collider thisCollider;
-    private Collider targetCollider;
-    private bool isBridgeOpened = false;  // Flaga do kontrolowania stanu mostu
-
-    void Start()
-    {
-        thisCollider = GetComponent<Collider>();
-        targetCollider = targetPlayer.GetComponent<Collider>();
-    }
+    private bool bridgeIsOpen = false;
+    private readonly float delayBeforeMatch = 0.15f;
+    private float timeSinceMatched = 0f;
+    private readonly float positionMarginOfError = 0.001f;
+    private readonly float rotationMarginOfError = 0.001f;
 
     void Update()
     {
-        CheckForMatch();
-    }
-
-    void CheckForMatch()
-    {
-        if (IsColliderMatched(thisCollider, targetCollider))
+        if (!bridgeIsOpen && IsPositionMatched() && IsRotationMatched())
         {
-            if (!isBridgeOpened)
+            timeSinceMatched += Time.deltaTime;
+
+            if (timeSinceMatched >= delayBeforeMatch)
             {
-                Debug.Log("You open bridge");
-                ToggleObject();
-                isBridgeOpened = true; 
+                CheckForMatch();
             }
         }
-        else
+        else if (!IsPositionMatched() || !IsRotationMatched())
         {
-            isBridgeOpened = false; 
+            bridgeIsOpen = false;
         }
     }
 
-    bool IsColliderMatched(Collider col1, Collider col2)
+    bool IsPositionMatched()
     {
-        return col1.bounds.center == col2.bounds.center && col1.bounds.size == col2.bounds.size;
+        return Vector3.Distance(player.transform.position, transform.position) < positionMarginOfError;
+    }
+
+    bool IsRotationMatched()
+    {
+        Vector3 playerEulerAngles = player.transform.rotation.eulerAngles;
+
+        bool isXMatched = IsWithinMargin(playerEulerAngles.x, 0) || IsWithinMargin(playerEulerAngles.x, 180);
+
+        bool isYMatched = IsWithinMargin(playerEulerAngles.y, 0) || IsWithinMargin(playerEulerAngles.y, 90) ||
+                          IsWithinMargin(playerEulerAngles.y, 180) || IsWithinMargin(playerEulerAngles.y, 270) ||
+                          IsWithinMargin(playerEulerAngles.y, 360);
+
+        return isXMatched && isYMatched;
+    }
+
+    bool IsWithinMargin(float angle, float target)
+    {
+        return Mathf.Abs(Mathf.DeltaAngle(angle, target)) < rotationMarginOfError;
+    }
+
+    private void CheckForMatch()
+    {
+        ToggleObject();
+        bridgeIsOpen = true;
     }
 
     private void ToggleObject()

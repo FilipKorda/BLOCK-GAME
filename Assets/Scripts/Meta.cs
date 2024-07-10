@@ -3,40 +3,56 @@ using UnityEngine;
 public class Meta : VisableCollider
 {
     [SerializeField] private Player player;
-    [SerializeField] private Collider thisCollider;
-    [SerializeField] private Collider playerCollider;
     [SerializeField] private DisappearAnimation disappearAnimation;
     [SerializeField] private SpiralMovement spiralMovement;
-    private bool isMatched = false;
+    private readonly float positionMarginOfError = 0.001f;
+    private readonly float rotationMarginOfError = 0.001f;
+    private readonly float delayBeforeMatch = 0.11f;
+    private float timeSinceMatched = 0f;
+    private bool isMatched;
 
     void Update()
     {
-        if (!isMatched)
+        if (IsPositionMatched() && IsRotationMatched())
         {
-            CheckForMatch();
+            timeSinceMatched += Time.deltaTime;
+            if (!isMatched && timeSinceMatched >= delayBeforeMatch)
+            {
+                CheckForMatch();
+            }
         }
-        else
-        {
-            disappearAnimation.PlayDisappearAnimation();
+    }
 
-        }
-    }
-    void CheckForMatch()
+    bool IsPositionMatched()
     {
-        if (IsColliderMatched(thisCollider, playerCollider))
-        {
-            Debug.Log("Go to the Next Level");
-            spiralMovement.Play();
-            player.canMove = false;
-            isMatched = true;
-        }
-        else
-        {
-            isMatched = false;
-        }
+        return Vector3.Distance(player.transform.position, transform.position) < positionMarginOfError;
     }
-    bool IsColliderMatched(Collider col1, Collider col2)
+
+    bool IsRotationMatched()
     {
-        return col1.bounds.center == col2.bounds.center && col1.bounds.size == col2.bounds.size;
+        Vector3 playerEulerAngles = player.transform.rotation.eulerAngles;
+
+        bool isXMatched = IsWithinMargin(playerEulerAngles.x, 0) || IsWithinMargin(playerEulerAngles.x, 180);
+
+        bool isYMatched = IsWithinMargin(playerEulerAngles.y, 0) || IsWithinMargin(playerEulerAngles.y, 90) ||
+                          IsWithinMargin(playerEulerAngles.y, 180) || IsWithinMargin(playerEulerAngles.y, 270) ||
+                          IsWithinMargin(playerEulerAngles.y, 360);
+
+        return isXMatched && isYMatched;
     }
+
+    bool IsWithinMargin(float angle, float target)
+    {
+        return Mathf.Abs(Mathf.DeltaAngle(angle, target)) < rotationMarginOfError;
+    }
+
+    private void CheckForMatch()
+    {
+        Debug.Log("Go to the Next Level");
+        spiralMovement.Play();
+        player.canMove = false;
+        disappearAnimation.PlayDisappearAnimation();
+        isMatched = true;
+    }
+
 }

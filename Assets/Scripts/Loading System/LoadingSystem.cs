@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class LoadingSystem : MonoBehaviour
 {
@@ -127,7 +128,6 @@ public class LoadingSystem : MonoBehaviour
 
     }
 
-
     private IEnumerator FadeToBlack()
     {
         yield return new WaitForSeconds(0.5f);
@@ -162,6 +162,11 @@ public class LoadingSystem : MonoBehaviour
                 yield return null;
             }
         }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
 
