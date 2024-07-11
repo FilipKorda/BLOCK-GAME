@@ -16,6 +16,16 @@ public class MoveTracker : MonoBehaviour
         GameManager.Instance.moveCount++;
         UpdateMoveCountText();
     }
+    
+    public void ShowMoves()
+    {
+        textMeshPro.gameObject.SetActive(true);
+    }
+
+    public void HideMoves()
+    {
+        textMeshPro.gameObject.SetActive(false);
+    }
 
     private void UpdateMoveCountText()
     {

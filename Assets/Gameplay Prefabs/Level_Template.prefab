@@ -547,7 +547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 7470587031197762807}
-  moveCount: 0
 --- !u!1 &2967942658175335350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1184,7 @@ MonoBehaviour:
   fadeDuration: 1
   loadingHandel: {fileID: 9152170811791841164}
   stageText: {fileID: 4652378650468028737}
+  moveTracker: {fileID: 2208470088210471557}
   sceneToLoad: {fileID: 11400000, guid: 8cbe1057c2f57d849ad49640e2ce590b, type: 2}
   sceneToUnload: {fileID: 11400000, guid: e6b1571570fc8004d9e89e03be0e20a3, type: 2}
   thisSceneToLoad: {fileID: 11400000, guid: e6b1571570fc8004d9e89e03be0e20a3, type: 2}
@@ -1363,7 +1363,6 @@ MonoBehaviour:
   speed: 1
   fallDownSpeed: 1
   loadingSystem: {fileID: 7579606639605957180}
-  moveTracker: {fileID: 2208470088210471557}
 --- !u!1 &5691275614440512232
 GameObject:
   m_ObjectHideFlags: 0
