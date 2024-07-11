@@ -2,20 +2,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
-using Unity.VisualScripting;
+using TMPro;
 
 public class LoadingSystem : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
     [SerializeField] private GameObject loadingHandel;
+    [SerializeField] private TextMeshProUGUI stageText;
     [Header("===========  Load Next Level  ===========")]
     public SceneData sceneToLoad;
     public SceneData sceneToUnload;
     [Header("===========   Restart This Level   ===========")]
-    public SceneData thisSceneToLoad;  
+    public SceneData thisSceneToLoad;
+    private bool isResetingLevel;
     [Header("===========   Load Main Menu   ===========")]
     public SceneData mainMenuToLoad;
+    private bool returnToMainMenu;
 
     public SceneData thisSceneToUnload;
 
@@ -65,6 +68,7 @@ public class LoadingSystem : MonoBehaviour
 
     private IEnumerator ResetCurretLevel(SceneData sceneData, SceneData thisSceneData)
     {
+        isResetingLevel = true;
         yield return StartCoroutine(FadeToBlack());
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
         asyncLoad.allowSceneActivation = false;
@@ -87,7 +91,7 @@ public class LoadingSystem : MonoBehaviour
 
 
         SceneManager.UnloadSceneAsync(thisSceneData.sceneIndex);
-
+        isResetingLevel = false;
     }
 
     public void GoBackToMainMenu()
@@ -97,18 +101,17 @@ public class LoadingSystem : MonoBehaviour
 
     private IEnumerator ReturnToMainMenu(SceneData mainMenuSceneData, SceneData thisSceneData)
     {
+        returnToMainMenu = true;
         Time.timeScale = 1f;
+        PauseMenu.GameIsPaused = false;
         yield return StartCoroutine(FadeToBlack());
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuSceneData.sceneIndex, LoadSceneMode.Additive);
-
-      
 
         asyncLoad.allowSceneActivation = false;
 
         float minimumLoadTime = 1f;
         float loadStartTime = Time.time;
-
 
         while ((Time.time - loadStartTime) < minimumLoadTime)
         {
@@ -122,16 +125,15 @@ public class LoadingSystem : MonoBehaviour
             yield return null;
         }
 
-
         SceneManager.UnloadSceneAsync(thisSceneData.sceneIndex);
 
-
+        returnToMainMenu = false;
     }
 
     private IEnumerator FadeToBlack()
     {
         yield return new WaitForSeconds(0.5f);
-           
+
         if (fadeImage != null)
         {
             float elapsedTime = 0f;
@@ -142,6 +144,17 @@ public class LoadingSystem : MonoBehaviour
                 float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
                 fadeImage.color = new Color(0f, 0f, 0f, alpha);
                 loadingHandel.SetActive(true);
+                if(!returnToMainMenu)
+                {
+                    if (isResetingLevel)
+                    {
+                        ResetShowStageText();
+                    }
+                    else
+                    {
+                        ShowStageText();
+                    }
+                }              
                 yield return null;
             }
         }
@@ -159,9 +172,28 @@ public class LoadingSystem : MonoBehaviour
                 float alpha = Mathf.Clamp01(1f - (elapsedTime / fadeDuration));
                 fadeImage.color = new Color(0f, 0f, 0f, alpha);
                 loadingHandel.SetActive(false);
+                HideStageText();
                 yield return null;
             }
         }
+    }
+
+    public void ShowStageText()
+    {
+        if (stageText != null)
+            stageText.text = sceneToLoad.stageString;
+    }
+
+    private void ResetShowStageText()
+    {
+        if (stageText != null)
+            stageText.text = thisSceneToLoad.stageString;
+    }
+
+    public void HideStageText()
+    {
+        if (stageText != null)
+            stageText.text = "";
     }
 
     public void Quit()

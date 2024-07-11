@@ -5,7 +5,7 @@ using UnityEngine;
 public class DisappearAnimation : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private float speed = 0.1f;
+    [SerializeField] private float speed = 1f;
     [SerializeField] private float fallDownSpeed = 0.04f;
     [SerializeField] private LoadingSystem loadingSystem;
 
@@ -27,7 +27,7 @@ public class DisappearAnimation : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && player.transform.position.y < -2.199f)
+        if (collision.gameObject.CompareTag("Player") && player.transform.position.y < -2f)
         {
             Debug.Log("Collided with DisableSetActiveCollider and position Y is less than -2f");
             player.SetActive(false);
