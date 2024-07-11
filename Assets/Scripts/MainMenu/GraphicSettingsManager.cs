@@ -16,7 +16,7 @@ public class GraphicSettingsManager : MonoBehaviour
 
     public Button resolutionButton;
     public TextMeshProUGUI resolutionButtonText;
-    private string[] resolutionArray = { "1280x720", "1280x1024", "1600x1200", "1920x1080" };
+    private string[] resolutionArray = { "1280x720", "1366x768", "1600x900", "1920x1080", "2560x1440" };
 
     private int currentResolutionIndex;
 
