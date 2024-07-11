@@ -8,6 +8,7 @@ public class DisappearAnimation : MonoBehaviour
     [SerializeField] private float speed = 1f;
     [SerializeField] private float fallDownSpeed = 0.04f;
     [SerializeField] private LoadingSystem loadingSystem;
+    [SerializeField] private MoveTracker moveTracker;
 
     public void PlayDisappearAnimation()
     {
@@ -32,6 +33,7 @@ public class DisappearAnimation : MonoBehaviour
             Debug.Log("Collided with DisableSetActiveCollider and position Y is less than -2f");
             player.SetActive(false);
             loadingSystem.LoadNextLexel();
+            moveTracker.textMeshPro.gameObject.SetActive(false);
         }
     }
 

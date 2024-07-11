@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -18,8 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector3 forceDirection_D = new(10, -10, 0);
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
-    private MovesManager movesManager;
-
+    [SerializeField] private MoveTracker moveTracker;
     void Start()
     {
         isRotating = false;
@@ -27,8 +25,6 @@ public class Player : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
-        //movesManager.textMeshPro.gameObject.SetActive(true);
-
     }
 
     void Update()
@@ -42,8 +38,7 @@ public class Player : MonoBehaviour
                 {
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
-                    //movesManager.moveCount++;
-                   // movesManager.textMeshPro.text = $"{movesManager.moveCount}";
+                    moveTracker.AddMove();
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
