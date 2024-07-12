@@ -1,71 +1,63 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UIElements;
+
 public class TrappedPlate : VisableCollider
 {
-   
-    [SerializeField] private Transform targetPlayer;
-    [SerializeField] private float moveDistance = 5f; 
-    [SerializeField] private float moveDuration = 1f;
-
-    [SerializeField] private Transform targetPlate;
-    [SerializeField] private float movePlateDistance = 2f;
-    [SerializeField] private float movePlateDuration = 1f;
-    [SerializeField] private float rotateDuration = 1f;
+    [SerializeField] private float moveDistance = 30f;
+    [SerializeField] private float moveDuration = 2f;
+    [SerializeField] private GameObject targetPlate;
+    [SerializeField] private float movePlateDistance = 31f;
+    [SerializeField] private float movePlateDuration = 2f;
+    [SerializeField] private float rotateDuration = 10f;
 
     [SerializeField] private Player player;
-    [SerializeField] private Collider thisSecomdCollider;
-    private Collider thisCollider;
-    private Collider targetCollider;
-    private bool isMatched = false;
+    [SerializeField] private Collider playerCollider;
+    [SerializeField] private Collider trappedPlateCollider;
+    private bool colliderMatech;
 
-    void Start()
+    private void Start()
     {
-        thisCollider = GetComponent<Collider>();
-        targetCollider = targetPlayer.GetComponent<Collider>();
+        trappedPlateCollider.enabled = false;
     }
 
-    void Update()
+    private void Update()
     {
-        if (!isMatched)
+        if (!colliderMatech && AreTransformsAtSamePosition(player.transform, trappedPlateCollider.transform))
         {
-            CheckForMatch();
-        }
-        else
-        {
-            MovePlateDown();
-            MovePlayerDown();
+            trappedPlateCollider.enabled = true;
+            colliderMatech = true;          
         }
     }
-    void CheckForMatch()
+
+    void OnTriggerEnter(Collider other)
     {
-        if (IsColliderMatched(thisCollider, targetCollider))
+        if (other == playerCollider)
         {
-            Debug.Log("You got trapped");
-            thisCollider.enabled = false;
-            thisSecomdCollider.enabled = false;
-            player.canMove = false;
-            isMatched = true;
-        }
-        else
-        {
-            isMatched = false;
+            if (player.gameObject.transform.position == trappedPlateCollider.transform.position)
+            {               
+                player.canMove = false;
+                Debug.Log("spadasz");
+            }
         }
     }
-    bool IsColliderMatched(Collider col1, Collider col2)
+
+    bool AreTransformsAtSamePosition(Transform t1, Transform t2)
     {
-        return col1.bounds.center == col2.bounds.center && col1.bounds.size == col2.bounds.size;
+        return t1.position == t2.position;
     }
+
     void MovePlateDown()
     {
-        Vector3 endPosition = targetPlate.position - Vector3.up * movePlateDistance;
+        Vector3 endPosition = targetPlate.transform.position - Vector3.up * movePlateDistance;
         Sequence sequence = DOTween.Sequence();
-        sequence.Append(targetPlate.DOMove(endPosition, movePlateDuration)); 
-        sequence.Join(targetPlate.DORotate(new Vector3(180f, 180f, -180f), rotateDuration, RotateMode.LocalAxisAdd));
+        sequence.Append(targetPlate.transform.DOMove(endPosition, movePlateDuration));
+        sequence.Join(targetPlate.transform.DORotate(new Vector3(180f, 180f, -180f), rotateDuration, RotateMode.LocalAxisAdd));
         sequence.Play();
     }
     void MovePlayerDown()
     {
-        Vector3 endPosition = targetPlayer.position - Vector3.up * moveDistance;
-        targetPlayer.DOMove(endPosition, moveDuration);
+        Vector3 endPosition = player.transform.position - Vector3.up * moveDistance;
+        player.transform.DOMove(endPosition, moveDuration);
     }
 }

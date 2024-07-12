@@ -48,7 +48,6 @@ public class Meta : VisableCollider
 
     private void CheckForMatch()
     {
-        Debug.Log("Go to the Next Level");
         spiralMovement.Play();
         player.canMove = false;
         disappearAnimation.PlayDisappearAnimation();

@@ -38,6 +38,8 @@ public class LoadingSystem : MonoBehaviour
     {
         yield return StartCoroutine(FadeToBlack());
 
+        Debug.Log("Load: " + sceneData.stageString);
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
 
         asyncLoad.allowSceneActivation = false;
@@ -64,10 +66,10 @@ public class LoadingSystem : MonoBehaviour
 
     public void ResetThisLevel()
     {
-        StartCoroutine(ResetCurretLevel(thisSceneToLoad, thisSceneToUnload));
+        StartCoroutine(ResetThisLevel(thisSceneToLoad, thisSceneToUnload));
     }
 
-    private IEnumerator ResetCurretLevel(SceneData sceneData, SceneData thisSceneData)
+    private IEnumerator ResetThisLevel(SceneData sceneData, SceneData thisSceneData)
     {
         isResetingLevel = true;
         yield return StartCoroutine(FadeToBlack());

@@ -1898,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3263872429875944418, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451443998483126214, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 293.94598
@@ -1939,9 +1943,17 @@ PrefabInstance:
       value: -52.97699
       objectReference: {fileID: 0}
     - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 1454935078973457826}
+    - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: restetCollider
       value: 
       objectReference: {fileID: 8754156605943197359}
+    - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: crossPlateCollider
+      value: 
+      objectReference: {fileID: 9138558946797267326}
     - target: {fileID: 5654058020630161774, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5
@@ -2521,6 +2533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f4c64d0966c6040999911bb7fd7067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1454935078973457826 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1790872707718861742, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+  m_PrefabInstance: {fileID: 930699775730357772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1552713401733260427 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1830390127008756359, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
@@ -2778,6 +2795,11 @@ GameObject:
 --- !u!1 &8981946629335487395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8092065132030363055, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+  m_PrefabInstance: {fileID: 930699775730357772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &9138558946797267326 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8230377189072191346, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
   m_PrefabInstance: {fileID: 930699775730357772}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1207431803923921436

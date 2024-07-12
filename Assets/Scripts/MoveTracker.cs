@@ -13,7 +13,10 @@ public class MoveTracker : MonoBehaviour
 
     public void AddMove()
     {
-        GameManager.Instance.moveCount++;
+        if(GameManager.Instance != null)
+        {
+            GameManager.Instance.moveCount++;
+        }
         UpdateMoveCountText();
     }
     
@@ -29,7 +32,7 @@ public class MoveTracker : MonoBehaviour
 
     private void UpdateMoveCountText()
     {
-        if (textMeshPro != null)
+        if (textMeshPro != null && GameManager.Instance != null)
         {
             textMeshPro.text = $"{GameManager.Instance.moveCount}";
         }

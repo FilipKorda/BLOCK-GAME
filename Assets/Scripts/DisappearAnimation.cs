@@ -29,7 +29,6 @@ public class DisappearAnimation : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && player.transform.position.y < -2f)
         {
-            Debug.Log("Collided with DisableSetActiveCollider and position Y is less than -2f");
             player.SetActive(false);
             loadingSystem.LoadNextLexel();         
         }

@@ -1624,7 +1624,8 @@ MonoBehaviour:
   fadeDuration: 1
   loadingHandel: {fileID: 1929563247}
   stageText: {fileID: 2084113934}
-  sceneToLoad: {fileID: 11400000, guid: e6b1571570fc8004d9e89e03be0e20a3, type: 2}
+  moveTracker: {fileID: 0}
+  sceneToLoad: {fileID: 11400000, guid: 8cbe1057c2f57d849ad49640e2ce590b, type: 2}
   sceneToUnload: {fileID: 11400000, guid: 0bd34fd1903a40443b768f9222d5ef21, type: 2}
   thisSceneToLoad: {fileID: 11400000, guid: 0bd34fd1903a40443b768f9222d5ef21, type: 2}
   mainMenuToLoad: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
