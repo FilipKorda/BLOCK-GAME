@@ -127,7 +127,7 @@ MonoBehaviour:
   resetCollider: {fileID: 0}
   bridgeIsOpen: 0
   playerCollider: {fileID: 0}
-  crossPlateCollider: {fileID: 0}
+  crossPlateCollider: {fileID: 5031148441629149109}
   originalPosition: {x: 0, y: -0.1, z: -3}
   destinationPosition: {x: 2, y: -0.1, z: -3}
   transitionDuration: 0.1
