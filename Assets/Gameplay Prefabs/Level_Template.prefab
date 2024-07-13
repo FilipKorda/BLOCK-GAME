@@ -843,7 +843,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -868,6 +868,8 @@ MonoBehaviour:
   player: {fileID: 1488980393954920055}
   disappearAnimation: {fileID: 4836176027974315615}
   spiralMovement: {fileID: 6449964952983652613}
+  playerCollider: {fileID: 1790872707718861742}
+  metaCollider: {fileID: 845832212734889685}
 --- !u!114 &6449964952983652613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,6 +2425,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b586c40cbe52dba4eb9eb70620cb50d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1790872707718861742 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2201656616724886156, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
+  m_PrefabInstance: {fileID: 457025451613757730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5116559297477161786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4707956682101690904, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
@@ -4498,6 +4505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8098829495795093034, guid: 741410b776cef0a4f87da1ceecaafc7b, type: 3}
+      propertyPath: restetCollider
+      value: 
+      objectReference: {fileID: 8543100476841857454}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -4,10 +4,10 @@ using UnityEngine.UIElements;
 
 public class TrappedPlate : VisableCollider
 {
-    [SerializeField] private float moveDistance = 30f;
+    [SerializeField] private float moveDistance = 20f;
     [SerializeField] private float moveDuration = 2f;
     [SerializeField] private GameObject targetPlate;
-    [SerializeField] private float movePlateDistance = 31f;
+    [SerializeField] private float movePlateDistance = 21f;
     [SerializeField] private float movePlateDuration = 2f;
     [SerializeField] private float rotateDuration = 10f;
 
@@ -26,7 +26,7 @@ public class TrappedPlate : VisableCollider
         if (!colliderMatech && AreTransformsAtSamePosition(player.transform, trappedPlateCollider.transform))
         {
             trappedPlateCollider.enabled = true;
-            colliderMatech = true;          
+            colliderMatech = true;
         }
     }
 
@@ -35,9 +35,11 @@ public class TrappedPlate : VisableCollider
         if (other == playerCollider)
         {
             if (player.gameObject.transform.position == trappedPlateCollider.transform.position)
-            {               
+            {
                 player.canMove = false;
                 Debug.Log("spadasz");
+                MovePlateDown();
+                MovePlayerDown();
             }
         }
     }

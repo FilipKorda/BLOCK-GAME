@@ -1574,6 +1574,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 286343217220444401, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000032186506
+      objectReference: {fileID: 0}
+    - target: {fileID: 286343217220444401, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 423931331708171591, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_Name
       value: Level_Template
@@ -1608,11 +1616,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629450176204529615, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.777778
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 629450176204529615, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.2222223
+      propertyPath: m_LocalPosition.y
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 629450176204529615, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1629,6 +1637,14 @@ PrefabInstance:
     - target: {fileID: 761029347394284241, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 293.94598
+      objectReference: {fileID: 0}
+    - target: {fileID: 878865826570812580, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 878865826570812580, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 903517775938515022, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1874,6 +1890,14 @@ PrefabInstance:
       propertyPath: objectsToMove.Array.data[57]
       value: 
       objectReference: {fileID: 8008258944417895388}
+    - target: {fileID: 2115870884954825935, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000032186506
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115870884954825935, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2228912342339454693, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -52.97699
@@ -1882,6 +1906,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2887492763020730105, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: resetCollider
+      value: 
+      objectReference: {fileID: 5618725809955930967}
+    - target: {fileID: 2887492763020730105, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: restetCollider
+      value: 
+      objectReference: {fileID: 5618725809955930967}
     - target: {fileID: 3022025981659657132, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -1915,12 +1947,8 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4016210451305048089, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016210451305048089, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.75
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4016210451305048089, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1942,6 +1970,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -52.97699
       objectReference: {fileID: 0}
+    - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: resetCollider
+      value: 
+      objectReference: {fileID: 8754156605943197359}
     - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: playerCollider
       value: 

@@ -122,12 +122,12 @@ MonoBehaviour:
   isCollider: 0
   isTrappedPlate: 1
   isBridgePlate: 0
-  moveDistance: 30
+  moveDistance: 22.5
   moveDuration: 2
   targetPlate: {fileID: 7310379222514919160}
-  movePlateDistance: 31
+  movePlateDistance: 25
   movePlateDuration: 2
-  rotateDuration: 10
+  rotateDuration: 15
   player: {fileID: 0}
   playerCollider: {fileID: 0}
   trappedPlateCollider: {fileID: 2482549512463616272}
