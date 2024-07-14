@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class CubeMovement : MonoBehaviour
 {
     private readonly float rotationSpeed = 750f;
     private float totalRotation;
     private bool isRotating;
-    private Direction rotationDirection;
-    public Vector3 pivot, axis, scale;
+    private CubeDirection rotationDirection;
+    private Vector3 pivot, axis, scale;
     private Rigidbody rb;
     [Header("Player Menagment")]
     public bool canMove;
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     {
         isRotating = false;
         canMove = true;
-        scale = transform.localScale / 2f;             
+        scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
     }
@@ -41,15 +41,15 @@ public class Player : MonoBehaviour
                     isRotating = false;
                     moveTracker.AddMove();
                 }
-                if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
+                if ((rotationDirection == CubeDirection.A) || (rotationDirection == CubeDirection.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
                 else transform.RotateAround(pivot, axis, -deltaRotation);
                 totalRotation += deltaRotation;
             }
-            else if (Input.GetKeyDown(KeyCode.W)) Rotate(Direction.W);
-            else if (Input.GetKeyDown(KeyCode.A)) Rotate(Direction.A);
-            else if (Input.GetKeyDown(KeyCode.S)) Rotate(Direction.S);
-            else if (Input.GetKeyDown(KeyCode.D)) Rotate(Direction.D);
+            else if (Input.GetKeyDown(KeyCode.W)) Rotate(CubeDirection.W);
+            else if (Input.GetKeyDown(KeyCode.A)) Rotate(CubeDirection.A);
+            else if (Input.GetKeyDown(KeyCode.S)) Rotate(CubeDirection.S);
+            else if (Input.GetKeyDown(KeyCode.D)) Rotate(CubeDirection.D);
             if (!isRotating)
             {
                 //SnapPosition();
@@ -58,27 +58,27 @@ public class Player : MonoBehaviour
 
     }
 
-    void Rotate(Direction direction)
+    void Rotate(CubeDirection direction)
     {
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
         switch (rotationDirection)
         {
-            case Direction.D:
+            case CubeDirection.D:
                 pivot = transform.position + new Vector3(scale.x, -scale.y, 0);
                 break;
-            case Direction.A:
+            case CubeDirection.A:
                 pivot = transform.position + new Vector3(-scale.x, -scale.y, 0);
                 break;
-            case Direction.W:
+            case CubeDirection.W:
                 pivot = transform.position + new Vector3(0, -scale.y, scale.z);
                 break;
-            case Direction.S:
+            case CubeDirection.S:
                 pivot = transform.position + new Vector3(0, -scale.y, -scale.z);
                 break;
         }
-        if ((rotationDirection == Direction.D) || (rotationDirection == Direction.A))
+        if ((rotationDirection == CubeDirection.D) || (rotationDirection == CubeDirection.A))
         {
             axis = Vector3.forward;
             (scale.y, scale.x) = (scale.x, scale.y);
@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
     }
 }
 
-public enum Direction
+public enum CubeDirection
 {
     W,
     S,

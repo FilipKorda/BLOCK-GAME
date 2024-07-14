@@ -98,6 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b586c40cbe52dba4eb9eb70620cb50d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pivot: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: 0}
+  scale: {x: 0, y: 0, z: 0}
   canMove: 0
   forceDirection_W: {x: 0, y: -10, z: 10}
   forceDirection_A: {x: -10, y: -10, z: 0}
@@ -106,7 +109,7 @@ MonoBehaviour:
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  textMeshPro: {fileID: 0}
+  moveTracker: {fileID: 0}
 --- !u!65 &2201656616724886156
 BoxCollider:
   m_ObjectHideFlags: 0

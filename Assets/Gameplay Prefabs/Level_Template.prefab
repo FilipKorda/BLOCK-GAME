@@ -502,6 +502,7 @@ MonoBehaviour:
   isCollider: 1
   isTrappedPlate: 0
   isBridgePlate: 0
+  isSplitPlate: 0
 --- !u!1 &1997551686657881053
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +866,7 @@ MonoBehaviour:
   isCollider: 0
   isTrappedPlate: 0
   isBridgePlate: 0
+  isSplitPlate: 0
   player: {fileID: 1488980393954920055}
   disappearAnimation: {fileID: 4836176027974315615}
   spiralMovement: {fileID: 6449964952983652613}
@@ -1801,6 +1803,7 @@ MonoBehaviour:
   isCollider: 1
   isTrappedPlate: 0
   isBridgePlate: 0
+  isSplitPlate: 0
 --- !u!1 &6855378153276605347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2008,7 @@ MonoBehaviour:
   isCollider: 1
   isTrappedPlate: 0
   isBridgePlate: 0
+  isSplitPlate: 0
 --- !u!1 &8543100476841857454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2315,7 @@ MonoBehaviour:
   isCollider: 1
   isTrappedPlate: 0
   isBridgePlate: 0
+  isSplitPlate: 0
 --- !u!1 &9152170811791841164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,10 +2363,6 @@ PrefabInstance:
     - target: {fileID: 347822873513603274, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 347822873513603274, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 347822873513603274, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
       propertyPath: m_LocalPosition.z
