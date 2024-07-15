@@ -1637,10 +1637,18 @@ PrefabInstance:
       propertyPath: twoCubeController
       value: 
       objectReference: {fileID: 5034437717150952230}
+    - target: {fileID: 1620476804529316852, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d9dde98781fed8478556c7c3a788e0a, type: 2}
     - target: {fileID: 7210067645559360037, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: m_Name
       value: Ground Two Cubes Button
       objectReference: {fileID: 0}
+    - target: {fileID: 7534189534535805848, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d9dde98781fed8478556c7c3a788e0a, type: 2}
     - target: {fileID: 8741227517722142001, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
