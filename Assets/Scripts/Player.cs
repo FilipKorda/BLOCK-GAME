@@ -8,22 +8,27 @@ public class Player : MonoBehaviour
     private Direction rotationDirection;
     public Vector3 pivot, axis, scale;
     private Rigidbody rb;
-    [Header("Player Menagment")]
+
+    [Header("Player Management")]
     public bool canMove;
-    [Header("Force Direction`s")]
+
+    [Header("Force Directions")]
     [SerializeField] private Vector3 forceDirection_W = new(0, -10, 10);
     [SerializeField] private Vector3 forceDirection_A = new(-10, -10, 0);
     [SerializeField] private Vector3 forceDirection_S = new(0, -10, -10);
     [SerializeField] private Vector3 forceDirection_D = new(10, -10, 0);
+
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
+
     [SerializeField] private MoveTracker moveTracker;
+
 
     void Start()
     {
         isRotating = false;
         canMove = true;
-        scale = transform.localScale / 2f;             
+        scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
     }
@@ -50,10 +55,6 @@ public class Player : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.A)) Rotate(Direction.A);
             else if (Input.GetKeyDown(KeyCode.S)) Rotate(Direction.S);
             else if (Input.GetKeyDown(KeyCode.D)) Rotate(Direction.D);
-            if (!isRotating)
-            {
-                //SnapPosition();
-            }
         }
 
     }
@@ -63,6 +64,7 @@ public class Player : MonoBehaviour
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
+
         switch (rotationDirection)
         {
             case Direction.D:
@@ -89,19 +91,6 @@ public class Player : MonoBehaviour
             (scale.y, scale.z) = (scale.z, scale.y);
         }
     }
-    void SnapPosition()
-    {
-        Vector3 newPosition = transform.position;
-
-        newPosition.x = Mathf.Round(newPosition.x);
-        newPosition.z = Mathf.Round(newPosition.z);
-
-        newPosition.y = -scale.y;
-
-        transform.position = newPosition;
-    }
-
-
 
     void OnCollisionEnter(Collision collision)
     {
@@ -157,10 +146,12 @@ public class Player : MonoBehaviour
                value.y >= min.y && value.y <= max.y &&
                value.z >= min.z && value.z <= max.z;
     }
+
 }
 
 public enum Direction
 {
+    None,
     W,
     S,
     D,

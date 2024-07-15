@@ -12,7 +12,7 @@ public class TwoCubeController : MonoBehaviour
 
     private GameObject ActiveCube;
     private bool isCube1Active = true;
-    private readonly float positionOffset = 0.1f;
+    private readonly float positionOffset = 0.001f;
 
     void Start()
     {
@@ -60,8 +60,26 @@ public class TwoCubeController : MonoBehaviour
             Vector3 connectionPosition = CalculateConnectionPosition(positionCube1, positionCube2, dx, dy, dz);
             Debug.Log("Cube1 i Cube2 s¹ obok siebie! Pozycja po³¹czenia: " + connectionPosition);
 
-            player.transform.SetLocalPositionAndRotation(connectionPosition, Quaternion.Euler(0, 0, 90));
+            player.transform.position = connectionPosition;
+
+            //rotacja czerwonego gracza po z³¹czeniu siê
+            if (Mathf.Abs(dx - 1) <= positionOffset)
+            {
+                // Poziome po³¹czenie (na osi X)
+                player.transform.rotation = Quaternion.Euler(0, 0, 90);
+                player.scale = new Vector3(1f, 0.5f, 0.5f);
+            }        
+            else if (Mathf.Abs(dz - 1) <= positionOffset)
+            {
+                // Poziome po³¹czenie (na osi Z)
+                player.transform.rotation = Quaternion.Euler(0, 90, 90);
+                player.scale = new Vector3(0.5f, 0.5f, 1f);
+            }
+
             player.gameObject.SetActive(true);
+            player.pivot = new Vector3(0, 0, 0);
+            player.axis = new Vector3(0, 0, 0);
+
         }
     }
     Vector3 CalculateConnectionPosition(Vector3 pos1, Vector3 pos2, float dx, float dy, float dz)
@@ -78,6 +96,6 @@ public class TwoCubeController : MonoBehaviour
         {
             return new Vector3(pos1.x, pos1.y, (pos1.z + pos2.z) / 2);
         }
-        return Vector3.zero; // Powinno siê nigdy nie zdarzyæ, jeœli warunki s¹ poprawne
+        return Vector3.zero;
     }
 }
