@@ -18,6 +18,7 @@ public class CubeMovement : MonoBehaviour
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
     [SerializeField] private MoveTracker moveTracker;
+    [SerializeField] private TwoCubeController twoCubeController;
 
     void Start()
     {
@@ -40,6 +41,8 @@ public class CubeMovement : MonoBehaviour
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
                     moveTracker.AddMove();
+                    twoCubeController.DisableSelector();
+
                 }
                 if ((rotationDirection == CubeDirection.A) || (rotationDirection == CubeDirection.W))
                     transform.RotateAround(pivot, axis, deltaRotation);

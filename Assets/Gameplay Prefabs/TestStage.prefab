@@ -315,7 +315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181297602913407464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 423931331708171591, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_Name
@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 761029347394284241, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94595
+      value: 293.946
       objectReference: {fileID: 0}
     - target: {fileID: 1525312349780616672, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: objectsToMove.Array.data[0]
@@ -355,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451443998483126214, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94595
+      value: 293.946
       objectReference: {fileID: 0}
     - target: {fileID: 5654058020630161774, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186787297489918794, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94595
+      value: 293.946
       objectReference: {fileID: 0}
     - target: {fileID: 8507514687014791123, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalScale.z
@@ -1367,6 +1367,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7967967393286389599}
     m_Modifications:
+    - target: {fileID: 423945029169613566, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_Name
+      value: Selector_Canvas_1
+      objectReference: {fileID: 0}
     - target: {fileID: 459391428446832459, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1411,10 +1415,18 @@ PrefabInstance:
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 1428080230985930485}
+    - target: {fileID: 804581047917252843, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: moveTracker
+      value: 
+      objectReference: {fileID: 1428080230985930485}
     - target: {fileID: 2168000826932272911, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 1428080230985930485}
+    - target: {fileID: 3180484617199982715, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_Name
+      value: Selector_Image
+      objectReference: {fileID: 0}
     - target: {fileID: 5692926535304074764, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: moveTracker
       value: 
@@ -1423,6 +1435,10 @@ PrefabInstance:
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 1428080230985930485}
+    - target: {fileID: 7233885741808901099, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7613227995991433268, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: m_Name
       value: TwoCubeController
@@ -1431,12 +1447,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7838465402478630394, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085213483583208268, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_Name
+      value: Selector_Canvas_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445204836873982297, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_Name
+      value: Selector_Image
+      objectReference: {fileID: 0}
     - target: {fileID: 9110706832136804466, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1864045463167339015}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6901929307465676092, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
