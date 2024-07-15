@@ -53,10 +53,6 @@ public class CubeMovement : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.A)) Rotate(CubeDirection.A);
             else if (Input.GetKeyDown(KeyCode.S)) Rotate(CubeDirection.S);
             else if (Input.GetKeyDown(KeyCode.D)) Rotate(CubeDirection.D);
-            if (!isRotating)
-            {
-                //SnapPosition();
-            }
         }
 
     }
@@ -92,19 +88,6 @@ public class CubeMovement : MonoBehaviour
             (scale.y, scale.z) = (scale.z, scale.y);
         }
     }
-    void SnapPosition()
-    {
-        Vector3 newPosition = transform.position;
-
-        newPosition.x = Mathf.Round(newPosition.x);
-        newPosition.z = Mathf.Round(newPosition.z);
-
-        newPosition.y = -scale.y;
-
-        transform.position = newPosition;
-    }
-
-
 
     void OnCollisionEnter(Collision collision)
     {
@@ -149,7 +132,7 @@ public class CubeMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    void UnfreezeRotation()
+    public void UnfreezeRotation()
     {
         rb.constraints = RigidbodyConstraints.None;
     }

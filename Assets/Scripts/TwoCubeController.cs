@@ -5,6 +5,7 @@ public class TwoCubeController : MonoBehaviour
 {
     [SerializeField] private GameObject twoCubeController;
     [SerializeField] private Player player;
+    [SerializeField] private TwoCubesButton twoCubesButton;
     [Header("Cube 1")]
     [SerializeField] private GameObject cube1;
     [SerializeField] private CubeMovement cubeMovement1;
@@ -18,6 +19,8 @@ public class TwoCubeController : MonoBehaviour
     private GameObject ActiveCube;
     private bool isCube1Active = true;
     private readonly float positionOffset = 0.001f;
+    private Vector3 initialPositionCube1;
+    private Vector3 initialPositionCube2;
 
     void Start()
     {
@@ -25,7 +28,9 @@ public class TwoCubeController : MonoBehaviour
         ActiveCube = cube1;
         StartCoroutine(ActiveSelectorOnCube1(0.5f));
         cubeMovement2.enabled = false;
-        Debug.Log("Kontrola nad: Cube1");        
+        Debug.Log("Kontrola nad: Cube1");
+        initialPositionCube1 = cube1.transform.position;
+        initialPositionCube2 = cube2.transform.position;
     }
 
     void Update()
@@ -85,15 +90,19 @@ public class TwoCubeController : MonoBehaviour
                 // Poziome po³¹czenie (na osi X)
                 player.transform.rotation = Quaternion.Euler(0, 0, 90);
                 player.scale = new Vector3(1f, 0.5f, 0.5f);
+                LoadInitialPositions();
             }        
             else if (Mathf.Abs(dz - 1) <= positionOffset)
             {
                 // Poziome po³¹czenie (na osi Z)
                 player.transform.rotation = Quaternion.Euler(0, 90, 90);
                 player.scale = new Vector3(0.5f, 0.5f, 1f);
+                LoadInitialPositions();
             }
 
             player.gameObject.SetActive(true);
+            twoCubesButton.twoCubeButtonCollider.isTrigger = true;
+            twoCubesButton.twoCubeButtonCollider.enabled = false;
             player.pivot = new Vector3(0, 0, 0);
             player.axis = new Vector3(0, 0, 0);
 
@@ -115,6 +124,12 @@ public class TwoCubeController : MonoBehaviour
             return new Vector3(pos1.x, pos1.y, (pos1.z + pos2.z) / 2);
         }
         return Vector3.zero;
+    }
+
+    private void LoadInitialPositions()
+    {
+        cube1.transform.position = initialPositionCube1;
+        cube2.transform.position = initialPositionCube2;
     }
 
     #region LookAtCameraAndShowSelector

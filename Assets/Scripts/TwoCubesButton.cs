@@ -3,9 +3,9 @@ using UnityEngine;
 public class TwoCubesButton : VisableCollider
 {
     [SerializeField] private Player player;
-    [SerializeField] private Collider playerCollider;
-    [SerializeField] private Collider twoCubeButtonCollider;
+    [SerializeField] private Collider playerCollider;   
     [SerializeField] private TwoCubeController twoCubeController;
+    public Collider twoCubeButtonCollider;
 
     private void Start()
     {
@@ -35,10 +35,11 @@ public class TwoCubesButton : VisableCollider
 
     private void SplitObject()
     {
+        //StartCoroutine(twoCubeController.ActiveSelectorOnCube1(0.5f));
         player.gameObject.SetActive(false);
         twoCubeButtonCollider.enabled = true;
         twoCubeButtonCollider.isTrigger = false;
-        twoCubeController.gameObject.SetActive(true);        
+        twoCubeController.gameObject.SetActive(true);
         Debug.Log("Create 2 cubes and swithc them on TAB to move around");
     }
 }

@@ -1463,6 +1463,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1864045463167339015}
+    - target: {fileID: 9110706832136804466, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: twoCubesButton
+      value: 
+      objectReference: {fileID: 4994404605699567794}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6901929307465676092, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
@@ -1699,6 +1703,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8741227517722142001, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
   m_PrefabInstance: {fileID: 4811286547417853344}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4994404605699567794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+  m_PrefabInstance: {fileID: 4811286547417853344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff8b90bc97b9b443894e027460cf55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6189246162733172490
 PrefabInstance:
   m_ObjectHideFlags: 0
