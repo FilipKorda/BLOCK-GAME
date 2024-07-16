@@ -2034,13 +2034,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+      propertyPath: cubeMovement
+      value: 
+      objectReference: {fileID: 7836595467393142054}
+    - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+      propertyPath: cube1Movement
+      value: 
+      objectReference: {fileID: 7836595467393142054}
+    - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: playerCollider
       value: 
       objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: twoCubeController
       value: 
-      objectReference: {fileID: 4699279402464433038}
+      objectReference: {fileID: 6268751912559848392}
     - target: {fileID: 7210067645559360037, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: m_Name
       value: Ground Two Cubes Button
@@ -2090,6 +2098,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+--- !u!114 &387347221686743676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+  m_PrefabInstance: {fileID: 210135528340172654}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff8b90bc97b9b443894e027460cf55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5861922430340412471 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6031223986567912281, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
@@ -4804,7 +4823,7 @@ PrefabInstance:
     - target: {fileID: 7579606639605957180, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: sceneToLoad
       value: 
-      objectReference: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
+      objectReference: {fileID: 11400000, guid: 74c57d5cdc0dcb646880314aac94a134, type: 2}
     - target: {fileID: 7579606639605957180, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: sceneToUnload
       value: 
@@ -5260,6 +5279,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 9110706832136804466, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: twoCubesButton
+      value: 
+      objectReference: {fileID: 387347221686743676}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5270,15 +5293,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 459391428446832459, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
   m_PrefabInstance: {fileID: 4564550092954979324}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4699279402464433038 stripped
+--- !u!1 &6268751912559848392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7613227995991433268, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+  m_PrefabInstance: {fileID: 4564550092954979324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7836595467393142054 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9110706832136804466, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6024026496617236186, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
   m_PrefabInstance: {fileID: 4564550092954979324}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b45e6c10af7e885489555eafdb03b248, type: 3}
+  m_Script: {fileID: 11500000, guid: e14a60117a76d5141a60af43b5dfb341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4645767875606434774

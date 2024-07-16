@@ -58,7 +58,6 @@ public class TwoCubeController : MonoBehaviour
         cubeMovement1.enabled = isCube1Active;
         cubeMovement2.enabled = !isCube1Active;
 
-
         if (isCube1Active)
         {
             StartCoroutine(ActiveSelectorOnCube1(0.5f));

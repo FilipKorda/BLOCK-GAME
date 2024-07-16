@@ -1643,6 +1643,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7506363509199353230}
     - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
+      propertyPath: cube1Movement
+      value: 
+      objectReference: {fileID: 7506363509199353230}
+    - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: playerCollider
       value: 
       objectReference: {fileID: 1562174585602219998}

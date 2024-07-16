@@ -5,7 +5,7 @@ public class TwoCubesButton : VisableCollider
     [SerializeField] private Player player;
     [SerializeField] private Collider playerCollider;
     [SerializeField] private GameObject twoCubeController;
-    [SerializeField] private CubeMovement cubeMovement;
+    [SerializeField] private CubeMovement cube1Movement;
     public Collider twoCubeButtonCollider;
 
     private void Start()
@@ -36,7 +36,7 @@ public class TwoCubesButton : VisableCollider
 
     private void SplitObject()
     {
-        cubeMovement.enabled = true;
+        cube1Movement.enabled = true;
         player.gameObject.SetActive(false);
         twoCubeButtonCollider.isTrigger = false;
         twoCubeButtonCollider.enabled = false;
