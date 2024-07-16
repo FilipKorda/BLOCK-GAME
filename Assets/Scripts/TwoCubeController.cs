@@ -22,15 +22,22 @@ public class TwoCubeController : MonoBehaviour
     private Vector3 initialPositionCube1;
     private Vector3 initialPositionCube2;
 
-    void Start()
+    private void Awake()
     {
         mainCamera = Camera.main;
-        ActiveCube = cube1;
-        StartCoroutine(ActiveSelectorOnCube1(0.5f));
-        cubeMovement2.enabled = false;
-        Debug.Log("Kontrola nad: Cube1");
         initialPositionCube1 = cube1.transform.position;
         initialPositionCube2 = cube2.transform.position;
+        ActiveCube = cube1;
+    }
+
+    void Start()
+    {            
+        StartCoroutine(ActiveSelectorOnCube1(0.5f));     
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(ActiveSelectorOnCube1(0.5f));
     }
 
     void Update()
@@ -50,6 +57,7 @@ public class TwoCubeController : MonoBehaviour
 
         cubeMovement1.enabled = isCube1Active;
         cubeMovement2.enabled = !isCube1Active;
+
 
         if (isCube1Active)
         {
@@ -84,28 +92,29 @@ public class TwoCubeController : MonoBehaviour
 
             player.transform.position = connectionPosition;
 
-            //rotacja czerwonego gracza po z³¹czeniu siê
+
+            //=============PO£¥CZENIE KOSTEK W JEDNEGO GRACZA=============//
             if (Mathf.Abs(dx - 1) <= positionOffset)
             {
                 // Poziome po³¹czenie (na osi X)
                 player.transform.rotation = Quaternion.Euler(0, 0, 90);
                 player.scale = new Vector3(1f, 0.5f, 0.5f);
-                LoadInitialPositions();
-            }        
+                ResetToInitialCubes();
+            }
             else if (Mathf.Abs(dz - 1) <= positionOffset)
             {
-                // Poziome po³¹czenie (na osi Z)
+                // Pionowe po³¹czenie (na osi Z)
                 player.transform.rotation = Quaternion.Euler(0, 90, 90);
                 player.scale = new Vector3(0.5f, 0.5f, 1f);
-                LoadInitialPositions();
+                ResetToInitialCubes();
             }
 
             player.gameObject.SetActive(true);
-            twoCubesButton.twoCubeButtonCollider.isTrigger = true;
-            twoCubesButton.twoCubeButtonCollider.enabled = false;
+            ResetTwoCubesButtonCollider();
             player.pivot = new Vector3(0, 0, 0);
             player.axis = new Vector3(0, 0, 0);
 
+            //=============PO£¥CZENIE KOSTEK W JEDNEGO GRACZA=============//
         }
     }
 
@@ -126,10 +135,25 @@ public class TwoCubeController : MonoBehaviour
         return Vector3.zero;
     }
 
-    private void LoadInitialPositions()
+    private void ResetToInitialCubes()
     {
         cube1.transform.position = initialPositionCube1;
         cube2.transform.position = initialPositionCube2;
+
+        cubeMovement1.enabled = false;
+        cubeMovement1.canMove = true;
+
+        cubeMovement2.enabled = false;
+        cubeMovement2.canMove = true;
+
+        ActiveCube = cube1;
+        isCube1Active = true;
+    }
+
+    private void ResetTwoCubesButtonCollider()
+    {
+        twoCubesButton.twoCubeButtonCollider.isTrigger = true;
+        twoCubesButton.twoCubeButtonCollider.enabled = false;
     }
 
     #region LookAtCameraAndShowSelector

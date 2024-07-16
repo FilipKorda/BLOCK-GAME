@@ -244,12 +244,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751208210669814822}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14a60117a76d5141a60af43b5dfb341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
+  canMove: 1
   forceDirection_W: {x: 0, y: -10, z: 10}
   forceDirection_A: {x: -10, y: -10, z: 0}
   forceDirection_S: {x: 0, y: -10, z: -10}
@@ -476,12 +476,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6638351132301890229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14a60117a76d5141a60af43b5dfb341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
+  canMove: 1
   forceDirection_W: {x: 0, y: -10, z: 10}
   forceDirection_A: {x: -10, y: -10, z: 0}
   forceDirection_S: {x: 0, y: -10, z: -10}
@@ -539,6 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   twoCubeController: {fileID: 7613227995991433268}
   player: {fileID: 0}
+  twoCubesButton: {fileID: 0}
   cube1: {fileID: 751208210669814822}
   cubeMovement1: {fileID: 6024026496617236186}
   selector_Canvas1: {fileID: 423945029169613566}
