@@ -127,6 +127,7 @@ MonoBehaviour:
   bridge: {fileID: 7256900610870947954}
   bridge2: {fileID: 0}
   resetCollider: {fileID: 0}
+  resetCollider2: {fileID: 0}
   bridgeIsOpen: 0
   playerCollider: {fileID: 0}
   crossPlateCollider: {fileID: 5031148441629149109}
@@ -317,7 +318,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9171b126447bdac4f80b22c06d93be23, type: 2}
+      objectReference: {fileID: 2100000, guid: f3bd4db0aa5ce0b4090b5222e997ff59, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: BridgePart
@@ -424,7 +425,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9171b126447bdac4f80b22c06d93be23, type: 2}
+      objectReference: {fileID: 2100000, guid: f3bd4db0aa5ce0b4090b5222e997ff59, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: BridgePart
@@ -531,7 +532,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9171b126447bdac4f80b22c06d93be23, type: 2}
+      objectReference: {fileID: 2100000, guid: f3bd4db0aa5ce0b4090b5222e997ff59, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: BridgePart2
@@ -638,7 +639,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9171b126447bdac4f80b22c06d93be23, type: 2}
+      objectReference: {fileID: 2100000, guid: f3bd4db0aa5ce0b4090b5222e997ff59, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: BridgePart2

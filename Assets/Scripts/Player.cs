@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask collisionLayerMask;
 
     [SerializeField] private MoveTracker moveTracker;
-
+    private StepSoundManager stepSoundManager;
 
     void Start()
     {
@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
         canMove = true;
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
+        stepSoundManager = GetComponent<StepSoundManager>();
         FreezeAllAxes();
     }
 
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
                     moveTracker.AddMove();
+                    stepSoundManager.StopMoving();
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
+        stepSoundManager.StartMoving();
 
         switch (rotationDirection)
         {

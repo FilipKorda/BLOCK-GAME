@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 
     public int moveCount = 0;
 
+    public int starCount = 0;
+
     private void Awake()
     {
         if (Instance == null)

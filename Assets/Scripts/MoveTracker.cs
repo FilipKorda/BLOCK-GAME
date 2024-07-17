@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class MoveTracker : MonoBehaviour
 {
-    [Header("TextMeshPro Field")]
-    public TextMeshProUGUI textMeshPro;
+    [SerializeField] private TextMeshProUGUI textMeshPro;
 
     private void Start()
     {

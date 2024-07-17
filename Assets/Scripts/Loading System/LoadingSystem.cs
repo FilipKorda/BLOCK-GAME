@@ -11,6 +11,7 @@ public class LoadingSystem : MonoBehaviour
     [SerializeField] private GameObject loadingHandel;
     [SerializeField] private TextMeshProUGUI stageText;
     [SerializeField] private MoveTracker moveTracker;
+    [SerializeField] private StarTracker starTracker;
     [Header("===========  Load Next Level  ===========")]
     public SceneData sceneToLoad;
     public SceneData sceneToUnload;
@@ -148,8 +149,11 @@ public class LoadingSystem : MonoBehaviour
                 float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
                 fadeImage.color = new Color(0f, 0f, 0f, alpha);
                 loadingHandel.SetActive(true);
-                if (moveTracker != null)
+                if (moveTracker != null && starTracker != null)
+                {
                     moveTracker.HideMoves();
+                    starTracker.HideStars();
+                }
                 if (!returnToMainMenu)
                 {
                     if (isResetingLevel)
@@ -180,8 +184,12 @@ public class LoadingSystem : MonoBehaviour
                 loadingHandel.SetActive(false);
                 HideStageText();
 
-                if (moveTracker != null)
+                if (moveTracker != null && starTracker != null)
+                {
                     moveTracker.ShowMoves();
+                    starTracker.ShowStars();
+                }
+                    
                 yield return null;
             }
         }

@@ -81,7 +81,7 @@ public class BridgeButtonTwo : VisableCollider
         {
             bridge.transform.localPosition = Vector3.Lerp(startPosition, endPosition, elapsedTime / transitionDuration);
 
-            if (shouldOpenTwoBridges)
+            if (shouldOpenTwoBridges && bridge2 != null)
             {
                 bridge2.transform.localPosition = Vector3.Lerp(startPositionBridge2, endPositionBridge2, elapsedTime / transitionDuration);
             }
@@ -92,7 +92,7 @@ public class BridgeButtonTwo : VisableCollider
 
         bridge.transform.localPosition = endPosition;
 
-        if (shouldOpenTwoBridges)
+        if (shouldOpenTwoBridges && bridge2 != null)
         {
             bridge2.transform.localPosition = endPositionBridge2;
         }
@@ -107,11 +107,12 @@ public class BridgeButtonTwo : VisableCollider
 
     private void ToggleObject()
     {
-        if (bridge != null && resetCollider != null && resetCollider2 != null)
+        if (resetCollider != null)
         {
             StartCoroutine(MoveBridge());
             resetCollider.SetActive(!resetCollider.activeSelf);
-            resetCollider2.SetActive(!resetCollider2.activeSelf);
+            if (resetCollider2 != null)
+                resetCollider2.SetActive(!resetCollider2.activeSelf);
         }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DisableSetActiveCollider
   - ResetCollider
+  - Grass
   layers:
   - Default
   - TransparentFX

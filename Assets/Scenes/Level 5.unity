@@ -225,17 +225,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 460839043524263133, guid: 7eb1fd69bb407574cb4e661c6a89753c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 293.94598
-      objectReference: {fileID: 0}
     - target: {fileID: 1836337719893034721, guid: 7eb1fd69bb407574cb4e661c6a89753c, type: 3}
       propertyPath: m_Name
       value: Level 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2526374824088699338, guid: 7eb1fd69bb407574cb4e661c6a89753c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 2542805525598246421, guid: 7eb1fd69bb407574cb4e661c6a89753c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,9 +269,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9040920349631352134, guid: 7eb1fd69bb407574cb4e661c6a89753c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 293.94598
+    - target: {fileID: 5569008104738326657, guid: 7eb1fd69bb407574cb4e661c6a89753c, type: 3}
+      propertyPath: leftRotate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

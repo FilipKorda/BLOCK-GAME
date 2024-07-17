@@ -285,11 +285,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1949660562 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7738900825739541719, guid: 3423c7ed1f883404985f47e1baddb304, type: 3}
-  m_PrefabInstance: {fileID: 7171189741474353456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2974974499837990826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,24 +293,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 574271176724293281, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 293.94598
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480987951414144639, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1949660562}
     - target: {fileID: 1856350507705437956, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
       propertyPath: m_Name
       value: TestStage
       objectReference: {fileID: 0}
-    - target: {fileID: 2491192876081175478, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 293.94598
+    - target: {fileID: 2528507451471302677, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5914861831456920416, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 2528507451471302677, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7967967393286389599, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
@@ -358,53 +345,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8080577543743716478, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1949660562}
-    - target: {fileID: 9001234492490372922, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 293.94598
+    - target: {fileID: 9106498524627156280, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
+      propertyPath: leftRotate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e44670035462aa4da0f5aa5f3b01295, type: 3}
---- !u!1001 &7171189741474353456
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4924192488338735057, guid: 3423c7ed1f883404985f47e1baddb304, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4924192488338735057, guid: 3423c7ed1f883404985f47e1baddb304, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4924192488338735057, guid: 3423c7ed1f883404985f47e1baddb304, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6401682287894816130, guid: 3423c7ed1f883404985f47e1baddb304, type: 3}
-      propertyPath: m_Name
-      value: Main Camera
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3423c7ed1f883404985f47e1baddb304, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 7171189741474353456}
   - {fileID: 705507995}
-  - {fileID: 1049901457}
   - {fileID: 2974974499837990826}
+  - {fileID: 1049901457}
