@@ -572,6 +572,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8272603680813293362}
+  - component: {fileID: 1427040400485961135}
+  - component: {fileID: 2235666054944229125}
   - component: {fileID: 5717401834686719008}
   - component: {fileID: 3562326190048672603}
   m_Layer: 0
@@ -596,6 +598,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8932118076430167062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1427040400485961135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151614241680294175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951c3bab4a33abc4db2578ee09bf5b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getStarSound: {fileID: 8300000, guid: 6f5ad8b66a75bc049b93cf0557ed49ce, type: 3}
+  loseSound: {fileID: 8300000, guid: ec54d2ee046aa5a4d9d96cfc49d71f1d, type: 3}
+  winSound: {fileID: 8300000, guid: 9127ce172ee739247b43feb4fba117d1, type: 3}
+  connectTwoCube: {fileID: 8300000, guid: b103268093a591d40a10c88339f12c8a, type: 3}
+  startGame: {fileID: 8300000, guid: 35a05489e8e7f234cba9853e8f59ad3b, type: 3}
+--- !u!114 &2235666054944229125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151614241680294175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2302b0ccbddb5428ad7a863572a2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stoneNormalSound: {fileID: 8300000, guid: ae43e8fdc6b1fa141a530f3c72b85c75, type: 3}
+  stoneBridgeSound: {fileID: 8300000, guid: e7ad2e277eb976748acedc9b07bdfd3b, type: 3}
+  trappedPlateSound: {fileID: 8300000, guid: 18361a49b3351fd4c877098ea9328d12, type: 3}
 --- !u!82 &5717401834686719008
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2690,6 +2724,10 @@ PrefabInstance:
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 2208470088210471557}
+    - target: {fileID: 1368608292178519893, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
+      propertyPath: stepSoundManager
+      value: 
+      objectReference: {fileID: 2235666054944229125}
     - target: {fileID: 4707956682101690904, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
       propertyPath: m_Name
       value: Player

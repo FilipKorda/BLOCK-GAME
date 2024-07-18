@@ -5,7 +5,12 @@ public class StepSoundManager : MonoBehaviour
     [SerializeField] private AudioClip stoneNormalSound;
     [SerializeField] private AudioClip stoneBridgeSound;
     [SerializeField] private AudioClip trappedPlateSound;
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void PlaySound(string surfaceTag)
     {

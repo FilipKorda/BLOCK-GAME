@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static SoundManager;
 
 public class TwoCubeController : MonoBehaviour
 {
@@ -112,7 +113,7 @@ public class TwoCubeController : MonoBehaviour
             ResetTwoCubesButtonCollider();
             player.pivot = new Vector3(0, 0, 0);
             player.axis = new Vector3(0, 0, 0);
-
+            SoundManager.Instance.PlaySound(SoundType.ConnectTwoCube);
             //=============PO£¥CZENIE KOSTEK W JEDNEGO GRACZA=============//
         }
     }

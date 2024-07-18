@@ -1,4 +1,5 @@
 using UnityEngine;
+using static SoundManager;
 
 public class Star : MonoBehaviour
 {
@@ -34,5 +35,6 @@ public class Star : MonoBehaviour
     {
         starTracker.AddStar();
         gameObject.SetActive(false);
+        SoundManager.Instance.PlaySound(SoundType.GetStarSound);
     }
 }

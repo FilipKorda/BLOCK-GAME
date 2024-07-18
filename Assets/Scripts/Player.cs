@@ -1,4 +1,5 @@
 using UnityEngine;
+using static SoundManager;
 
 public class Player : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask collisionLayerMask;
 
     [SerializeField] private MoveTracker moveTracker;
-    private StepSoundManager stepSoundManager;
+    [SerializeField] private StepSoundManager stepSoundManager;
 
     void Start()
     {
@@ -30,7 +31,6 @@ public class Player : MonoBehaviour
         canMove = true;
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
-        stepSoundManager = GetComponent<StepSoundManager>();
         FreezeAllAxes();
     }
 
@@ -117,6 +117,8 @@ public class Player : MonoBehaviour
         Debug.Log("Collision Direction: " + collisionDirection);
         Debug.Log("Collision Direction: " + collision.gameObject.name);
         Destroy(collision.gameObject);
+
+        SoundManager.Instance.PlaySound(SoundType.LoseSound);
 
         if (IsInRange(collisionDirection, new Vector3(-1f, -1f, 0f), new Vector3(1f, 0f, 1f)))  // to dzia³a na przycisk W
         {

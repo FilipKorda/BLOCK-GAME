@@ -19,6 +19,7 @@ public class CubeMovement : MonoBehaviour
     [SerializeField] private LayerMask collisionLayerMask;
     [SerializeField] private MoveTracker moveTracker;
     [SerializeField] private TwoCubeController twoCubeController;
+    [SerializeField] private StepSoundManager stepSoundManager;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class CubeMovement : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
+
     }
 
     void Update()
@@ -42,7 +44,7 @@ public class CubeMovement : MonoBehaviour
                     isRotating = false;
                     moveTracker.AddMove();
                     twoCubeController.DisableSelector();
-
+                    DetectSurface();
                 }
                 if ((rotationDirection == CubeDirection.A) || (rotationDirection == CubeDirection.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
@@ -86,6 +88,18 @@ public class CubeMovement : MonoBehaviour
         {
             axis = Vector3.right;
             (scale.y, scale.z) = (scale.z, scale.y);
+        }
+    }
+
+
+    void DetectSurface()
+    {
+        Ray ray = new(transform.position, Vector3.down);
+        Debug.DrawRay(ray.origin, ray.direction * 1.5f, Color.red);
+        if (Physics.Raycast(ray, out RaycastHit hit, 1.5f))
+        {
+            string surfaceTag = hit.collider.tag;
+            stepSoundManager.PlaySound(surfaceTag);
         }
     }
 
