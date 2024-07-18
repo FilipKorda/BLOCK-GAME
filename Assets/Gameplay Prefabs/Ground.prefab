@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3378874289134494064}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: StoneNormalSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_TagString
-      value: Grass
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

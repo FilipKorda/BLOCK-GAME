@@ -172,9 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2302b0ccbddb5428ad7a863572a2f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassFootstep: {fileID: 8300000, guid: 94559b4011b22d14999688d7f5881b28, type: 3}
-  concreteFootstep: {fileID: 8300000, guid: 37de2cce5c4905848a254325d5f4b940, type: 3}
-  woodFootstep: {fileID: 8300000, guid: 37de2cce5c4905848a254325d5f4b940, type: 3}
+  stoneNormalSound: {fileID: 8300000, guid: ae43e8fdc6b1fa141a530f3c72b85c75, type: 3}
+  stoneBridgeSound: {fileID: 8300000, guid: e7ad2e277eb976748acedc9b07bdfd3b, type: 3}
+  trappedPlateSound: {fileID: 8300000, guid: 18361a49b3351fd4c877098ea9328d12, type: 3}
+  audioSource: {fileID: 0}
 --- !u!82 &2882551394123309599
 AudioSource:
   m_ObjectHideFlags: 0

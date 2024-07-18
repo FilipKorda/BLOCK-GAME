@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
                     moveTracker.AddMove();
-                    stepSoundManager.StopMoving();
+                    DetectSurface();
                 }
                 if ((rotationDirection == Direction.A) || (rotationDirection == Direction.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
@@ -66,7 +66,6 @@ public class Player : MonoBehaviour
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
-        stepSoundManager.StartMoving();
 
         switch (rotationDirection)
         {
@@ -94,6 +93,18 @@ public class Player : MonoBehaviour
             (scale.y, scale.z) = (scale.z, scale.y);
         }
     }
+
+    void DetectSurface()
+    {
+        Ray ray = new(transform.position, Vector3.down);
+        Debug.DrawRay(ray.origin, ray.direction * 2f, Color.red);
+        if (Physics.Raycast(ray, out RaycastHit hit, 2f))
+        {
+            string surfaceTag = hit.collider.tag;
+            stepSoundManager.PlaySound(surfaceTag);
+        }
+    }
+
 
     void OnCollisionEnter(Collision collision)
     {

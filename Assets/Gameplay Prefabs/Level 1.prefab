@@ -2007,6 +2007,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 267089597264293852, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: stoneSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 37de2cce5c4905848a254325d5f4b940, type: 3}
+    - target: {fileID: 267089597264293852, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: waterSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 94559b4011b22d14999688d7f5881b28, type: 3}
+    - target: {fileID: 267089597264293852, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 8759862210690181966}
     - target: {fileID: 423931331708171591, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_Name
       value: Level_Template
@@ -2182,6 +2194,10 @@ PrefabInstance:
     - target: {fileID: 1997551686657881053, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_Name
       value: Trackers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059222934824650983, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2228912342339454693, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2507,7 +2523,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3339224520426177341, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5991728593443702942, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
     - {fileID: 8848511465461270625, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
@@ -2794,6 +2811,11 @@ GameObject:
 --- !u!1 &7853785692862224650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6500737773815486052, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+  m_PrefabInstance: {fileID: 3947689751995567982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8759862210690181966 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5717401834686719008, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
   m_PrefabInstance: {fileID: 3947689751995567982}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8900004173338961634 stripped
