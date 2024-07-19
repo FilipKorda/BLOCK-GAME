@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
-using static SoundManager;
 
 public class LoadingSystem : MonoBehaviour
 {
@@ -34,7 +33,7 @@ public class LoadingSystem : MonoBehaviour
     public void LoadNextLexel()
     {
         StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));
-        SoundManager.Instance.PlaySound(SoundType.StartGame);
+        //SoundManager.Instance.PlaySound(SoundManager.SoundType.StartGame);
     }
 
     private IEnumerator LoadNextLevel(SceneData sceneData, SceneData thisSceneName)

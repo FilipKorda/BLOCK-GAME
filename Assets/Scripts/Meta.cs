@@ -1,5 +1,4 @@
 using UnityEngine;
-using static SoundManager;
 
 public class Meta : VisableCollider
 {
@@ -44,7 +43,7 @@ public class Meta : VisableCollider
 
     private void CheckForMatch()
     {
-        SoundManager.Instance.PlaySound(SoundType.WinSound);
+        SoundManager.Instance.PlaySound(SoundManager.SoundType.WinSound);
         spiralMovement.Play();
         player.canMove = false;
         disappearAnimation.PlayDisappearAnimation();

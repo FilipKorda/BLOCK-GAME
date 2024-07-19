@@ -11,7 +11,23 @@ public class SoundManager : MonoBehaviour
         StartGame = 4,
     }
 
-    public static SoundManager Instance;
+    private static SoundManager _instance;
+    public static SoundManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<SoundManager>();
+                if (_instance == null)
+                {
+                    GameObject go = new("Audio");
+                    _instance = go.AddComponent<SoundManager>();
+                }
+            }
+            return _instance;
+        }
+    }
 
     [SerializeField] private AudioClip getStarSound;
     [SerializeField] private AudioClip loseSound;

@@ -1,5 +1,4 @@
 using UnityEngine;
-using static SoundManager;
 
 public class Star : MonoBehaviour
 {
@@ -21,13 +20,9 @@ public class Star : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (cube1Collider != null && cube2Collider != null)
+        if (other == playerCollider || other == cube1Collider || other == cube2Collider)
         {
-            if (other == playerCollider || other == cube1Collider || other == cube2Collider)
-            {
-                Collect();
-            }
-
+            Collect();
         }
     }
 
@@ -35,6 +30,6 @@ public class Star : MonoBehaviour
     {
         starTracker.AddStar();
         gameObject.SetActive(false);
-        SoundManager.Instance.PlaySound(SoundType.GetStarSound);
+        SoundManager.Instance.PlaySound(SoundManager.SoundType.GetStarSound);
     }
 }

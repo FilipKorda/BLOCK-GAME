@@ -1,5 +1,4 @@
 using UnityEngine;
-using static SoundManager;
 
 public class TwoCubesButton : VisableCollider
 {
@@ -37,7 +36,7 @@ public class TwoCubesButton : VisableCollider
 
     private void SplitObject()
     {
-        SoundManager.Instance.PlaySound(SoundType.ConnectTwoCube);
+        SoundManager.Instance.PlaySound(SoundManager.SoundType.ConnectTwoCube);
         cube1Movement.enabled = true;
         player.gameObject.SetActive(false);
         twoCubeButtonCollider.isTrigger = false;
