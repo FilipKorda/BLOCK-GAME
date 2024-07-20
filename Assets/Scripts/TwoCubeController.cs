@@ -112,7 +112,7 @@ public class TwoCubeController : MonoBehaviour
             ResetTwoCubesButtonCollider();
             player.pivot = new Vector3(0, 0, 0);
             player.axis = new Vector3(0, 0, 0);
-            SoundManager.Instance.PlaySound(SoundManager.SoundType.ConnectTwoCube);
+            SoundManager.Instance.PlaySound(SoundClip.ConnectTwoCubesSound);
             //=============PO£¥CZENIE KOSTEK W JEDNEGO GRACZA=============//
         }
     }

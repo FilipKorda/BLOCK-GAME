@@ -610,11 +610,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 951c3bab4a33abc4db2578ee09bf5b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getStarSound: {fileID: 8300000, guid: 6f5ad8b66a75bc049b93cf0557ed49ce, type: 3}
-  loseSound: {fileID: 8300000, guid: ec54d2ee046aa5a4d9d96cfc49d71f1d, type: 3}
-  winSound: {fileID: 8300000, guid: 9127ce172ee739247b43feb4fba117d1, type: 3}
-  connectTwoCube: {fileID: 8300000, guid: b103268093a591d40a10c88339f12c8a, type: 3}
-  startGame: {fileID: 8300000, guid: 35a05489e8e7f234cba9853e8f59ad3b, type: 3}
+  audioClipInfos:
+  - {fileID: 11400000, guid: b5d99714cf3a9b44aaac12d967186753, type: 2}
+  - {fileID: 11400000, guid: b27f0f823c68d7642a862a335776050e, type: 2}
+  - {fileID: 11400000, guid: eb3be5e67a3959f4e9ec56ad7f720084, type: 2}
+  - {fileID: 11400000, guid: 570501fdd5663b6438bb9f1ee934ef7f, type: 2}
+  - {fileID: 11400000, guid: e68f090dbadf99e43adb30f9701c985f, type: 2}
+  - {fileID: 11400000, guid: 3a3c6f7fb7c2af34baa12d713b3c4108, type: 2}
+  - {fileID: 11400000, guid: f215dfdfd292f2c48af1f4e30cb7b80f, type: 2}
+  - {fileID: 11400000, guid: f43e39c0ae613d54bb86d063cff668ec, type: 2}
+  audioSource: {fileID: 5717401834686719008}
+  parent: {fileID: 2151614241680294175}
 --- !u!114 &2235666054944229125
 MonoBehaviour:
   m_ObjectHideFlags: 0

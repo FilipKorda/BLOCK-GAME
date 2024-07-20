@@ -185,3 +185,4 @@ MonoBehaviour:
   cube2Collider: {fileID: 0}
   rotationSpeed: 10
   leftRotate: 0
+  targetObject: {fileID: 5759274462146548738, guid: a669bbe64c2f4e642a5fb17513cd4d40, type: 3}

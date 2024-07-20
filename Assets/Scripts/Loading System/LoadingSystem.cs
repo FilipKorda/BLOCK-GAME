@@ -33,7 +33,6 @@ public class LoadingSystem : MonoBehaviour
     public void LoadNextLexel()
     {
         StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));
-        //SoundManager.Instance.PlaySound(SoundManager.SoundType.StartGame);
     }
 
     private IEnumerator LoadNextLevel(SceneData sceneData, SceneData thisSceneName)

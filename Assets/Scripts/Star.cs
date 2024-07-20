@@ -21,7 +21,7 @@ public class Star : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other == playerCollider || other == cube1Collider || other == cube2Collider)
-        {
+        {           
             Collect();
         }
     }
@@ -30,6 +30,6 @@ public class Star : MonoBehaviour
     {
         starTracker.AddStar();
         gameObject.SetActive(false);
-        SoundManager.Instance.PlaySound(SoundManager.SoundType.GetStarSound);
+        SoundManager.Instance.PlaySound(SoundClip.GetStarSound);
     }
 }

@@ -30,7 +30,7 @@ public class Meta : VisableCollider
             if (player.gameObject.transform.position == metaCollider.transform.position)
             {
                 player.canMove = false;
-                Debug.Log("Win");
+               
                 CheckForMatch();
             }
         }
@@ -43,10 +43,11 @@ public class Meta : VisableCollider
 
     private void CheckForMatch()
     {
-        SoundManager.Instance.PlaySound(SoundManager.SoundType.WinSound);
         spiralMovement.Play();
         player.canMove = false;
+        SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
         disappearAnimation.PlayDisappearAnimation();
+        Debug.Log("Win");
     }
 
 }

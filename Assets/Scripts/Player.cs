@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
         Debug.Log("Collision Direction: " + collision.gameObject.name);
         Destroy(collision.gameObject);
 
-        SoundManager.Instance.PlaySound(SoundManager.SoundType.LoseSound);
+        SoundManager.Instance.PlaySound(SoundClip.LoseSound);
 
         if (IsInRange(collisionDirection, new Vector3(-1f, -1f, 0f), new Vector3(1f, 0f, 1f)))  // to dzia³a na przycisk W
         {

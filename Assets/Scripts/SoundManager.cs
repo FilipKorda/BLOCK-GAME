@@ -1,66 +1,66 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public enum SoundType
-    {
-        GetStarSound = 0,
-        LoseSound = 1,
-        WinSound = 2,
-        ConnectTwoCube = 3,
-        StartGame = 4,
-    }
+    public static SoundManager Instance;
 
-    private static SoundManager _instance;
-    public static SoundManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<SoundManager>();
-                if (_instance == null)
-                {
-                    GameObject go = new("Audio");
-                    _instance = go.AddComponent<SoundManager>();
-                }
-            }
-            return _instance;
-        }
-    }
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClipInfo[] audioClipInfos;
+    [SerializeField] private GameObject parent;
 
-    [SerializeField] private AudioClip getStarSound;
-    [SerializeField] private AudioClip loseSound;
-    [SerializeField] private AudioClip winSound;
-    [SerializeField] private AudioClip connectTwoCube;
-    [SerializeField] private AudioClip startGame;
-    private AudioSource audioSource;
+    private Dictionary<string, AudioClipInfo> audioClips;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        if (Instance == null)
+        {
+            Instance = this;
+            InitializeAudioClips();
+        }
     }
 
-    public void PlaySound(SoundType soundType)
+    private void InitializeAudioClips()
     {
-        switch (soundType)
+        audioClips = new Dictionary<string, AudioClipInfo>();
+
+        foreach (var clipInfo in audioClipInfos)
         {
-            case SoundType.GetStarSound:
-                audioSource.clip = getStarSound;
-                break;
-            case SoundType.LoseSound:
-                audioSource.clip = loseSound;
-                break;
-            case SoundType.WinSound:
-                audioSource.clip = winSound;
-                break;
-            case SoundType.ConnectTwoCube:
-                audioSource.clip = connectTwoCube;
-                break;
-            case SoundType.StartGame:
-                audioSource.clip = startGame;
-                break;
+            if (clipInfo != null)
+            {
+                audioClips[clipInfo.clipName.ToString()] = clipInfo;
+            }
+            else
+            {
+                Debug.Log("Found a null AudioClipInfo!");
+            }
         }
-        audioSource.Play();
+        Debug.Log($"<color=green>Total clips loaded:</color> {audioClips.Count}");
+    }
+
+    public void PlaySound(SoundClip clipName)
+    {
+        if (audioClips.ContainsKey(clipName.ToString()))
+        {
+            AudioClipInfo clipInfo = audioClips[clipName.ToString()];
+            GameObject soundObject = new(clipInfo.clipName.ToString());
+
+            if (parent != null)
+            {
+                soundObject.transform.SetParent(parent.transform);
+            }
+
+            AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+            audioSource.clip = clipInfo.clip;
+            audioSource.volume = clipInfo.volume;
+            audioSource.pitch = clipInfo.pitch;
+            audioSource.Play();
+
+            Destroy(soundObject, clipInfo.clip.length);
+        }
+        else
+        {
+            Debug.Log($"SoundManager: Clip {clipName} <color=red>not found!</color>");
+        }
     }
 }
