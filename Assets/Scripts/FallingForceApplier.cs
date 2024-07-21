@@ -15,7 +15,7 @@ public class FallingForceApplier : MonoBehaviour
     [SerializeField] private DirectionForceApplier[] forceDirections;
     [SerializeField] private float forceStrength = 35f;
     [SerializeField] private Player player;
-    [SerializeField] private GameObject collidersGameObject;
+    [SerializeField] private FallingDownManager fallingDownManager;
 
 
     private Vector3 forceDirection_W = new(0, -20, 5);
@@ -54,8 +54,14 @@ public class FallingForceApplier : MonoBehaviour
                 }
             }
 
-
-            collidersGameObject.SetActive(false);
+            foreach (var groundObject in fallingDownManager.groundObjects)
+            {
+                if (groundObject != null)
+                {
+                    Collider collider = groundObject.GetComponent<Collider>();
+                    collider.isTrigger = true;
+                }
+            }
 
             rb.AddForce(force, ForceMode.Impulse);
         }

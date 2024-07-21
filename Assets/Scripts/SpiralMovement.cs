@@ -80,7 +80,6 @@ public class SpiralMovement : MonoBehaviour
             return;
         }
 
-        // Pobierz wszystkie dzieci obiektu ground
         int childCount = ground.transform.childCount;
         objectsToMove = new GameObject[childCount];
         for (int i = 0; i < childCount; i++)

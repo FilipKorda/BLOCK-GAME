@@ -230,8 +230,9 @@ MonoBehaviour:
   isSplitPlate: 1
   player: {fileID: 0}
   playerCollider: {fileID: 0}
-  twoCubeButtonCollider: {fileID: 2013827208434417615}
   twoCubeController: {fileID: 0}
+  cube1Movement: {fileID: 0}
+  twoCubeButtonCollider: {fileID: 2013827208434417615}
 --- !u!1 &7210067645559360037
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8741227517722142001}
   - component: {fileID: 6031223986567912281}
+  - component: {fileID: 8604124819636707420}
   m_Layer: 6
   m_Name: Ground Two Cubes Button
   m_TagString: Untagged
@@ -282,6 +284,27 @@ MonoBehaviour:
   targetObject: {fileID: 8741227517722142001}
   moveDownDistance: 15
   moveDownDuration: 1
+--- !u!65 &8604124819636707420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7210067645559360037}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &125118585274662768
 PrefabInstance:
   m_ObjectHideFlags: 0
