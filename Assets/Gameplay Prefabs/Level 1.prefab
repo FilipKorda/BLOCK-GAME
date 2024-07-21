@@ -97,6 +97,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 5661992740752497184}
@@ -506,6 +510,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
@@ -2490,6 +2498,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 5661992740752497184}
@@ -2662,6 +2674,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 5661992740752497184}
@@ -2825,6 +2841,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
@@ -2998,6 +3018,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 5661992740752497184}
@@ -3165,6 +3189,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
@@ -3916,6 +3944,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 5661992740752497184}
@@ -3997,6 +4029,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: fallingDownManager
+      value: 
+      objectReference: {fileID: 3294932033793576298}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 

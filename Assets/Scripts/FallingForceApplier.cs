@@ -13,22 +13,46 @@ public class FallingForceApplier : MonoBehaviour
 
     [Header("Force Directions")]
     [SerializeField] private DirectionForceApplier[] forceDirections;
-    [SerializeField] private float forceStrength = 35f;
+    [SerializeField] private float fallForce = 10f;
     [SerializeField] private Player player;
     [SerializeField] private FallingDownManager fallingDownManager;
+    [SerializeField] private float rotationSpeed = 100f;
 
+    private bool isRotating;
+    private float rotationX = 0;
+    private float rotationY = 0;
+    private float rotationZ = 0;
 
     private Vector3 forceDirection_W = new(0, -20, 5);
     private Vector3 forceDirection_A = new(-5, -20, 0);
     private Vector3 forceDirection_S = new(0, -20, -5);
     private Vector3 forceDirection_D = new(5, -20, 0);
 
+    private void Start()
+    {
+        isRotating = false;
+    }
+
+    private void Update()
+    {
+        if (isRotating)
+        {
+            Vector3 rotation = rotationSpeed * Time.deltaTime * new Vector3(rotationX, rotationY, rotationZ);
+
+            player.gameObject.transform.Rotate(rotation);
+
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Rigidbody>(out var rb))
         {
             player.PreparPlayerToFallDown();
+
             Vector3 force = Vector3.zero;
+
+            isRotating = true;
 
             foreach (var direction in forceDirections)
             {
@@ -37,22 +61,35 @@ public class FallingForceApplier : MonoBehaviour
                     switch (direction)
                     {
                         case DirectionForceApplier.W:
-                            force += new Vector3(0, -forceStrength, 5);
+                            rotationX = 1;
+                            rotationZ = 1;
+                            rotationZ = 1;
+                            force += new Vector3(0, -fallForce, 5);
                             break;
                         case DirectionForceApplier.S:
-                            force += new Vector3(0, -forceStrength, -5);
+                            rotationX = -1;
+                            rotationZ = -1;
+                            rotationZ = -1;
+                            force += new Vector3(0, -fallForce, -5);
                             break;
                         case DirectionForceApplier.A:
-                            force += new Vector3(-5, -forceStrength, 0);
+                            rotationX = -1;
+                            rotationZ = -1;
+                            rotationZ = -1;
+                            force += new Vector3(-5, -fallForce, 0);
                             break;
                         case DirectionForceApplier.D:
-                            force += new Vector3(5, -forceStrength, 0);
+                            rotationX = 1;
+                            rotationZ = 1;
+                            rotationZ = 1;
+                            force += new Vector3(5, -fallForce, 0);
                             break;
                         default:
                             break;
                     }
                 }
             }
+
 
             foreach (var groundObject in fallingDownManager.groundObjects)
             {
@@ -62,6 +99,8 @@ public class FallingForceApplier : MonoBehaviour
                     collider.isTrigger = true;
                 }
             }
+
+
 
             rb.AddForce(force, ForceMode.Impulse);
         }
