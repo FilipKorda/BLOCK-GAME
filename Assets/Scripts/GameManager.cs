@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public int starCount = 0;
 
+    public RealGameTime realGameTime;
+
     private void Awake()
     {
         if (Instance == null)

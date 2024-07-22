@@ -2814,6 +2814,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25539df5295710e41b40bdc78c3028e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3012816373542602859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2235666054944229125, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+  m_PrefabInstance: {fileID: 3947689751995567982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2302b0ccbddb5428ad7a863572a2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3294932033793576298 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
@@ -3178,6 +3189,10 @@ PrefabInstance:
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 2913561991391548907}
+    - target: {fileID: 804581047917252843, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: stepSoundManager
+      value: 
+      objectReference: {fileID: 3012816373542602859}
     - target: {fileID: 5814358544818916884, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.75
@@ -3190,6 +3205,10 @@ PrefabInstance:
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 2913561991391548907}
+    - target: {fileID: 6024026496617236186, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: stepSoundManager
+      value: 
+      objectReference: {fileID: 3012816373542602859}
     - target: {fileID: 7233885741808901099, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.25

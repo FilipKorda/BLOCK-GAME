@@ -32,7 +32,7 @@ public class LoadingSystem : MonoBehaviour
 
     public void LoadNextLexel()
     {
-        StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));
+        StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));       
     }
 
     private IEnumerator LoadNextLevel(SceneData sceneData, SceneData thisSceneName)
@@ -62,6 +62,7 @@ public class LoadingSystem : MonoBehaviour
         }
 
         SceneManager.UnloadSceneAsync(thisSceneName.sceneIndex);
+        GameManager.Instance.realGameTime.StartTime();
 
     }
 
