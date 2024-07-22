@@ -13,7 +13,7 @@ public class FallingForceApplier : MonoBehaviour
 
     [Header("Force Directions")]
     [SerializeField] private DirectionForceApplier[] forceDirections;
-    [SerializeField] private float fallForce = 10f;
+    [SerializeField] private float downFallForce = 5f;
     [SerializeField] private Player player;
     [SerializeField] private FallingDownManager fallingDownManager;
     [SerializeField] private float rotationSpeed = 100f;
@@ -63,26 +63,26 @@ public class FallingForceApplier : MonoBehaviour
                         case DirectionForceApplier.W:
                             rotationX = 1;
                             rotationZ = 1;
-                            rotationZ = 1;
-                            force += new Vector3(0, -fallForce, 5);
+
+                            force += new Vector3(0, -downFallForce, 5);
                             break;
                         case DirectionForceApplier.S:
                             rotationX = -1;
                             rotationZ = -1;
-                            rotationZ = -1;
-                            force += new Vector3(0, -fallForce, -5);
+
+                            force += new Vector3(0, -downFallForce, -5);
                             break;
                         case DirectionForceApplier.A:
                             rotationX = -1;
                             rotationZ = -1;
-                            rotationZ = -1;
-                            force += new Vector3(-5, -fallForce, 0);
+
+                            force += new Vector3(-5, -downFallForce, 0);
                             break;
                         case DirectionForceApplier.D:
                             rotationX = 1;
                             rotationZ = 1;
-                            rotationZ = 1;
-                            force += new Vector3(5, -fallForce, 0);
+
+                            force += new Vector3(5, -downFallForce, 0);
                             break;
                         default:
                             break;

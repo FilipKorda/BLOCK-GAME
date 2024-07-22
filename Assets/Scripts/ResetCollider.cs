@@ -8,6 +8,17 @@ public class ResetCollider : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private PlateMoveDown[] objectsToMove;
     [SerializeField] private LoadingSystem loadingSystem;
+    private int previousStarCount = 0;
+
+
+    private void Start()
+    {
+        if (GameManager.Instance != null)
+        {
+            previousStarCount = GameManager.Instance.starCount;
+        }
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -19,6 +30,19 @@ public class ResetCollider : MonoBehaviour
         {
             StartCoroutine(TriggerMovePlatesWithDelay());
         }
+
+        if (GameManager.Instance != null)
+        {
+            int starDifference = GameManager.Instance.starCount - previousStarCount;
+
+            if (starDifference > 0)
+            {
+                GameManager.Instance.starCount = Mathf.Max(0, GameManager.Instance.starCount - starDifference); 
+            }
+
+            previousStarCount = GameManager.Instance.starCount;
+        }
+
     }
 
     private IEnumerator TriggerMovePlatesWithDelay()
@@ -53,7 +77,7 @@ public class ResetCollider : MonoBehaviour
         for (int i = 0; i < childCount; i++)
         {
             GameObject child = ground.transform.GetChild(i).gameObject;
-            
+
             if (child.TryGetComponent<PlateMoveDown>(out var plateMoveDown))
             {
                 objectsToMove[i] = plateMoveDown;
