@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sounds
+  m_EditorClassIdentifier: 
+  m_GroupName: Sounds
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3d28e80f0aba161478efe29fabbc572b
+  m_SerializeEntries:
+  - m_GUID: b103268093a591d40a10c88339f12c8a
+    m_Address: Assets/Sounds/ConnectTwoCubeSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f5ad8b66a75bc049b93cf0557ed49ce
+    m_Address: Assets/Sounds/GetStarSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec54d2ee046aa5a4d9d96cfc49d71f1d
+    m_Address: Assets/Sounds/LoseSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35a05489e8e7f234cba9853e8f59ad3b
+    m_Address: Assets/Sounds/StartGameSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7ad2e277eb976748acedc9b07bdfd3b
+    m_Address: Assets/Sounds/Stone Bridge Sound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae43e8fdc6b1fa141a530f3c72b85c75
+    m_Address: Assets/Sounds/Stone Normal Sound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18361a49b3351fd4c877098ea9328d12
+    m_Address: Assets/Sounds/TrappedPlateSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9127ce172ee739247b43feb4fba117d1
+    m_Address: Assets/Sounds/WinGameSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8724e87e4907fa94992a2a0dfc7b0df5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d4c878c3e9b0bdf4f8b90b2ca0f90fc0, type: 2}
+    - {fileID: 11400000, guid: 49b4a281b372323479794daacb4d5a67, type: 2}

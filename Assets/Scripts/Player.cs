@@ -4,8 +4,8 @@ public class Player : MonoBehaviour
 {
     public FallingForceApplier.DirectionForceApplier rotationDirection;
     private readonly float rotationSpeed = 750f;
-    private float totalRotation;
-    private bool isRotating;
+    public float totalRotation;
+    public bool isRotating;
 
     public Vector3 pivot, axis, scale;
     private Rigidbody rb;
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
                     moveTracker.AddMove();
-                    DetectSurface();
+                    DetectSurface();                  
                 }
                 if ((rotationDirection == FallingForceApplier.DirectionForceApplier.A) || (rotationDirection == FallingForceApplier.DirectionForceApplier.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.S)) Rotate(FallingForceApplier.DirectionForceApplier.S);
             else if (Input.GetKeyDown(KeyCode.D)) Rotate(FallingForceApplier.DirectionForceApplier.D);
         }
+        
     }
 
     void Rotate(FallingForceApplier.DirectionForceApplier direction)
@@ -59,6 +60,8 @@ public class Player : MonoBehaviour
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
+
+        
 
         switch (rotationDirection)
         {
@@ -84,7 +87,7 @@ public class Player : MonoBehaviour
         {
             axis = Vector3.right;
             (scale.y, scale.z) = (scale.z, scale.y);
-        }
+        }      
     }
 
     void DetectSurface()

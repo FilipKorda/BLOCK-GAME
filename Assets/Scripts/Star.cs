@@ -12,16 +12,19 @@ public class Star : MonoBehaviour
 
     void Update()
     {
-        if (leftRotate)
-            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-        else
-            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+        if (transform.gameObject.activeInHierarchy)
+        {
+            if (leftRotate)
+                transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+            else
+                transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other == playerCollider || other == cube1Collider || other == cube2Collider)
-        {           
+        {
             Collect();
         }
     }

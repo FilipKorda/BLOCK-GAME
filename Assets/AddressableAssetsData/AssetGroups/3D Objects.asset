@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: 3D Objects
+  m_EditorClassIdentifier: 
+  m_GroupName: 3D Objects
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e2032fdcb30f6ef4fb10ac83750cbf6c
+  m_SerializeEntries:
+  - m_GUID: a26eb4acecc4b9143baf28cd9d389016
+    m_Address: Assets/3D Models/CirclePlate.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d2dd75a40a16e448a8a602252bfe446
+    m_Address: Assets/3D Models/Crate.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f32fed69d8fe00e42ac471563ae27dad
+    m_Address: Assets/3D Models/CrossPlate.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6562a94ed7c737643bc013ac9fe342c0
+    m_Address: Assets/3D Models/SplitCubeButton.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24c031eb8457cc7468e8df19e1066ed2
+    m_Address: Assets/Textures/CirclePlate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b93c21f3543c054f97702f888937b7f
+    m_Address: Assets/Textures/Crate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a9ccf5448c2e034a84111d3b3fd17be
+    m_Address: Assets/Textures/CrossPlate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8724e87e4907fa94992a2a0dfc7b0df5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cea4c4496869d754c8fee8012ac73e3e, type: 2}
+    - {fileID: 11400000, guid: 455860d6aecd0cd469c88ddf53e605da, type: 2}

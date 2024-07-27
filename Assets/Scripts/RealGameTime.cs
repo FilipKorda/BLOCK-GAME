@@ -19,6 +19,17 @@ public class RealGameTime : MonoBehaviour
         }
     }
 
+    public void EnabledTimeText()
+    {
+        timeText.gameObject.SetActive(true);
+    }
+
+    public void DisableTimeText()
+    {
+        timeText.gameObject.SetActive(false);
+    }
+
+
     void Update()
     {
         if (startTime)

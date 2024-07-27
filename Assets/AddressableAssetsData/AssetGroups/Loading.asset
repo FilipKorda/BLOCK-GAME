@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Loading
+  m_EditorClassIdentifier: 
+  m_GroupName: Loading
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 31d2624769cf4474dba4d39556855959
+  m_SerializeEntries:
+  - m_GUID: 4e985976ea14aeb47a5af46fe52e67e0
+    m_Address: Assets/Animations/LoadingAnimation/LoadingAnim.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c08089962fbbc04391ba5159b3a3b18
+    m_Address: Assets/Animations/LoadingAnimation/Main Layer Image.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8724e87e4907fa94992a2a0dfc7b0df5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 43f9f25d406e2e944bcc6643c6e6d765, type: 2}
+    - {fileID: 11400000, guid: bd41e5f1416d13943bfa173631abbd8a, type: 2}

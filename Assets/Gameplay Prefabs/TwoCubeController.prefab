@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 5764079880617106790}
   - component: {fileID: 1294355736653973510}
   - component: {fileID: 6024026496617236186}
+  - component: {fileID: 5411234761485141567}
   m_Layer: 3
   m_Name: Cube1
   m_TagString: Player
@@ -259,6 +260,22 @@ MonoBehaviour:
     m_Bits: 128
   moveTracker: {fileID: 0}
   twoCubeController: {fileID: 9110706832136804466}
+  stepSoundManager: {fileID: 0}
+--- !u!114 &5411234761485141567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751208210669814822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f4c64d0966c6040999911bb7fd7067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 7233885741808901099}
+  moveDownDistance: 15
+  moveDownDuration: 1
 --- !u!1 &3180484617199982715
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +365,7 @@ GameObject:
   - component: {fileID: 2360784304638559779}
   - component: {fileID: 6326636677122398464}
   - component: {fileID: 804581047917252843}
+  - component: {fileID: 7797345939226666145}
   m_Layer: 3
   m_Name: Cube2
   m_TagString: Player
@@ -491,6 +509,22 @@ MonoBehaviour:
     m_Bits: 128
   moveTracker: {fileID: 0}
   twoCubeController: {fileID: 9110706832136804466}
+  stepSoundManager: {fileID: 0}
+--- !u!114 &7797345939226666145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638351132301890229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f4c64d0966c6040999911bb7fd7067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 5814358544818916884}
+  moveDownDistance: 15
+  moveDownDuration: 1
 --- !u!1 &7613227995991433268
 GameObject:
   m_ObjectHideFlags: 0

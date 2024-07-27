@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Materials
+  m_EditorClassIdentifier: 
+  m_GroupName: Materials
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9390cdfeb5bd1ac43b7c359ea50334fd
+  m_SerializeEntries:
+  - m_GUID: d9c175643188f7b4098dc9db7d95dfa7
+    m_Address: Assets/Materials/Bridge.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3bd4db0aa5ce0b4090b5222e997ff59
+    m_Address: Assets/Materials/Bridge Ground.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67c16053e6f1bf94690dd18051fd7387
+    m_Address: Assets/Materials/CirclePlate.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: baad72076a2324a48b94363e1abf7bbc
+    m_Address: Assets/Materials/Colliders.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d47731b65733f74c8483cb18d315f6c
+    m_Address: Assets/Materials/CrossPlate.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9171b126447bdac4f80b22c06d93be23
+    m_Address: Assets/Materials/Ground.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c613047a0e5d6c4ba08e31b1297c312
+    m_Address: Assets/Materials/InvisibleWall.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95dbb1ea3f4acf2499f77ee7315e93db
+    m_Address: Assets/Materials/Meta.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae090e999133933478fdcd3b3a063d7d
+    m_Address: Assets/Materials/Player.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d9dde98781fed8478556c7c3a788e0a
+    m_Address: Assets/Materials/SplitCubeButton.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 735c235d4ede55b45a5563b52e10139e
+    m_Address: Assets/Materials/Star.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5a166a16354fb14a9b15b6a0815e4c6
+    m_Address: Assets/Materials/TrappedGround.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8724e87e4907fa94992a2a0dfc7b0df5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bf73443b61d1b7440be91f03dc78b441, type: 2}
+    - {fileID: 11400000, guid: fd2763faf2d18f4478d8b0859253076d, type: 2}

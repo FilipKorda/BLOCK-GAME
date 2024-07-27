@@ -6,6 +6,7 @@ public class StarRotation : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        if (transform.gameObject.activeInHierarchy)
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }

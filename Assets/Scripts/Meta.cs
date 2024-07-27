@@ -8,37 +8,52 @@ public class Meta : VisableCollider
 
     [SerializeField] private Collider playerCollider;
     [SerializeField] private Collider metaCollider;
+    [SerializeField] private float tolerance = 0.01f;
+    private bool fixRotation = false;
 
 
-    private void Start()
+    private void Awake()
     {
+        fixRotation = false;
         metaCollider.enabled = false;
     }
 
     private void Update()
     {
-        if (AreTransformsAtSamePosition(player.transform, metaCollider.transform))
-        {
-            metaCollider.enabled = true;
-        }
+        CheckPositionAndRotation();
     }
 
-    void OnTriggerEnter(Collider other)
+    void CheckPositionAndRotation()
     {
-        if (other == playerCollider)
+        if (Vector3.Distance(playerCollider.transform.position, metaCollider.transform.position) < tolerance)
         {
-            if (player.gameObject.transform.position == metaCollider.transform.position)
+            Quaternion rotation = player.transform.rotation;
+            if (!fixRotation && player.scale.x == 0.5 && player.scale.y == 1 && player.scale.z == 0.5 && !player.isRotating && player.totalRotation == 90)
             {
-                player.canMove = false;
-               
+                rotation.w = 1;
+                rotation.x = 0;
+                rotation.y = 0;
+                rotation.z = 0;
+
+                player.transform.rotation = rotation;
+
+                fixRotation = true;
+            }
+
+            if (Quaternion.Angle(playerCollider.transform.rotation, metaCollider.transform.rotation) < tolerance)
+            {
                 CheckForMatch();
+                Debug.Log("Win");
+            }
+            else
+            {
+                Debug.Log("Gracz jest w tej samej pozycji co meta, ale ma inn¹ rotacjê.");
             }
         }
-    }
-
-    bool AreTransformsAtSamePosition(Transform t1, Transform t2)
-    {
-        return t1.position == t2.position;
+        else
+        {
+            Debug.Log("Gracz nie jest w tej samej pozycji co meta.");
+        }
     }
 
     private void CheckForMatch()

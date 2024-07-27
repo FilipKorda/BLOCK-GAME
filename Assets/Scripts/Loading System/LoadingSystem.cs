@@ -154,6 +154,7 @@ public class LoadingSystem : MonoBehaviour
                 {
                     moveTracker.HideMoves();
                     starTracker.HideStars();
+                    GameManager.Instance.realGameTime.DisableTimeText();
                 }
                 if (!returnToMainMenu)
                 {
@@ -189,6 +190,7 @@ public class LoadingSystem : MonoBehaviour
                 {
                     moveTracker.ShowMoves();
                     starTracker.ShowStars();
+                    GameManager.Instance.realGameTime.EnabledTimeText();
                 }
                     
                 yield return null;
