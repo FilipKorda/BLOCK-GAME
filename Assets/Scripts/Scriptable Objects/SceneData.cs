@@ -6,4 +6,5 @@ public class SceneData : ScriptableObject
     public string sceneName;
     public int sceneIndex; 
     public string stageString;
+    public int stageNumber;
 }

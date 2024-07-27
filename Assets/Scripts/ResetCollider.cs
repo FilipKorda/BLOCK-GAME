@@ -8,6 +8,7 @@ public class ResetCollider : MonoBehaviour
     [SerializeField] private PlateMoveDown[] objectsToMove;
     [SerializeField] private LoadingSystem loadingSystem;
     [SerializeField] private Player player;
+    [SerializeField] private StatsPanel statsPanel;
     private int previousStarCount = 0;
 
 
@@ -59,6 +60,7 @@ public class ResetCollider : MonoBehaviour
     private IEnumerator ResetDealy()
     {
         yield return new WaitForSeconds(2f);
+        statsPanel.AddAttemptsNumber();
         loadingSystem.ResetThisLevel();
     }
 

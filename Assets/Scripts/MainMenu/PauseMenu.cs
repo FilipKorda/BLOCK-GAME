@@ -3,8 +3,12 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
+    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private StatsPanel statsPanel;
     [SerializeField] private Player player;
+    [SerializeField] private MoveTracker moveTracker;
+    [SerializeField] private StarTracker starTracker;
+
 
     void Update()
     {
@@ -24,6 +28,9 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        statsPanel.gameObject.SetActive(false);
+        moveTracker.ShowMoves();
+        starTracker.ShowStars();
         Time.timeScale = 1f;
         GameIsPaused = false;
         player.canMove = true;
@@ -32,6 +39,12 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        statsPanel.gameObject.SetActive(true);
+        statsPanel.UpdateMoves();
+        statsPanel.UpdateStars();
+        statsPanel.UpdateAttempts();
+        moveTracker.HideMoves();
+        starTracker.HideStars();
         Time.timeScale = 0f;
         GameIsPaused = true;
         player.canMove = false;

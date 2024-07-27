@@ -29,7 +29,7 @@ public class MoveTracker : MonoBehaviour
         textMeshPro.gameObject.SetActive(false);
     }
 
-    private void UpdateMoveCountText()
+    public void UpdateMoveCountText()
     {
         if (textMeshPro != null && GameManager.Instance != null)
         {

@@ -29,7 +29,7 @@ public class StarTracker : MonoBehaviour
         starCountText.gameObject.SetActive(false);
     }
 
-    private void UpdateStarCountUI()
+    public void UpdateStarCountUI()
     {
         if (starCountText != null && GameManager.Instance != null)
         {
