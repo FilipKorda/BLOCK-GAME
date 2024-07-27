@@ -35,7 +35,7 @@ public class FallingForceApplier : MonoBehaviour
 
     private void Update()
     {
-        if (isRotating)
+        if (isRotating && player.gameObject.activeInHierarchy)
         {
             Vector3 rotation = rotationSpeed * Time.deltaTime * new Vector3(rotationX, rotationY, rotationZ);
 

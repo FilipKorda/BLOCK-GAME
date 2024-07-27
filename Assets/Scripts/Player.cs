@@ -60,9 +60,7 @@ public class Player : MonoBehaviour
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
-
-        
-
+      
         switch (rotationDirection)
         {
             case FallingForceApplier.DirectionForceApplier.D:
@@ -98,10 +96,12 @@ public class Player : MonoBehaviour
         {
             string surfaceTag = hit.collider.tag;
             stepSoundManager.PlaySound(surfaceTag);
+
+            SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
         }
     }
 
-    void FreezeAllAxes()
+    public void FreezeAllAxes()
     {
         rb.constraints = RigidbodyConstraints.FreezeAll;
     }

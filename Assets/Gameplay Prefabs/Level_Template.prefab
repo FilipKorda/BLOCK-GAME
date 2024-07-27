@@ -914,7 +914,7 @@ MonoBehaviour:
   spiralMovement: {fileID: 6449964952983652613}
   playerCollider: {fileID: 1790872707718861742}
   metaCollider: {fileID: 845832212734889685}
-  positionOffset: 0.05
+  tolerance: 0.01
 --- !u!114 &6449964952983652613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2091,7 +2091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 6855378153276605347}
-  player: {fileID: 5116559297477161786}
   objectsToMove:
   - {fileID: 1980378390151256935}
   - {fileID: 1326891037623076253}
@@ -2117,6 +2116,7 @@ MonoBehaviour:
   - {fileID: 4332267267132682597}
   - {fileID: 279997215847795484}
   loadingSystem: {fileID: 0}
+  player: {fileID: 1488980393954920055}
 --- !u!1 &8672369994555839822
 GameObject:
   m_ObjectHideFlags: 0

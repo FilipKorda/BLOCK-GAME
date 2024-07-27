@@ -5,9 +5,9 @@ using UnityEngine;
 public class ResetCollider : MonoBehaviour
 {
     [SerializeField] private GameObject ground;
-    [SerializeField] private GameObject player;
     [SerializeField] private PlateMoveDown[] objectsToMove;
     [SerializeField] private LoadingSystem loadingSystem;
+    [SerializeField] private Player player;
     private int previousStarCount = 0;
 
 
@@ -24,7 +24,7 @@ public class ResetCollider : MonoBehaviour
     {
         StartCoroutine(ResetDealy());
 
-        player.SetActive(false);
+        player.gameObject.SetActive(false);
 
         if (collision.gameObject.CompareTag("Player"))
         {

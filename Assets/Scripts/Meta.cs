@@ -10,6 +10,7 @@ public class Meta : VisableCollider
     [SerializeField] private Collider metaCollider;
     [SerializeField] private float tolerance = 0.01f;
     private bool fixRotation = false;
+    private bool youWin = false;
 
 
     private void Awake()
@@ -40,19 +41,12 @@ public class Meta : VisableCollider
                 fixRotation = true;
             }
 
-            if (Quaternion.Angle(playerCollider.transform.rotation, metaCollider.transform.rotation) < tolerance)
+            if (!youWin && Quaternion.Angle(playerCollider.transform.rotation, metaCollider.transform.rotation) < tolerance)
             {
                 CheckForMatch();
-                Debug.Log("Win");
+                youWin = true;
+
             }
-            else
-            {
-                Debug.Log("Gracz jest w tej samej pozycji co meta, ale ma inn¹ rotacjê.");
-            }
-        }
-        else
-        {
-            Debug.Log("Gracz nie jest w tej samej pozycji co meta.");
         }
     }
 
