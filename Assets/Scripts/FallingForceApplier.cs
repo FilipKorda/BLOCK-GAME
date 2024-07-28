@@ -28,8 +28,6 @@ public class FallingForceApplier : MonoBehaviour
     private Vector3 forceDirection_S = new(0, -20, -5);
     private Vector3 forceDirection_D = new(5, -20, 0);
 
-    private bool soundPlay = false;
-
     private void Start()
     {
         isRotating = false;
@@ -52,12 +50,7 @@ public class FallingForceApplier : MonoBehaviour
         {
             player.PreparPlayerToFallDown();
 
-            if(!soundPlay)
-            {
-                SoundManager.Instance.PlaySound(SoundClip.LoseSound);
-                soundPlay = true;
-            }
-          
+            SoundManager.Instance.PlaySound(SoundClip.LoseSound);
 
             Vector3 force = Vector3.zero;
 

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GetStarSound
   m_EditorClassIdentifier: 
   clipName: 2
-  clip: {fileID: 8300000, guid: 6f5ad8b66a75bc049b93cf0557ed49ce, type: 3}
+  clip: {fileID: 8300000, guid: 3f50090622533e14caa66e081c3f66a9, type: 3}
   volume: 0.2
-  pitch: 0.2
+  pitch: 1

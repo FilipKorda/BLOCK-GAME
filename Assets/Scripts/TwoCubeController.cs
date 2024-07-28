@@ -99,6 +99,7 @@ public class TwoCubeController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(0, 0, 90);
                 player.scale = new Vector3(1f, 0.5f, 0.5f);
                 ResetToInitialCubes();
+                SoundManager.Instance.PlaySound(SoundClip.ConnectTwoCubesSound);
             }
             else if (Mathf.Abs(dz - 1) <= positionOffset)
             {
@@ -106,13 +107,14 @@ public class TwoCubeController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(0, 90, 90);
                 player.scale = new Vector3(0.5f, 0.5f, 1f);
                 ResetToInitialCubes();
+                SoundManager.Instance.PlaySound(SoundClip.ConnectTwoCubesSound);
             }
 
             player.gameObject.SetActive(true);
             ResetTwoCubesButtonCollider();
             player.pivot = new Vector3(0, 0, 0);
             player.axis = new Vector3(0, 0, 0);
-            SoundManager.Instance.PlaySound(SoundClip.ConnectTwoCubesSound);
+           
             //=============PO£¥CZENIE KOSTEK W JEDNEGO GRACZA=============//
         }
     }

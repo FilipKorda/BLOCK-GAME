@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 54299900630677481}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2571001, y: -1.49, z: 1.6885}
-  m_LocalScale: {x: 1.833072, y: 1, z: 0.8626818}
+  m_LocalPosition: {x: -1.2571001, y: -1.0953, z: 1.6642}
+  m_LocalScale: {x: 1.894945, y: 0.20063208, z: 0.9620533}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3583997503970946142}
@@ -200,8 +200,8 @@ Transform:
   m_GameObject: {fileID: 2240144167131786398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2571, y: -1.49, z: 1.6885}
-  m_LocalScale: {x: 1.833072, y: 1, z: 0.8626818}
+  m_LocalPosition: {x: -4.2571, y: -1.0953, z: 1.6885}
+  m_LocalScale: {x: 1.894945, y: 0.20063208, z: 0.9135441}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3583997503970946142}
@@ -369,8 +369,8 @@ Transform:
   m_GameObject: {fileID: 8064090999151629499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.298, y: -1.49, z: 0.1693}
-  m_LocalScale: {x: 0.87031287, y: 1, z: 1.7346493}
+  m_LocalPosition: {x: 4.261, y: -1.0953, z: 0.16930012}
+  m_LocalScale: {x: 0.89489985, y: 0.20063208, z: 1.9134948}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3583997503970946142}
@@ -3464,7 +3464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 761029347394284241, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94595
+      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 802985933092036507, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3980,7 +3980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451443998483126214, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94595
+      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 4288809859757407218, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4304,7 +4304,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 74c57d5cdc0dcb646880314aac94a134, type: 2}
     - target: {fileID: 8186787297489918794, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94595
+      value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 8230998593370653536, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalScale.x

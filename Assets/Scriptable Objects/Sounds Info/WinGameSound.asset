@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WinGameSound
   m_EditorClassIdentifier: 
   clipName: 5
-  clip: {fileID: 8300000, guid: 9127ce172ee739247b43feb4fba117d1, type: 3}
+  clip: {fileID: 8300000, guid: 27c6d11b545987a4da49501bbab25937, type: 3}
   volume: 0.2
-  pitch: 0.2
+  pitch: 1

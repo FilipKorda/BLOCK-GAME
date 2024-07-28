@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e1e20e3ed4ad0448956ffb4124ab449, type: 3}
-  m_Name: ConnectTwoCubeSound
+  m_Name: ConnectTwoCubesSound
   m_EditorClassIdentifier: 
   clipName: 1
-  clip: {fileID: 8300000, guid: b103268093a591d40a10c88339f12c8a, type: 3}
+  clip: {fileID: 8300000, guid: e5e64fc5f587b344b943190aac135ce4, type: 3}
   volume: 0.2
-  pitch: 0.2
+  pitch: 1

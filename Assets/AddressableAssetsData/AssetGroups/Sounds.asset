@@ -17,23 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3d28e80f0aba161478efe29fabbc572b
   m_SerializeEntries:
-  - m_GUID: b103268093a591d40a10c88339f12c8a
-    m_Address: Assets/Sounds/ConnectTwoCubeSound.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6f5ad8b66a75bc049b93cf0557ed49ce
-    m_Address: Assets/Sounds/GetStarSound.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ec54d2ee046aa5a4d9d96cfc49d71f1d
-    m_Address: Assets/Sounds/LoseSound.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 35a05489e8e7f234cba9853e8f59ad3b
-    m_Address: Assets/Sounds/StartGameSound.mp3
+  - m_GUID: 18361a49b3351fd4c877098ea9328d12
+    m_Address: Assets/Sounds/TrappedPlateSound.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -47,13 +32,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 18361a49b3351fd4c877098ea9328d12
-    m_Address: Assets/Sounds/TrappedPlateSound.mp3
+  - m_GUID: 9127ce172ee739247b43feb4fba117d1
+    m_Address: Assets/Sounds/WinGameSound.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9127ce172ee739247b43feb4fba117d1
-    m_Address: Assets/Sounds/WinGameSound.mp3
+  - m_GUID: ec54d2ee046aa5a4d9d96cfc49d71f1d
+    m_Address: Assets/Sounds/LoseSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35a05489e8e7f234cba9853e8f59ad3b
+    m_Address: Assets/Sounds/StartGameSound.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
