@@ -36,7 +36,7 @@ public class TwoCubesButton : VisableCollider
 
     private void SplitObject()
     {
-        SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
+        SoundManager.Instance.PlaySound(SoundClip.ConnectTwoCubesSound);
         cube1Movement.enabled = true;
         player.gameObject.SetActive(false);
         twoCubeButtonCollider.isTrigger = false;

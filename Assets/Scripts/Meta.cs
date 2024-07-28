@@ -43,6 +43,7 @@ public class Meta : VisableCollider
 
             if (!youWin && Quaternion.Angle(playerCollider.transform.rotation, metaCollider.transform.rotation) < tolerance)
             {
+                SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
                 CheckForMatch();
                 youWin = true;
 
@@ -53,8 +54,7 @@ public class Meta : VisableCollider
     private void CheckForMatch()
     {
         spiralMovement.Play();
-        player.canMove = false;
-        SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
+        player.canMove = false;   
         disappearAnimation.PlayDisappearAnimation();
         Debug.Log("Win");
     }

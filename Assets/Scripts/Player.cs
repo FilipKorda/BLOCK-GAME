@@ -96,8 +96,6 @@ public class Player : MonoBehaviour
         {
             string surfaceTag = hit.collider.tag;
             stepSoundManager.PlaySound(surfaceTag);
-
-            SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
         }
     }
 

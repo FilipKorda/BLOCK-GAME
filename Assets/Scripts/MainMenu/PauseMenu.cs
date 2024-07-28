@@ -29,8 +29,11 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         statsPanel.gameObject.SetActive(false);
+
         moveTracker.ShowMoves();
         starTracker.ShowStars();
+        statsPanel.DeactiveStatsPanel();
+
         Time.timeScale = 1f;
         GameIsPaused = false;
         player.canMove = true;
@@ -40,11 +43,14 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         statsPanel.gameObject.SetActive(true);
+
         statsPanel.UpdateMoves();
         statsPanel.UpdateStars();
         statsPanel.UpdateAttempts();
         moveTracker.HideMoves();
         starTracker.HideStars();
+        statsPanel.ActiveStatsPanel();
+
         Time.timeScale = 0f;
         GameIsPaused = true;
         player.canMove = false;

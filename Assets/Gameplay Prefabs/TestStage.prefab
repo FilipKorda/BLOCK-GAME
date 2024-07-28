@@ -606,6 +606,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: groundObjects.Array.data[55]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: groundObjects.Array.data[60]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: groundObjects.Array.data[61]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: groundObjects.Array.data[62]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3175226541133763096, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.75
@@ -830,6 +846,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.6499993
       objectReference: {fileID: 0}
+    - target: {fileID: 7083870094509977281, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: currentStageNumber
+      value: 
+      objectReference: {fileID: 11400000, guid: b1253733f4e090841a1d39a9b6566781, type: 2}
     - target: {fileID: 7579606639605957180, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: sceneToLoad
       value: 

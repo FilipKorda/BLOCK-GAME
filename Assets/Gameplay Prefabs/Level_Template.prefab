@@ -87,12 +87,12 @@ GameObject:
   - component: {fileID: 8581266919610205875}
   - component: {fileID: 582797043271803602}
   m_Layer: 5
-  m_Name: Stars_Text (TMP) (1)
+  m_Name: Stars_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2440235875565958740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -108,10 +108,10 @@ RectTransform:
   - {fileID: 7007633553430608094}
   m_Father: {fileID: 345792100617345615}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -287.5}
+  m_SizeDelta: {x: 450, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8581266919610205875
 CanvasRenderer:
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 8370388982354268993}
   - component: {fileID: 413552566130713988}
   - component: {fileID: 1188424767198093458}
-  - component: {fileID: 3117496251955549291}
+  - component: {fileID: 7083870094509977281}
   m_Layer: 5
   m_Name: Stats_Panel
   m_TagString: Untagged
@@ -529,8 +529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 26.99408, y: 26.99408}
-  m_SizeDelta: {x: 526.99, y: 195.94}
+  m_AnchoredPosition: {x: 26.993958, y: 26.99408}
+  m_SizeDelta: {x: 526.99, y: 340}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8370388982354268993
 CanvasRenderer:
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272207442918984790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &3117496251955549291
+--- !u!114 &7083870094509977281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -606,11 +606,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306ef40c69f0374e8ff7ccf9be54fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statsPanelImage: {fileID: 413552566130713988}
+  currentStage: {fileID: 1698358320300609687}
+  attempts: {fileID: 1725719672279768127}
+  moves: {fileID: 4787107739018729940}
+  stars: {fileID: 192743751716574739}
   currentStageNumberText: {fileID: 2344868237172822201}
   attemptsNumberText: {fileID: 3644493578252082317}
   movesNumberText: {fileID: 5739121122969150923}
   starsNumberText: {fileID: 8341765471633695185}
-  currentStageNumber: {fileID: 11400000, guid: e6b1571570fc8004d9e89e03be0e20a3, type: 2}
+  currentStageNumber: {fileID: 11400000, guid: e14af0b31d14c594c8ba920d0175df30, type: 2}
 --- !u!1 &1698358320300609687
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4600355899922793161
 RectTransform:
   m_ObjectHideFlags: 0
@@ -646,8 +651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 270, y: -62.5}
+  m_SizeDelta: {x: 450, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3382780710706625539
 CanvasRenderer:
@@ -763,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7873059816065263644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -781,8 +786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 270, y: -137.5}
+  m_SizeDelta: {x: 450, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9218093047238334319
 CanvasRenderer:
@@ -1372,7 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 861425495907077107}
-  statsPanel: {fileID: 3117496251955549291}
+  statsPanel: {fileID: 7083870094509977281}
   player: {fileID: 1488980393954920055}
   moveTracker: {fileID: 2208470088210471557}
   starTracker: {fileID: 8793492186570912222}
@@ -2229,7 +2234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3051972921130700639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2245,10 +2250,10 @@ RectTransform:
   - {fileID: 5758004699672850201}
   m_Father: {fileID: 345792100617345615}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -212.5}
+  m_SizeDelta: {x: 450, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2235690619224263752
 CanvasRenderer:
@@ -3191,7 +3196,7 @@ MonoBehaviour:
   - {fileID: 279997215847795484}
   loadingSystem: {fileID: 0}
   player: {fileID: 1488980393954920055}
-  statsPanel: {fileID: 3117496251955549291}
+  statsPanel: {fileID: 7083870094509977281}
 --- !u!1 &8672369994555839822
 GameObject:
   m_ObjectHideFlags: 0

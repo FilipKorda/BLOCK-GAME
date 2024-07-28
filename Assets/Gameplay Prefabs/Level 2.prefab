@@ -169,9 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirections: 0400000003000000
-  forceStrength: 35
+  downFallForce: 5
   player: {fileID: 1748356822601158779}
   fallingDownManager: {fileID: 1700798596896953352}
+  rotationSpeed: 100
 --- !u!1 &8754156605943197359
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,9 +310,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirections: 0400000003000000
-  forceStrength: 35
+  downFallForce: 5
   player: {fileID: 1748356822601158779}
   fallingDownManager: {fileID: 1700798596896953352}
+  rotationSpeed: 100
 --- !u!1001 &759385684052188035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1488,6 +1490,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.8434995
       objectReference: {fileID: 0}
+    - target: {fileID: 7083870094509977281, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: currentStageNumber
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cbe1057c2f57d849ad49640e2ce590b, type: 2}
     - target: {fileID: 7103756751021462839, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
