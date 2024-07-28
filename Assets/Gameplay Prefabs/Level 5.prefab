@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 307352081755669860}
   - component: {fileID: 5860848219827500991}
   - component: {fileID: 8857480778460102858}
+  - component: {fileID: 2303954672464948118}
   m_Layer: 7
   m_Name: Collider Ground Brifge Button
   m_TagString: Untagged
@@ -183,6 +184,24 @@ MonoBehaviour:
   isTrappedPlate: 0
   isBridgePlate: 0
   isSplitPlate: 0
+--- !u!114 &2303954672464948118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618725809955930967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceDirections: 0400000003000000
+  downFallForce: 5
+  players:
+  - {fileID: 5470511326749566262}
+  fallingDownManager: {fileID: 1700798596896953352}
+  rotationSpeed: 100
 --- !u!1 &7701052514138929782
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +216,7 @@ GameObject:
   - component: {fileID: 1163082856546987391}
   - component: {fileID: 3498112309082737807}
   - component: {fileID: 5734528586901422149}
+  - component: {fileID: 928668097374746021}
   m_Layer: 7
   m_Name: Collider Ground Brifge Button (2)
   m_TagString: Untagged
@@ -334,6 +354,24 @@ MonoBehaviour:
   isTrappedPlate: 0
   isBridgePlate: 0
   isSplitPlate: 0
+--- !u!114 &928668097374746021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701052514138929782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceDirections: 0400000003000000
+  downFallForce: 5
+  players:
+  - {fileID: 5470511326749566262}
+  fallingDownManager: {fileID: 1700798596896953352}
+  rotationSpeed: 100
 --- !u!1 &8754156605943197359
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +386,7 @@ GameObject:
   - component: {fileID: 53972799105392620}
   - component: {fileID: 8967194374428266962}
   - component: {fileID: 725282576716713144}
+  - component: {fileID: 2623442363310737382}
   m_Layer: 7
   m_Name: Collider Ground Brifge Button (1)
   m_TagString: Untagged
@@ -485,6 +524,24 @@ MonoBehaviour:
   isTrappedPlate: 0
   isBridgePlate: 0
   isSplitPlate: 0
+--- !u!114 &2623442363310737382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754156605943197359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceDirections: 0400000003000000
+  downFallForce: 5
+  players:
+  - {fileID: 5470511326749566262}
+  fallingDownManager: {fileID: 1700798596896953352}
+  rotationSpeed: 100
 --- !u!1001 &33517946192869631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1052,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 761029347394284241, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94598
+      value: 293.946
       objectReference: {fileID: 0}
     - target: {fileID: 878865826570812580, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1744,7 +1801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451443998483126214, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94598
+      value: 293.946
       objectReference: {fileID: 0}
     - target: {fileID: 3602874056753280569, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2155,6 +2212,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b9c3a8e18d129294fa5fa06ff39572a7, type: 2}
     - target: {fileID: 7832619355925783116, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832619355925783116, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
+    - target: {fileID: 7832619355925783116, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: forceDirections.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2172,7 +2237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186787297489918794, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.94598
+      value: 293.946
       objectReference: {fileID: 0}
     - target: {fileID: 8230998593370653536, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalScale.x
@@ -2591,7 +2656,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1488980393954920055, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
   m_PrefabInstance: {fileID: 930699775730357772}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5470511326749566262}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b586c40cbe52dba4eb9eb70620cb50d0, type: 3}
@@ -2623,6 +2688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f4c64d0966c6040999911bb7fd7067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5470511326749566262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5116559297477161786, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+  m_PrefabInstance: {fileID: 930699775730357772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6903006587165793938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5991728593443702942, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
@@ -2873,9 +2943,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -3127,9 +3205,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 2
@@ -3849,9 +3935,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -4177,9 +4271,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -4275,9 +4377,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 2
@@ -4451,9 +4561,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 2
@@ -4549,9 +4667,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 2
@@ -4804,9 +4930,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 2
@@ -4898,9 +5032,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -5230,9 +5372,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -5480,9 +5630,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -5574,9 +5732,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -5668,9 +5834,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -5766,9 +5940,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 4
@@ -7896,9 +8078,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
@@ -9165,9 +9355,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700798596896953352}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: collidersGameObject
       value: 
       objectReference: {fileID: 8672369994555839822, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+    - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 5470511326749566262}
     - target: {fileID: 8350396344564764294, guid: 6a7d1934aec163e439067ee67476f808, type: 3}
       propertyPath: forceDirections.Array.size
       value: 1
