@@ -32,7 +32,7 @@ public class LoadingSystem : MonoBehaviour
 
     public void LoadNextLexel()
     {
-        StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));       
+        StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));
     }
 
     private IEnumerator LoadNextLevel(SceneData sceneData, SceneData thisSceneName)
@@ -107,6 +107,8 @@ public class LoadingSystem : MonoBehaviour
     private IEnumerator ReturnToMainMenu(SceneData mainMenuSceneData, SceneData thisSceneData)
     {
         GameManager.Instance.moveCount = 0;
+        GameManager.Instance.starCount = 0;
+        GameManager.Instance.attemptsNumber = 1;
         returnToMainMenu = true;
         Time.timeScale = 1f;
         PauseMenu.GameIsPaused = false;
@@ -192,7 +194,7 @@ public class LoadingSystem : MonoBehaviour
                     starTracker.ShowStars();
                     GameManager.Instance.realGameTime.EnabledTimeText();
                 }
-                    
+
                 yield return null;
             }
         }

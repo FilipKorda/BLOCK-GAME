@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public int starCount = 0;
 
-    public int attemptsNumber = 0;
+    public int attemptsNumber = 1;
 
     public RealGameTime realGameTime;
 

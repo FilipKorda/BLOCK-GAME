@@ -871,6 +871,10 @@ PrefabInstance:
       value: 293.94598
       objectReference: {fileID: 0}
     - target: {fileID: 8293177054660522312, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: leftRotate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293177054660522312, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: cube1Collider
       value: 
       objectReference: {fileID: 8380198236828855858}
@@ -2522,17 +2526,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7613227995991433268, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
   m_PrefabInstance: {fileID: 4301590727212757844}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7506363509199353230 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6024026496617236186, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
-  m_PrefabInstance: {fileID: 4301590727212757844}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e14a60117a76d5141a60af43b5dfb341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8380198236828855858 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5764079880617106790, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
@@ -2717,11 +2710,11 @@ PrefabInstance:
     - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: cubeMovement
       value: 
-      objectReference: {fileID: 7506363509199353230}
+      objectReference: {fileID: 0}
     - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: cube1Movement
       value: 
-      objectReference: {fileID: 7506363509199353230}
+      objectReference: {fileID: 0}
     - target: {fileID: 543439225353723154, guid: 04dacd032dd6fb146a0a49f60f3223f8, type: 3}
       propertyPath: playerCollider
       value: 

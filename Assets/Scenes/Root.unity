@@ -451,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveCount: 0
   starCount: 0
-  attemptsNumber: 0
+  attemptsNumber: 1
   realGameTime: {fileID: 799245266}
 --- !u!4 &1121549968
 Transform:

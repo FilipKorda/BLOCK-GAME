@@ -20,27 +20,34 @@ public class StatsPanel : MonoBehaviour
         UpdateAttempts();
         UpdateMoves();
         UpdateStars();
-        currentStageNumberText.text = currentStageNumber.stageNumber.ToString();
+        if (currentStageNumberText != null)
+            currentStageNumberText.text = currentStageNumber.stageNumber.ToString();
     }
 
     public void AddAttemptsNumber()
     {
-        GameManager.Instance.attemptsNumber++;
+        if (GameManager.Instance != null)
+            GameManager.Instance.attemptsNumber++;
     }
 
     public void UpdateAttempts()
     {
-        attemptsNumberText.text = $"{GameManager.Instance.attemptsNumber}";
+        if (attemptsNumberText != null && GameManager.Instance != null)
+        {
+            attemptsNumberText.text = $"{GameManager.Instance.attemptsNumber}";
+        }
     }
 
     public void UpdateMoves()
     {
-        movesNumberText.text = $"{GameManager.Instance.moveCount}";
+        if (movesNumberText != null && GameManager.Instance != null)
+            movesNumberText.text = $"{GameManager.Instance.moveCount}";
     }
 
     public void UpdateStars()
     {
-        starsNumberText.text = $"{GameManager.Instance.starCount}";
+        if (starsNumberText && GameManager.Instance != null)
+            starsNumberText.text = $"{GameManager.Instance.starCount}";
     }
 
     public void ActiveStatsPanel()
