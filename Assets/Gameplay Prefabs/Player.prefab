@@ -98,14 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b586c40cbe52dba4eb9eb70620cb50d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDirection: 0
+  totalRotation: 0
+  isRotating: 0
   pivot: {x: 0, y: 0, z: 0}
   axis: {x: 0, y: 0, z: 0}
   scale: {x: 0, y: 0, z: 0}
+  rb: {fileID: 5617971655109837648}
   canMove: 0
-  forceDirection_W: {x: 0, y: -20, z: 5}
-  forceDirection_A: {x: -5, y: -20, z: 0}
-  forceDirection_S: {x: 0, y: -20, z: -5}
-  forceDirection_D: {x: 5, y: -20, z: 0}
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 128

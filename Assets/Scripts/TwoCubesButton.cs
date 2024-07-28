@@ -5,7 +5,7 @@ public class TwoCubesButton : VisableCollider
     [SerializeField] private Player player;
     [SerializeField] private Collider playerCollider;
     [SerializeField] private GameObject twoCubeController;
-    [SerializeField] private CubeMovement cube1Movement;
+    [SerializeField] private Player cube1Movement;
     public Collider twoCubeButtonCollider;
 
     private void Start()

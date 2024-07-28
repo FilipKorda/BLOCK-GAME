@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public bool isRotating;
 
     public Vector3 pivot, axis, scale;
-    private Rigidbody rb;
+    [SerializeField] private Rigidbody rb;
 
     [Header("Player Management")]
     public bool canMove;

@@ -25,10 +25,9 @@ public class ResetCollider : MonoBehaviour
     {
         StartCoroutine(ResetDealy());
 
-        player.gameObject.SetActive(false);
-
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.SetActive(false);
             StartCoroutine(TriggerMovePlatesWithDelay());
         }
 

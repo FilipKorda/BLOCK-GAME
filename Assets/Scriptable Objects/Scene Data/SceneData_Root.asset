@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: SceneData_Root
   m_EditorClassIdentifier: 
   sceneName: Root
+  sceneIndex: 0
+  stageString: Root
+  stageNumber: 0

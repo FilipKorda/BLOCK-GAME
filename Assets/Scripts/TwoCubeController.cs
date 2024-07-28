@@ -8,11 +8,11 @@ public class TwoCubeController : MonoBehaviour
     [SerializeField] private TwoCubesButton twoCubesButton;
     [Header("Cube 1")]
     [SerializeField] private GameObject cube1;
-    [SerializeField] private CubeMovement cubeMovement1;
+    [SerializeField] private Player cubeMovement1;
     [SerializeField] private GameObject selector_Canvas1;
     [Header("Cube 2")]
     [SerializeField] private GameObject cube2;
-    [SerializeField] private CubeMovement cubeMovement2;
+    [SerializeField] private Player cubeMovement2;
     [SerializeField] private GameObject selector_Canvas2;
 
     private Camera mainCamera;

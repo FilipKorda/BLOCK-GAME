@@ -14,7 +14,7 @@ public class FallingForceApplier : MonoBehaviour
     [Header("Force Directions")]
     [SerializeField] private DirectionForceApplier[] forceDirections;
     [SerializeField] private float downFallForce = 5f;
-    [SerializeField] private Player player;
+    [SerializeField] private GameObject[] players;
     [SerializeField] private FallingDownManager fallingDownManager;
     [SerializeField] private float rotationSpeed = 100f;
 
@@ -35,12 +35,16 @@ public class FallingForceApplier : MonoBehaviour
 
     private void Update()
     {
-        if (isRotating && player.gameObject.activeInHierarchy)
+        if (isRotating)
         {
-            Vector3 rotation = rotationSpeed * Time.deltaTime * new Vector3(rotationX, rotationY, rotationZ);
-
-            player.gameObject.transform.Rotate(rotation);
-
+            foreach (var player in players)
+            {
+                if (player.activeInHierarchy && player.GetComponent<Player>().enabled)
+                {
+                    Vector3 rotation = rotationSpeed * Time.deltaTime * new Vector3(rotationX, rotationY, rotationZ);
+                    player.transform.Rotate(rotation);
+                }
+            }
         }
     }
 
@@ -48,50 +52,53 @@ public class FallingForceApplier : MonoBehaviour
     {
         if (other.TryGetComponent<Rigidbody>(out var rb))
         {
-            player.PreparPlayerToFallDown();
+            foreach (var player in players)
+            {
+                if (player.activeInHierarchy && player.GetComponent<Player>().enabled)
+                {
+                    player.GetComponent<Player>().PreparPlayerToFallDown();
+                }
+            }
 
             SoundManager.Instance.PlaySound(SoundClip.LoseSound);
 
             Vector3 force = Vector3.zero;
-
             isRotating = true;
 
-            foreach (var direction in forceDirections)
+            foreach (var player in players)
             {
-                if (direction == player.rotationDirection)
+                foreach (var direction in forceDirections)
                 {
-                    switch (direction)
+                    if (direction == player.GetComponent<Player>().rotationDirection)
                     {
-                        case DirectionForceApplier.W:
-                            rotationX = 1;
-                            rotationZ = 1;
-
-                            force += new Vector3(0, -downFallForce, 5);
-                            break;
-                        case DirectionForceApplier.S:
-                            rotationX = -1;
-                            rotationZ = -1;
-
-                            force += new Vector3(0, -downFallForce, -5);
-                            break;
-                        case DirectionForceApplier.A:
-                            rotationX = -1;
-                            rotationZ = -1;
-
-                            force += new Vector3(-5, -downFallForce, 0);
-                            break;
-                        case DirectionForceApplier.D:
-                            rotationX = 1;
-                            rotationZ = 1;
-
-                            force += new Vector3(5, -downFallForce, 0);
-                            break;
-                        default:
-                            break;
+                        switch (direction)
+                        {
+                            case DirectionForceApplier.W:
+                                rotationX = 1;
+                                rotationZ = 1;
+                                force += new Vector3(0, -downFallForce, 5);
+                                break;
+                            case DirectionForceApplier.S:
+                                rotationX = -1;
+                                rotationZ = -1;
+                                force += new Vector3(0, -downFallForce, -5);
+                                break;
+                            case DirectionForceApplier.A:
+                                rotationX = -1;
+                                rotationZ = -1;
+                                force += new Vector3(-5, -downFallForce, 0);
+                                break;
+                            case DirectionForceApplier.D:
+                                rotationX = 1;
+                                rotationZ = 1;
+                                force += new Vector3(5, -downFallForce, 0);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
             }
-
 
             foreach (var groundObject in fallingDownManager.groundObjects)
             {
@@ -101,8 +108,6 @@ public class FallingForceApplier : MonoBehaviour
                     collider.isTrigger = true;
                 }
             }
-
-
 
             rb.AddForce(force, ForceMode.Impulse);
         }
