@@ -285,6 +285,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &999455895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8850947239429881937, guid: 75702492078adce4d925c2b238228657, type: 3}
+  m_PrefabInstance: {fileID: 5852963350110798847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5852963350110798847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +298,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2477236180510378265, guid: 75702492078adce4d925c2b238228657, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 999455895}
+    - target: {fileID: 2477236180510378265, guid: 75702492078adce4d925c2b238228657, type: 3}
+      propertyPath: thisTranform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477236180510378265, guid: 75702492078adce4d925c2b238228657, type: 3}
+      propertyPath: targetTransform
+      value: 
+      objectReference: {fileID: 999455895}
+    - target: {fileID: 2477236180510378265, guid: 75702492078adce4d925c2b238228657, type: 3}
+      propertyPath: interpolationSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477236180510378265, guid: 75702492078adce4d925c2b238228657, type: 3}
+      propertyPath: centerOfMassTransform
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4688428937381274977, guid: 75702492078adce4d925c2b238228657, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

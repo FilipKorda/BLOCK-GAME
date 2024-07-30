@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public FallingForceApplier.DirectionForceApplier rotationDirection;
+    private DirectionForceApplier rotationDirection;
     private readonly float rotationSpeed = 750f;
     public float totalRotation;
     public bool isRotating;
@@ -19,10 +19,15 @@ public class Player : MonoBehaviour
     [SerializeField] private MoveTracker moveTracker;
     [SerializeField] private StepSoundManager stepSoundManager;
 
+    [SerializeField] private Transform targetWhenFall;
+    [SerializeField] private float attractionForce = 10f;
+    private bool isFalling;
+
     void Start()
     {
         isRotating = false;
         canMove = true;
+        isFalling = false;
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
@@ -30,6 +35,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (isFalling && targetWhenFall != null)
+        {
+            Vector3 direction = targetWhenFall.position - transform.position;
+            direction.Normalize();
+            rb.AddForce(direction * attractionForce);
+
+        }
+
         if (canMove)
         {
             if (isRotating)
@@ -40,43 +53,43 @@ public class Player : MonoBehaviour
                     deltaRotation = 90f - totalRotation;
                     isRotating = false;
                     moveTracker.AddMove();
-                    DetectSurface();                  
+                    DetectSurface();
                 }
-                if ((rotationDirection == FallingForceApplier.DirectionForceApplier.A) || (rotationDirection == FallingForceApplier.DirectionForceApplier.W))
+                if ((rotationDirection == DirectionForceApplier.A) || (rotationDirection == DirectionForceApplier.W))
                     transform.RotateAround(pivot, axis, deltaRotation);
                 else transform.RotateAround(pivot, axis, -deltaRotation);
                 totalRotation += deltaRotation;
             }
-            else if (Input.GetKeyDown(KeyCode.W)) Rotate(FallingForceApplier.DirectionForceApplier.W);
-            else if (Input.GetKeyDown(KeyCode.A)) Rotate(FallingForceApplier.DirectionForceApplier.A);
-            else if (Input.GetKeyDown(KeyCode.S)) Rotate(FallingForceApplier.DirectionForceApplier.S);
-            else if (Input.GetKeyDown(KeyCode.D)) Rotate(FallingForceApplier.DirectionForceApplier.D);
+            else if (Input.GetKeyDown(KeyCode.W)) Rotate(DirectionForceApplier.W);
+            else if (Input.GetKeyDown(KeyCode.A)) Rotate(DirectionForceApplier.A);
+            else if (Input.GetKeyDown(KeyCode.S)) Rotate(DirectionForceApplier.S);
+            else if (Input.GetKeyDown(KeyCode.D)) Rotate(DirectionForceApplier.D);
         }
-        
+
     }
 
-    void Rotate(FallingForceApplier.DirectionForceApplier direction)
+    void Rotate(DirectionForceApplier direction)
     {
         rotationDirection = direction;
         isRotating = true;
         totalRotation = 0f;
-      
+
         switch (rotationDirection)
         {
-            case FallingForceApplier.DirectionForceApplier.D:
+            case DirectionForceApplier.D:
                 pivot = transform.position + new Vector3(scale.x, -scale.y, 0);
                 break;
-            case FallingForceApplier.DirectionForceApplier.A:
+            case DirectionForceApplier.A:
                 pivot = transform.position + new Vector3(-scale.x, -scale.y, 0);
                 break;
-            case FallingForceApplier.DirectionForceApplier.W:
+            case DirectionForceApplier.W:
                 pivot = transform.position + new Vector3(0, -scale.y, scale.z);
                 break;
-            case FallingForceApplier.DirectionForceApplier.S:
+            case DirectionForceApplier.S:
                 pivot = transform.position + new Vector3(0, -scale.y, -scale.z);
                 break;
         }
-        if ((rotationDirection == FallingForceApplier.DirectionForceApplier.D) || (rotationDirection == FallingForceApplier.DirectionForceApplier.A))
+        if ((rotationDirection == DirectionForceApplier.D) || (rotationDirection == DirectionForceApplier.A))
         {
             axis = Vector3.forward;
             (scale.y, scale.x) = (scale.x, scale.y);
@@ -85,7 +98,7 @@ public class Player : MonoBehaviour
         {
             axis = Vector3.right;
             (scale.y, scale.z) = (scale.z, scale.y);
-        }      
+        }
     }
 
     void DetectSurface()
@@ -109,6 +122,38 @@ public class Player : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
         rb.useGravity = true;
         canMove = false;
+        isFalling = true;
+
+        Vector3 newCenterOfMass = rb.centerOfMass;
+
+        Quaternion rot1 = new(0, 0, -180, 0);
+        Quaternion rot2 = new(-180, 0, 0, 0);
+        if (transform.rotation == rot1 || transform.rotation == rot2)
+        {
+            newCenterOfMass.y -= 1;
+        }
+        else
+        {
+            newCenterOfMass.y += 1;
+
+        }
+        rb.centerOfMass = newCenterOfMass;
+
+        if (targetWhenFall != null)
+        {
+            Vector3 targetPosition = transform.position;
+            targetPosition.y -= 10;
+            targetWhenFall.position = targetPosition;
+        }
     }
+
 }
 
+public enum DirectionForceApplier
+{
+    None,
+    W,
+    S,
+    A,
+    D
+}

@@ -250,6 +250,7 @@ Transform:
   - {fileID: 3842135625804165986}
   - {fileID: 1206820320243703957}
   - {fileID: 6132262974576831167}
+  - {fileID: 5484790022870929215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861425495907077107
@@ -2096,6 +2097,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4469644852452076826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5484790022870929215}
+  m_Layer: 0
+  m_Name: targetWhenFall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5484790022870929215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469644852452076826}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.75, y: -10, z: -0.25}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8932118076430167062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4759715067153528054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3426,6 +3458,10 @@ PrefabInstance:
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 2208470088210471557}
+    - target: {fileID: 1368608292178519893, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
+      propertyPath: targetWhenFall
+      value: 
+      objectReference: {fileID: 5484790022870929215}
     - target: {fileID: 1368608292178519893, guid: 96a6925c808774e43b38f24f0a6d1127, type: 3}
       propertyPath: stepSoundManager
       value: 

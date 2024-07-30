@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b586c40cbe52dba4eb9eb70620cb50d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: 0
   totalRotation: 0
   isRotating: 0
   pivot: {x: 0, y: 0, z: 0}
@@ -111,6 +110,8 @@ MonoBehaviour:
     m_Bits: 128
   moveTracker: {fileID: 0}
   stepSoundManager: {fileID: 0}
+  targetWhenFall: {fileID: 0}
+  attractionForce: 20
 --- !u!65 &2201656616724886156
 BoxCollider:
   m_ObjectHideFlags: 0
