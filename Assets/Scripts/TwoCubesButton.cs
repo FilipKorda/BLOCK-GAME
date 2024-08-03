@@ -53,7 +53,8 @@ public class TwoCubesButton : VisableCollider
     {
         if (twoCubeController != null && twoCubeController != null)
         {
-            twoCubeButtonCollider.enabled = false;
+            yield return new WaitForSeconds(0.15f);
+            twoCubeButtonCollider.isTrigger = true;
             yield return new WaitForSeconds(0.5f);
             twoCubeController.SetActive(true);
         }
