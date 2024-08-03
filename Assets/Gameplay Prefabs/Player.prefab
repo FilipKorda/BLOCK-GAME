@@ -104,6 +104,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   scale: {x: 0, y: 0, z: 0}
   rb: {fileID: 5617971655109837648}
+  boxCollider: {fileID: 2201656616724886156}
   canMove: 0
   collisionLayerMask:
     serializedVersion: 2

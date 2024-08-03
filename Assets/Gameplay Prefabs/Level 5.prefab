@@ -196,12 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 0400000003000000
-  downFallForce: 5
   players:
   - {fileID: 5470511326749566262}
-  fallingDownManager: {fileID: 1700798596896953352}
-  rotationSpeed: 100
 --- !u!1 &7701052514138929782
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,12 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 0400000003000000
-  downFallForce: 5
   players:
   - {fileID: 5470511326749566262}
-  fallingDownManager: {fileID: 1700798596896953352}
-  rotationSpeed: 100
 --- !u!1 &8754156605943197359
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,12 +528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 0400000003000000
-  downFallForce: 5
   players:
   - {fileID: 5470511326749566262}
-  fallingDownManager: {fileID: 1700798596896953352}
-  rotationSpeed: 100
 --- !u!1001 &33517946192869631
 PrefabInstance:
   m_ObjectHideFlags: 0

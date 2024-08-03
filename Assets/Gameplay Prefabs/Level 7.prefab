@@ -164,12 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 0400000001000000
-  downFallForce: 5
   players:
   - {fileID: 8198989469009607764}
-  fallingDownManager: {fileID: 3294932033793576298}
-  rotationSpeed: 100
 --- !u!1 &8831766302756313385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,7 +3540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: groundObjects.Array.size
-      value: 54
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: groundObjects.Array.data[0]
@@ -3762,6 +3758,10 @@ PrefabInstance:
       propertyPath: groundObjects.Array.data[53]
       value: 
       objectReference: {fileID: 801558473930235800}
+    - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: groundObjects.Array.data[54]
+      value: 
+      objectReference: {fileID: 7607035169097121089}
     - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: groundObjects.Array.data[55]
       value: 
@@ -6212,6 +6212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f4c64d0966c6040999911bb7fd7067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7607035169097121089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3500314882257657561, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
+  m_PrefabInstance: {fileID: 6413693190281683864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7882338272941647493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3774494896211346717, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}

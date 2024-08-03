@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -6,25 +7,21 @@ public class Player : MonoBehaviour
     private readonly float rotationSpeed = 800f;
     public float totalRotation;
     public bool isRotating;
-
     public Vector3 pivot, axis, scale;
-    [SerializeField] private Rigidbody rb;
 
     [Header("Player Management")]
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Collider boxCollider;
     public bool canMove;
     private bool shouldCorrectRotation;
     private bool isFalling;
 
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
-
     [SerializeField] private MoveTracker moveTracker;
     [SerializeField] private StepSoundManager stepSoundManager;
-
     [SerializeField] private Transform targetWhenFall;
     [SerializeField] private float attractionForce = 10f;
-
-
 
     void Start()
     {
@@ -34,6 +31,7 @@ public class Player : MonoBehaviour
         shouldCorrectRotation = true;
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<Collider>();
         FreezeAllAxes();
     }
 
@@ -150,6 +148,7 @@ public class Player : MonoBehaviour
         rb.useGravity = true;
         canMove = false;
         isFalling = true;
+        StartCoroutine(DelayDisableCollider());
 
         Vector3 newCenterOfMass = rb.centerOfMass;
         newCenterOfMass.y += 1;
@@ -161,6 +160,14 @@ public class Player : MonoBehaviour
             targetPosition.y -= 10;
             targetWhenFall.position = targetPosition;
         }
+    }
+
+    private IEnumerator DelayDisableCollider()
+    {
+        yield return new WaitForSeconds(0.1f);
+        boxCollider.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        boxCollider.enabled = true;
     }
 
 }
