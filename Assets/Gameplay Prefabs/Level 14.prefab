@@ -4057,7 +4057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1602169776096418432, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.25
+      value: -8.25
       objectReference: {fileID: 0}
     - target: {fileID: 1977346128688382468, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: groundObjects.Array.size
@@ -4353,7 +4353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2632584493003666757, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.257
+      value: -4.257
       objectReference: {fileID: 0}
     - target: {fileID: 3100400172178024220, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_TagString

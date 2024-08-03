@@ -1,7 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class TwoCubesButton : VisableCollider
 {
+    // ==== Instruction for SetUp Cubes Mechnics ====
+    // - To this twoCubeController assigned a TwoCubeController GameObject
+
     [SerializeField] private Player player;
     [SerializeField] private Collider playerCollider;
     [SerializeField] private GameObject twoCubeController;
@@ -41,7 +45,17 @@ public class TwoCubesButton : VisableCollider
         player.gameObject.SetActive(false);
         twoCubeButtonCollider.isTrigger = false;
         twoCubeButtonCollider.enabled = false;
-        twoCubeController.SetActive(true);
+        StartCoroutine(DelaySpawnTwoCubes());
         Debug.Log("Create 2 cubes and swithc them on TAB to move around");
+    }
+
+    private IEnumerator DelaySpawnTwoCubes()
+    {
+        if (twoCubeController != null && twoCubeController != null)
+        {
+            twoCubeButtonCollider.enabled = false;
+            yield return new WaitForSeconds(0.5f);
+            twoCubeController.SetActive(true);
+        }
     }
 }
