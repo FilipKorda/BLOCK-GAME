@@ -6,16 +6,15 @@ public class FallingForceApplier : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Rigidbody>(out var rb))
+        if (other.TryGetComponent<Player>(out var playerScript))
         {
             foreach (var player in players)
             {
-                if (player.activeInHierarchy && player.GetComponent<Player>().enabled)
+                if (player.activeInHierarchy && playerScript.enabled)
                 {
-                    player.GetComponent<Player>().PreparPlayerToFallDown();
+                    playerScript.PreparPlayerToFallDown();
                 }
             }
-
             SoundManager.Instance.PlaySound(SoundClip.LoseSound);
         }
     }

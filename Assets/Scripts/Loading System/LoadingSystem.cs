@@ -30,6 +30,14 @@ public class LoadingSystem : MonoBehaviour
         loadingHandel.SetActive(true);
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            ResetThisLevel();
+        }
+    }
+
     public void LoadNextLexel()
     {
         StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));

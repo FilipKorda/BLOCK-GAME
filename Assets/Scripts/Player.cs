@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private DirectionForceApplier rotationDirection;
-    private readonly float rotationSpeed = 750f;
+    private readonly float rotationSpeed = 800f;
     public float totalRotation;
     public bool isRotating;
 
@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     [Header("Player Management")]
     public bool canMove;
+    private bool shouldCorrectRotation;
+    private bool isFalling;
 
     [Header("Layer Mask of Invisible Wall")]
     [SerializeField] private LayerMask collisionLayerMask;
@@ -21,13 +23,15 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Transform targetWhenFall;
     [SerializeField] private float attractionForce = 10f;
-    private bool isFalling;
+
+
 
     void Start()
     {
         isRotating = false;
         canMove = true;
         isFalling = false;
+        shouldCorrectRotation = true;
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
@@ -40,7 +44,6 @@ public class Player : MonoBehaviour
             Vector3 direction = targetWhenFall.position - transform.position;
             direction.Normalize();
             rb.AddForce(direction * attractionForce);
-
         }
 
         if (canMove)
@@ -56,8 +59,14 @@ public class Player : MonoBehaviour
                     DetectSurface();
                 }
                 if ((rotationDirection == DirectionForceApplier.A) || (rotationDirection == DirectionForceApplier.W))
+                {
                     transform.RotateAround(pivot, axis, deltaRotation);
-                else transform.RotateAround(pivot, axis, -deltaRotation);
+                }
+                else
+                {
+                    transform.RotateAround(pivot, axis, -deltaRotation);
+                }
+
                 totalRotation += deltaRotation;
             }
             else if (Input.GetKeyDown(KeyCode.W)) Rotate(DirectionForceApplier.W);
@@ -65,7 +74,23 @@ public class Player : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.S)) Rotate(DirectionForceApplier.S);
             else if (Input.GetKeyDown(KeyCode.D)) Rotate(DirectionForceApplier.D);
         }
+        if (!isRotating)
+        {
+            CorrectRotationIfUpsideDown();
+        }
 
+    }
+
+    private void CorrectRotationIfUpsideDown()
+    {
+        if (shouldCorrectRotation)
+        {
+            Vector3 currentRotation = transform.eulerAngles;
+            if (Mathf.Abs(currentRotation.x - 180) < 1f || Mathf.Abs(currentRotation.z - 180) < 1f || Mathf.Abs(currentRotation.x - 360) < 1f || Mathf.Abs(currentRotation.z - 360) < 1f)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+        }
     }
 
     void Rotate(DirectionForceApplier direction)
@@ -99,6 +124,7 @@ public class Player : MonoBehaviour
             axis = Vector3.right;
             (scale.y, scale.z) = (scale.z, scale.y);
         }
+
     }
 
     void DetectSurface()
@@ -120,23 +146,13 @@ public class Player : MonoBehaviour
     public void PreparPlayerToFallDown()
     {
         rb.constraints = RigidbodyConstraints.None;
+        shouldCorrectRotation = false;
         rb.useGravity = true;
         canMove = false;
         isFalling = true;
 
         Vector3 newCenterOfMass = rb.centerOfMass;
-
-        Quaternion rot1 = new(0, 0, -180, 0);
-        Quaternion rot2 = new(-180, 0, 0, 0);
-        if (transform.rotation == rot1 || transform.rotation == rot2)
-        {
-            newCenterOfMass.y -= 1;
-        }
-        else
-        {
-            newCenterOfMass.y += 1;
-
-        }
+        newCenterOfMass.y += 1;
         rb.centerOfMass = newCenterOfMass;
 
         if (targetWhenFall != null)

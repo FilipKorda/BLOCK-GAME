@@ -111,7 +111,7 @@ MonoBehaviour:
   moveTracker: {fileID: 0}
   stepSoundManager: {fileID: 0}
   targetWhenFall: {fileID: 0}
-  attractionForce: 20
+  attractionForce: 5
 --- !u!65 &2201656616724886156
 BoxCollider:
   m_ObjectHideFlags: 0
