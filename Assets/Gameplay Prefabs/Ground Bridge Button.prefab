@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6260602456782178685}
   - component: {fileID: 4831529509773462452}
   m_Layer: 6
-  m_Name: Ground Brifge Button
+  m_Name: Ground Bridge Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

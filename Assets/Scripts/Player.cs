@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
         shouldCorrectRotation = true;
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
-        boxCollider = GetComponent<Collider>();
         FreezeAllAxes();
     }
 
@@ -164,10 +163,13 @@ public class Player : MonoBehaviour
 
     private IEnumerator DelayDisableCollider()
     {
-        yield return new WaitForSeconds(0.1f);
-        boxCollider.enabled = false;
-        yield return new WaitForSeconds(0.3f);
-        boxCollider.enabled = true;
+        if (boxCollider != null)
+        {
+            yield return new WaitForSeconds(0.2f);
+            boxCollider.enabled = false;
+            yield return new WaitForSeconds(0.35f);
+            boxCollider.enabled = true;
+        }
     }
 
 }

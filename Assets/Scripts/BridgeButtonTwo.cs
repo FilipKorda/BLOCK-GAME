@@ -4,25 +4,25 @@ using UnityEngine;
 public class BridgeButtonTwo : VisableCollider
 {
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject bridge;
-    [SerializeField] private GameObject bridge2;
+
+    [SerializeField] private GameObject bridge;  
     [SerializeField] private GameObject resetCollider;
+    [SerializeField] private Vector3 originalPosition;
+    [SerializeField] private Vector3 destinationPosition;
+
+    public bool shouldOpenTwoBridges;
+    [SerializeField] private GameObject bridge2;
     [SerializeField] private GameObject resetCollider2;
+    [SerializeField] private Vector3 originalPositionBridge2;
+    [SerializeField] private Vector3 destinationPositionBridge2;
+
     public bool bridgeIsOpen = false;
 
     [SerializeField] private Collider playerCollider;
     [SerializeField] private Collider crossPlateCollider;
 
-    [SerializeField] private Vector3 originalPosition;
-    [SerializeField] private Vector3 destinationPosition;
-
-    [SerializeField] private Vector3 originalPositionBridge2;
-    [SerializeField] private Vector3 destinationPositionBridge2;
-
     [SerializeField] private float transitionDuration = 0.1f;
     private bool isAtOriginalPosition = true;
-
-    public bool shouldOpenTwoBridges;
 
     private void Start()
     {

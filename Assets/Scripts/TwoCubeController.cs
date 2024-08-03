@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class TwoCubeController : MonoBehaviour
 {
+    // Instruction for SetUp Cubes Mechnics
+    // - Disable Second cube Player Script
+
     [SerializeField] private GameObject twoCubeController;
     [SerializeField] private Player player;
     [SerializeField] private TwoCubesButton twoCubesButton;
