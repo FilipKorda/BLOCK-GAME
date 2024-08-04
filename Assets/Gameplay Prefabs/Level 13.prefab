@@ -638,6 +638,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (2)
@@ -958,6 +966,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (20)
@@ -1530,6 +1546,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (19)
@@ -1690,6 +1714,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (15)
@@ -2178,6 +2210,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (16)
@@ -2444,6 +2484,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (9)
@@ -2522,6 +2570,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (13)
@@ -2862,6 +2918,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (6)
@@ -3390,6 +3454,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (12)
@@ -3482,11 +3554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181297602913407464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 181297602913407464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423931331708171591, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_Name
@@ -3494,11 +3566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 537591179411612464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 537591179411612464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8299999
+      value: 2.83
       objectReference: {fileID: 0}
     - target: {fileID: 541904065567754068, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4240,6 +4312,10 @@ PrefabInstance:
       propertyPath: groundObjects.Array.data[80]
       value: 
       objectReference: {fileID: 7418740507808562475}
+    - target: {fileID: 2059222934824650983, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: orthographic size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2228912342339454693, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -52.97699
@@ -4262,11 +4338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3175226541133763096, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3175226541133763096, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.75
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 3263872429875944418, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_IsActive
@@ -4322,11 +4398,11 @@ PrefabInstance:
       objectReference: {fileID: 6915610368807177554}
     - target: {fileID: 5654058020630161774, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5654058020630161774, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5971772221004491629, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4774,11 +4850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353446175041047539, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8353446175041047539, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.25
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8507514687014791123, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: m_LocalScale.z
@@ -5197,6 +5273,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68b989759581914d85baa16b1bdb09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3320129106387082432 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1790872707718861742, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+  m_PrefabInstance: {fileID: 3947689751995567982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3583997503970946142 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 537591179411612464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
@@ -5329,6 +5410,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (8)
@@ -6029,6 +6118,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (10)
@@ -6459,6 +6556,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (3)
@@ -6537,6 +6642,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (14)
@@ -7123,6 +7236,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (4)
@@ -7201,6 +7322,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (7)
@@ -7521,6 +7650,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (18)
@@ -8107,6 +8244,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (11)
@@ -8775,6 +8920,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder
@@ -9099,6 +9252,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (1)
@@ -9517,6 +9678,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (17)
@@ -9595,6 +9764,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (5)
@@ -9755,6 +9932,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934763739187174774}
     m_Modifications:
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2477236180510378265}
+    - target: {fileID: 65904955453824675, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 3320129106387082432}
     - target: {fileID: 4072897543396750846, guid: 514bbad866b1dee458d164ba25ae3d10, type: 3}
       propertyPath: m_Name
       value: TrappedPlateHolder (21)

@@ -3255,6 +3255,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5565394677887296376}
     m_Modifications:
     - target: {fileID: 139647777519884703, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 139647777519884703, guid: 04555ed2d9181b640ac2adf6cd23cc13, type: 3}
       propertyPath: moveTracker
       value: 
       objectReference: {fileID: 2913561991391548907}

@@ -22,11 +22,10 @@ public class ResetCollider : MonoBehaviour
 
 
     private void OnCollisionEnter(Collision collision)
-    {
-        StartCoroutine(ResetDealy());
-
+    {      
         if (collision.gameObject.CompareTag("Player"))
         {
+            StartCoroutine(ResetDealy());
             collision.gameObject.SetActive(false);
             StartCoroutine(TriggerMovePlatesWithDelay());
         }
