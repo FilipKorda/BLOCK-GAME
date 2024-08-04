@@ -1626,7 +1626,7 @@ MonoBehaviour:
   stageText: {fileID: 2084113934}
   moveTracker: {fileID: 0}
   starTracker: {fileID: 0}
-  sceneToLoad: {fileID: 11400000, guid: 50dac0673ad5fd147a5dd392815c5cd9, type: 2}
+  sceneToLoad: {fileID: 11400000, guid: b38a6d14de877d740a185481eef461a3, type: 2}
   sceneToUnload: {fileID: 11400000, guid: 0bd34fd1903a40443b768f9222d5ef21, type: 2}
   thisSceneToLoad: {fileID: 11400000, guid: 0bd34fd1903a40443b768f9222d5ef21, type: 2}
   mainMenuToLoad: {fileID: 11400000, guid: 7c9d53ea4cddca34983370ce000fffba, type: 2}
