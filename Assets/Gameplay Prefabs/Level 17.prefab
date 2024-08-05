@@ -2309,7 +2309,7 @@ PrefabInstance:
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 3768699096822308486}
+      objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: bridge2
       value: 
@@ -7539,7 +7539,7 @@ PrefabInstance:
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 3768699096822308486}
+      objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: resetCollider
       value: 

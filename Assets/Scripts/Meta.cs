@@ -42,11 +42,9 @@ public class Meta : VisableCollider
             }
 
             if (!youWin && Quaternion.Angle(playerCollider.transform.rotation, metaCollider.transform.rotation) < tolerance)
-            {
-           
+            {          
                 CheckForMatch();
                 youWin = true;
-
             }
         }
     }

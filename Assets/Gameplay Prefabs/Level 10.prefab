@@ -164,14 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 0300000004000000
-  downFallForce: 5
   players:
   - {fileID: 8198989469009607764}
   - {fileID: 3833787877244407770}
   - {fileID: 7167658090926725449}
-  fallingDownManager: {fileID: 3294932033793576298}
-  rotationSpeed: 100
 --- !u!1 &2240144167131786398
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,14 +332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 0300000004000000
-  downFallForce: 5
   players:
   - {fileID: 8198989469009607764}
   - {fileID: 3833787877244407770}
   - {fileID: 7167658090926725449}
-  fallingDownManager: {fileID: 3294932033793576298}
-  rotationSpeed: 100
 --- !u!1 &8064090999151629499
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,14 +500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d8786e4e08d746bc1412ca24f7f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirections: 040000000200000001000000
-  downFallForce: 5
   players:
   - {fileID: 8198989469009607764}
   - {fileID: 3833787877244407770}
   - {fileID: 7167658090926725449}
-  fallingDownManager: {fileID: 3294932033793576298}
-  rotationSpeed: 100
 --- !u!1 &8831766302756313385
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,11 +4823,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 537591179411612464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
   m_PrefabInstance: {fileID: 3947689751995567982}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3768699096822308486 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 181297602913407464, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
-  m_PrefabInstance: {fileID: 3947689751995567982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3808764014223359295 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 149305265516687953, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
@@ -7734,7 +7717,7 @@ PrefabInstance:
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 3768699096822308486}
+      objectReference: {fileID: 2477236180510378265}
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: bridge2
       value: 

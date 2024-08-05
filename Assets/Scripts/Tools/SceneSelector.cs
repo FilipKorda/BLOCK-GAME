@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SceneSelector : EditorWindow
 {
+    private Vector2 scrollPosition;
 
     void OnGUI()
     {
@@ -14,6 +15,8 @@ public class SceneSelector : EditorWindow
         GUILayout.Label("--== Build Settings Scenes ==--", EditorStyles.boldLabel);
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
+
+        scrollPosition = GUILayout.BeginScrollView(scrollPosition);
 
         string[] scenes = EditorBuildSettings.scenes.Select(s => System.IO.Path.GetFileNameWithoutExtension(s.path)).ToArray();
 
@@ -24,11 +27,12 @@ public class SceneSelector : EditorWindow
                 SwitchToScene(scene);
             }
         }
+
+        GUILayout.EndScrollView();
     }
 
     void SwitchToScene(string sceneName)
     {
-
         if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
         {
             string scenePath = EditorBuildSettings.scenes.FirstOrDefault(s => System.IO.Path.GetFileNameWithoutExtension(s.path) == sceneName)?.path;
@@ -37,7 +41,6 @@ public class SceneSelector : EditorWindow
                 EditorSceneManager.OpenScene(scenePath);
             }
         }
-
     }
 
     [MenuItem("Tools/Custom Build Settings Window")]
@@ -45,7 +48,5 @@ public class SceneSelector : EditorWindow
     {
         GetWindow(typeof(SceneSelector), false, "Build Settings");
     }
-
-
 }
 #endif

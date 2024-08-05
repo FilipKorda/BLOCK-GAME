@@ -1177,6 +1177,10 @@ PrefabInstance:
       value: -52.97699
       objectReference: {fileID: 0}
     - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1748356822601158779}
+    - target: {fileID: 5335563765921832395, guid: c8c4f87fc1b404a4f85547ffbe86648a, type: 3}
       propertyPath: resetCollider
       value: 
       objectReference: {fileID: 8754156605943197359}

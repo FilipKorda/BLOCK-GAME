@@ -16,37 +16,52 @@ public class TrappedPlate : VisableCollider
     [SerializeField] private Collider trappedPlateCollider;
     private bool colliderMatech;
 
+    [SerializeField] private float tolerance = 0.01f;
+    private bool fixRotation = false;
+
     private void Start()
     {
+        fixRotation = false;
         trappedPlateCollider.enabled = false;
     }
 
     private void Update()
     {
-        if (!colliderMatech && AreTransformsAtSamePosition(player.transform, trappedPlateCollider.transform))
-        {
-            trappedPlateCollider.enabled = true;
-            colliderMatech = true;
-        }
+        CheckPositionAndRotation();
     }
 
-    void OnTriggerEnter(Collider other)
+    void CheckPositionAndRotation()
     {
-        if (other == playerCollider)
+        if (Vector3.Distance(playerCollider.transform.position, trappedPlateCollider.transform.position) < tolerance)
         {
-            if (player.gameObject.transform.position == trappedPlateCollider.transform.position)
+            Quaternion rotation = player.transform.rotation;
+            if (!fixRotation && player.scale.x == 0.5 && player.scale.y == 1 && player.scale.z == 0.5 && !player.isRotating && player.totalRotation == 90)
             {
-                player.canMove = false;
-                Debug.Log("spadasz");
-                MovePlateDown();
-                MovePlayerDown();
+                rotation.w = 1;
+                rotation.x = 0;
+                rotation.y = 0;
+                rotation.z = 0;
+
+                player.transform.rotation = rotation;
+
+                fixRotation = true;
+            }
+
+            if (!colliderMatech && Quaternion.Angle(playerCollider.transform.rotation, trappedPlateCollider.transform.rotation) < tolerance)
+            {
+                trappedPlateCollider.enabled = true;
+                colliderMatech = true;
+                CheckForMatch();
             }
         }
     }
 
-    bool AreTransformsAtSamePosition(Transform t1, Transform t2)
+    private void CheckForMatch()
     {
-        return t1.position == t2.position;
+        player.canMove = false;
+        Debug.Log("spadasz");
+        MovePlateDown();
+        MovePlayerDown();
     }
 
     void MovePlateDown()

@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3385625778706815455, guid: e647142b39296a044970875babdd6563, type: 3}
+      propertyPath: isBridgePlate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4688428937381274977, guid: e647142b39296a044970875babdd6563, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -170,6 +174,10 @@ PrefabInstance:
     - target: {fileID: 4688428937381274977, guid: e647142b39296a044970875babdd6563, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991323826449961421, guid: e647142b39296a044970875babdd6563, type: 3}
+      propertyPath: isBridgePlate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8831766302756313385, guid: e647142b39296a044970875babdd6563, type: 3}
       propertyPath: m_Name

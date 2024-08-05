@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ButtonTwoOneOnSecondOff : MonoBehaviour
+public class ButtonTwoOneOnSecondOff : Visa
 {
     [SerializeField] private ButtonTwoOneOnSecondOff twinThisButton;
     [SerializeField] private Transform player;
