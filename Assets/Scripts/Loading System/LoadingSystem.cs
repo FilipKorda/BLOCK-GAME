@@ -49,6 +49,13 @@ public class LoadingSystem : MonoBehaviour
 
         Debug.Log("Load: " + sceneData.stageString);
 
+        if (sceneData.sceneName == "MainMenu")
+        {
+            GameManager.Instance.moveCount = 0;
+            GameManager.Instance.starCount = 0;
+            GameManager.Instance.attemptsNumber = 1;
+        }
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
 
         asyncLoad.allowSceneActivation = false;

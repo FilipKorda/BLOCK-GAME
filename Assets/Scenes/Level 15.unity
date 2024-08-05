@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 293.946
       objectReference: {fileID: 0}
+    - target: {fileID: 6091106093451370927, guid: f91baa89a16dc84499df59f9ce43bbd8, type: 3}
+      propertyPath: currentStageNumber
+      value: 
+      objectReference: {fileID: 11400000, guid: bff9494f132ff0c4fa7ad124cdaacd0b, type: 2}
     - target: {fileID: 8831766302756313385, guid: f91baa89a16dc84499df59f9ce43bbd8, type: 3}
       propertyPath: m_Name
       value: Level 15
