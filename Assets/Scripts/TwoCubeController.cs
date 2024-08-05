@@ -159,6 +159,8 @@ public class TwoCubeController : MonoBehaviour
     {
         twoCubesButton.twoCubeButtonCollider.isTrigger = true;
         twoCubesButton.twoCubeButtonCollider.enabled = false;
+        twoCubesButton.fixRotation = false;
+        twoCubesButton.youMatched = false;
     }
 
     #region LookAtCameraAndShowSelector

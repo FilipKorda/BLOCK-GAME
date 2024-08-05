@@ -75,13 +75,6 @@ public class BridgeButtonTwo : VisableCollider
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other == playerCollider)
-        {
-           
-        }
-    }
 
     private IEnumerator MoveBridge()
     {

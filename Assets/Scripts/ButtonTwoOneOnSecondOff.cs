@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ButtonTwoOneOnSecondOff : Visa
+public class ButtonTwoOneOnSecondOff : VisableCollider
 {
     [SerializeField] private ButtonTwoOneOnSecondOff twinThisButton;
     [SerializeField] private Transform player;
