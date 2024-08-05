@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 988032364587181390}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!1 &6904359454830005115
 GameObject:

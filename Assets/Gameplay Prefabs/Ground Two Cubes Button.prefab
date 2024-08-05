@@ -233,6 +233,9 @@ MonoBehaviour:
   twoCubeController: {fileID: 0}
   cube1Movement: {fileID: 0}
   twoCubeButtonCollider: {fileID: 2013827208434417615}
+  tolerance: 0.01
+  fixRotation: 0
+  youMatched: 0
 --- !u!1 &7210067645559360037
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 8741227517722142001}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!65 &8604124819636707420
 BoxCollider:

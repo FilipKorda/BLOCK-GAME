@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8383b3114b61b4488e8fc6742adee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circleBridgeButtonTrapped: {fileID: 0}
+  circleBridgeButtonTrapped1: {fileID: 0}
   bridge: {fileID: 8897451803865841759}
   resetCollider: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
@@ -465,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 3523965014849423632}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!1 &8897451803865841759
 GameObject:

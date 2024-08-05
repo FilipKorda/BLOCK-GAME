@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 8197542279934588731}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!1 &3663248918333233981
 GameObject:
@@ -390,15 +390,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03bd972a4eb3304abfd2504b97dedc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMeta: 0
+  isCollider: 0
+  isTrappedPlate: 0
+  isBridgePlate: 0
+  isSplitPlate: 0
+  twinThisButton: {fileID: 0}
   player: {fileID: 0}
   bridge: {fileID: 823111828037684258}
   resetCollider: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
   destinationPosition: {x: 0, y: 0, z: 0}
-  bridgeIsOpen: 0
+  bridgeIsClosed: 0
   playerCollider: {fileID: 0}
   crossPlateCollider: {fileID: 0}
   transitionDuration: 0.1
+  tolerance: 0.01
 --- !u!1 &6609107686882490701
 GameObject:
   m_ObjectHideFlags: 0

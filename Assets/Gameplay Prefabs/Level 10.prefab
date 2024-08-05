@@ -7768,7 +7768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: originalPositionBridge2.z
-      value: 9
+      value: 9.01
       objectReference: {fileID: 0}
     - target: {fileID: 9070720594458682636, guid: bfa63242d27f73c43a0887ce0d051703, type: 3}
       propertyPath: destinationPositionBridge2.x

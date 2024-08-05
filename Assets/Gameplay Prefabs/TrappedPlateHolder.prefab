@@ -132,6 +132,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerCollider: {fileID: 0}
   trappedPlateCollider: {fileID: 2482549512463616272}
+  tolerance: 0.01
 --- !u!1 &4072897543396750846
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 6438198033707411064}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!65 &3957471831900453744
 BoxCollider:

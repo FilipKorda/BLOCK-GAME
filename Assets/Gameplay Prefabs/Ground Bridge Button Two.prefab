@@ -125,18 +125,19 @@ MonoBehaviour:
   isSplitPlate: 0
   player: {fileID: 0}
   bridge: {fileID: 7256900610870947954}
-  bridge2: {fileID: 0}
   resetCollider: {fileID: 0}
-  resetCollider2: {fileID: 0}
-  bridgeIsOpen: 0
-  playerCollider: {fileID: 0}
-  crossPlateCollider: {fileID: 5031148441629149109}
   originalPosition: {x: 0, y: -0.1, z: -3}
   destinationPosition: {x: 2, y: -0.1, z: -3}
+  shouldOpenTwoBridges: 0
+  bridge2: {fileID: 0}
+  resetCollider2: {fileID: 0}
   originalPositionBridge2: {x: 0, y: 0, z: 0}
   destinationPositionBridge2: {x: 0, y: 0, z: 0}
+  isBridgeOpen: 0
+  playerCollider: {fileID: 0}
+  crossPlateCollider: {fileID: 5031148441629149109}
   transitionDuration: 0.1
-  shouldOpenTwoBridges: 0
+  tolerance: 0.01
 --- !u!1 &4875157890309954139
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 2169171746708769643}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!1 &6389419345182905968
 GameObject:

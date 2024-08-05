@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 3658807299186603451}
-  moveDownDistance: 15
+  moveDownDistance: 18
   moveDownDuration: 1
 --- !u!1 &3512375594080827700
 GameObject:
@@ -185,4 +185,3 @@ MonoBehaviour:
   cube2Collider: {fileID: 0}
   rotationSpeed: 10
   leftRotate: 0
-  targetObject: {fileID: 5759274462146548738, guid: a669bbe64c2f4e642a5fb17513cd4d40, type: 3}
