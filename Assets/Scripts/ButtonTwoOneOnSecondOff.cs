@@ -4,7 +4,7 @@ using UnityEngine;
 public class ButtonTwoOneOnSecondOff : VisableCollider
 {
     [SerializeField] private ButtonTwoOneOnSecondOff twinThisButton;
-    [SerializeField] private Transform player;
+    [SerializeField] private Player player;
 
     [SerializeField] private GameObject bridge;
     [SerializeField] private GameObject resetCollider;
@@ -17,46 +17,48 @@ public class ButtonTwoOneOnSecondOff : VisableCollider
     [SerializeField] private Collider crossPlateCollider;
 
     [SerializeField] private float transitionDuration = 0.1f;
+    [SerializeField] private float tolerance = 0.01f;
+
+    private bool fixRotation = false;
 
     private void Start()
     {
+        fixRotation = false;
         crossPlateCollider.enabled = false;
     }
 
     private void Update()
     {
-        if (AreTransformsAtSamePosition(player, crossPlateCollider.transform))
-        {
-            crossPlateCollider.enabled = true;
-        }
-        else
-        {
-            crossPlateCollider.enabled = false;
-        }
+        CheckPositionAndRotation();
     }
 
-    void OnTriggerEnter(Collider other)
+    void CheckPositionAndRotation()
     {
-        if (!bridgeIsClosed && other == playerCollider)
+        if (Vector3.Distance(playerCollider.transform.position, crossPlateCollider.transform.position) < tolerance)
         {
-            if (player.transform.position == crossPlateCollider.transform.position)
+            Quaternion rotation = player.transform.rotation;
+            if (!bridgeIsClosed && !fixRotation && player.scale.x == 0.5 && player.scale.y == 1 && player.scale.z == 0.5 && !player.isRotating && player.totalRotation == 90)
+            {
+                rotation.w = 1;
+                rotation.x = 0;
+                rotation.y = 0;
+                rotation.z = 0;
+
+                player.transform.rotation = rotation;
+
+                fixRotation = true;
+            }
+
+            if (!bridgeIsClosed && Quaternion.Angle(playerCollider.transform.rotation, crossPlateCollider.transform.rotation) < tolerance)
             {
                 ToggleObject();
+                bridgeIsClosed = true;
             }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other == playerCollider)
-        {
-            crossPlateCollider.enabled = false;
         }
     }
 
     private IEnumerator MoveBridge()
     {
-        bridgeIsClosed = true;
         Vector3 startPosition = originalPosition;
         Vector3 endPosition = destinationPosition;
 
@@ -72,11 +74,6 @@ public class ButtonTwoOneOnSecondOff : VisableCollider
 
     }
 
-    bool AreTransformsAtSamePosition(Transform t1, Transform t2)
-    {
-        return t1.position == t2.position;
-    }
-
     private void ToggleObject()
     {
         if (resetCollider != null)
@@ -84,6 +81,7 @@ public class ButtonTwoOneOnSecondOff : VisableCollider
             StartCoroutine(MoveBridge());
             resetCollider.SetActive(!resetCollider.activeSelf);
             twinThisButton.bridgeIsClosed = false;
+            fixRotation = false;
         }
     }
 }
