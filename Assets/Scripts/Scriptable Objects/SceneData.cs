@@ -7,4 +7,5 @@ public class SceneData : ScriptableObject
     public int sceneIndex; 
     public string stageString;
     public int stageNumber;
+    public int levelCode = 123456;
 }

@@ -8,39 +8,60 @@ public class RealGameTime : MonoBehaviour
     public TextMeshProUGUI timeText;
     private bool startTime;
 
-    public void StartTime()
+    public void InitTime()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         if (currentSceneName == "Level 1")
         {
             timeText.gameObject.SetActive(true);
-            startTime = true;
+            StartTime();
         }
     }
-
-    public void EnabledTimeText()
-    {
-        timeText.gameObject.SetActive(true);
-    }
-
-    public void DisableTimeText()
-    {
-        timeText.gameObject.SetActive(false);
-    }
-
 
     void Update()
     {
         if (startTime)
         {
             elapsedTime += Time.deltaTime;
-
-            int hours = Mathf.FloorToInt(elapsedTime / 3600);
-            int minutes = Mathf.FloorToInt((elapsedTime % 3600) / 60);
-            int seconds = Mathf.FloorToInt(elapsedTime % 60);
-
-            timeText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
+            UpdateTimeText();
         }
+    }
+
+    public void StartTime()
+    {
+        startTime = true;
+    }
+
+    public void StopTime()
+    {
+        startTime = false;
+    }
+
+    public void ResetTime()
+    {
+        startTime = false;
+        elapsedTime = 0f;
+    }
+
+    public void EnabledTimeText()
+    {
+        timeText.gameObject.SetActive(true);
+        StartTime();
+    }
+
+    public void DisableTimeText()
+    {
+        timeText.gameObject.SetActive(false);
+        StopTime();
+    }
+
+    private void UpdateTimeText()
+    {
+        int hours = Mathf.FloorToInt(elapsedTime / 3600);
+        int minutes = Mathf.FloorToInt((elapsedTime % 3600) / 60);
+        int seconds = Mathf.FloorToInt(elapsedTime % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
     }
 }

@@ -43,6 +43,11 @@ public class LoadingSystem : MonoBehaviour
         StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));
     }
 
+    public void LoadChoosenLexel(SceneData sceneDataToLoad, SceneData sceneToUnload)
+    {
+        StartCoroutine(LoadNextLevel(sceneDataToLoad, sceneToUnload));
+    }
+
     private IEnumerator LoadNextLevel(SceneData sceneData, SceneData thisSceneName)
     {
         yield return StartCoroutine(FadeToBlack());
@@ -54,6 +59,7 @@ public class LoadingSystem : MonoBehaviour
             GameManager.Instance.moveCount = 0;
             GameManager.Instance.starCount = 0;
             GameManager.Instance.attemptsNumber = 1;
+            GameManager.Instance.realGameTime.ResetTime();
         }
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneData.sceneIndex, LoadSceneMode.Additive);
@@ -77,7 +83,7 @@ public class LoadingSystem : MonoBehaviour
         }
 
         SceneManager.UnloadSceneAsync(thisSceneName.sceneIndex);
-        GameManager.Instance.realGameTime.StartTime();
+        GameManager.Instance.realGameTime.InitTime();
 
     }
 
@@ -121,6 +127,7 @@ public class LoadingSystem : MonoBehaviour
 
     private IEnumerator ReturnToMainMenu(SceneData mainMenuSceneData, SceneData thisSceneData)
     {
+        GameManager.Instance.realGameTime.ResetTime();
         GameManager.Instance.moveCount = 0;
         GameManager.Instance.starCount = 0;
         GameManager.Instance.attemptsNumber = 1;
