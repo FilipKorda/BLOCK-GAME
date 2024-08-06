@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 370d56f3ee3520d43b53950a93a66278, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 5dce2241ef2e89644a6ff9a8b71154e0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -333,10 +333,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6091106093451370927, guid: e05de976ea873224cb1363448289f7f6, type: 3}
-      propertyPath: currentStageNumber
-      value: 
-      objectReference: {fileID: 11400000, guid: ebeddd9194951334a9b17a08e20285af, type: 2}
     - target: {fileID: 8831766302756313385, guid: e05de976ea873224cb1363448289f7f6, type: 3}
       propertyPath: m_Name
       value: Level 18

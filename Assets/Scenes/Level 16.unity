@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2ce58d2bc4181f74aa2329af552a5dc9, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 56b9c92337024874fb7a0045b144e609, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -131,18 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1982314217811154060, guid: d5262be49edecc34b848b28b3448e117, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404391301700180848, guid: d5262be49edecc34b848b28b3448e117, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 18873554}
-    - target: {fileID: 2656686525002167642, guid: d5262be49edecc34b848b28b3448e117, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 18873554}
     - target: {fileID: 4688428937381274977, guid: d5262be49edecc34b848b28b3448e117, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -183,10 +171,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6091106093451370927, guid: d5262be49edecc34b848b28b3448e117, type: 3}
-      propertyPath: currentStageNumber
-      value: 
-      objectReference: {fileID: 11400000, guid: 17411d21f82f68148ab6ca5b78475980, type: 2}
     - target: {fileID: 8831766302756313385, guid: d5262be49edecc34b848b28b3448e117, type: 3}
       propertyPath: m_Name
       value: Level 16
@@ -196,17 +180,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5262be49edecc34b848b28b3448e117, type: 3}
---- !u!114 &18873554 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2477236180510378265, guid: d5262be49edecc34b848b28b3448e117, type: 3}
-  m_PrefabInstance: {fileID: 18873553}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b586c40cbe52dba4eb9eb70620cb50d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &915777998
 GameObject:
   m_ObjectHideFlags: 0
