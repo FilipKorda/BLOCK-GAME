@@ -453,6 +453,7 @@ MonoBehaviour:
   starCount: 0
   attemptsNumber: 1
   realGameTime: {fileID: 799245266}
+  currentUnlockedAvailableCodesIndex: -1
 --- !u!4 &1121549968
 Transform:
   m_ObjectHideFlags: 0

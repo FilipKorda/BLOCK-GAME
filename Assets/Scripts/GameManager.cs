@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour
     public int attemptsNumber = 1;
 
     public RealGameTime realGameTime;
+  
+    public int currentUnlockedAvailableCodesIndex = -1;
+    public HashSet<int> completedLevels = new();
 
     private void Awake()
     {
@@ -24,4 +28,5 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

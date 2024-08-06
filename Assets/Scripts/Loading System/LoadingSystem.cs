@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class LoadingSystem : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class LoadingSystem : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             ResetThisLevel();
         }
@@ -52,7 +53,7 @@ public class LoadingSystem : MonoBehaviour
     {
         yield return StartCoroutine(FadeToBlack());
 
-        Debug.Log("Load: " + sceneData.stageString);
+        Debug.Log("Load: " + sceneData.stageString);       
 
         if (sceneData.sceneName == "MainMenu")
         {
@@ -82,9 +83,18 @@ public class LoadingSystem : MonoBehaviour
             yield return null;
         }
 
+        if (sceneData.sceneName != "MainMenu" && sceneData.sceneName != "Tutorial")
+        {
+            if (!GameManager.Instance.completedLevels.Contains(sceneData.stageNumber))
+            {
+                GameManager.Instance.completedLevels.Add(sceneData.stageNumber);
+
+                GameManager.Instance.currentUnlockedAvailableCodesIndex++;
+            }
+        }
+
         SceneManager.UnloadSceneAsync(thisSceneName.sceneIndex);
         GameManager.Instance.realGameTime.InitTime();
-
     }
 
     public void ResetThisLevel()
