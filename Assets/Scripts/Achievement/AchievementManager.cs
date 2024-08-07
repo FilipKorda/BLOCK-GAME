@@ -16,6 +16,11 @@ public class AchievementManager
         achievements.Add(achievement);
     }
 
+    public List<Achievement> Achievements
+    {
+        get { return achievements; }
+    }
+
     private void CheckAchievements()
     {
         foreach (var achievement in achievements)

@@ -5,16 +5,31 @@ public class GameAchievementInitializer : MonoBehaviour
     [SerializeField] private GameManager playerStats;
     private AchievementManager achievementManager;
 
+    [SerializeField] private AchievementUI achievementUI;
+    public AchievementData moveAchievementData;
+    public AchievementData starAchievementData;
+    public AchievementData attemptAchievementData;
+
     private void Start()
     {
         playerStats = GetComponent<GameManager>();
         achievementManager = new AchievementManager(playerStats);
 
-        achievementManager.AddAchievement(new MovesAchievement(100));
-        achievementManager.AddAchievement(new StarAchievement(16));
-        achievementManager.AddAchievement(new AttemptsAchievement(6));
+        achievementManager.AddAchievement(new MovesAchievement(moveAchievementData, 100));
+        achievementManager.AddAchievement(new StarAchievement(starAchievementData, 16));
+        achievementManager.AddAchievement(new AttemptsAchievement(attemptAchievementData, 6));
+
+        foreach (var achievement in achievementManager.Achievements)
+        {
+            achievement.OnUnlock += AchievementUnlocked;
+        }
     }
 
+    private void AchievementUnlocked(Achievement achievement)
+    {
+        Debug.Log($"Achievement Unlocked: {achievement.AchievementData.achievementTitle}");
+        achievementUI.ShowAchievement(achievement.AchievementData);
+    }
 
     //TEST Buttons
     [ContextMenu("Add Moves")]

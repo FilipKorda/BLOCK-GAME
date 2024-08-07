@@ -2,7 +2,7 @@ public class AttemptsAchievement : Achievement
 {
     private int attemptsTarget;
 
-    public AttemptsAchievement(int target) : base($"Attempt {target} Times", $"Attempt {target} to unlock this achievement.")
+    public AttemptsAchievement(AchievementData data, int target) : base(data)
     {
         attemptsTarget = target;
     }

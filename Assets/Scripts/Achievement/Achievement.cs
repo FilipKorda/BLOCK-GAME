@@ -1,18 +1,14 @@
 using System;
-using UnityEngine;
-
 public abstract class Achievement
 {
-    public string Name { get; private set; }
-    public string Description { get; private set; }
+    public AchievementData AchievementData { get; private set; }
     public bool IsUnlocked { get; protected set; }
 
     public event Action<Achievement> OnUnlock;
 
-    public Achievement(string name, string description)
+    public Achievement(AchievementData data)
     {
-        Name = name;
-        Description = description;
+        AchievementData = data;
         IsUnlocked = false;
     }
 
@@ -24,7 +20,7 @@ public abstract class Achievement
         {
             IsUnlocked = true;
             OnUnlock?.Invoke(this);
-            Debug.Log($"Achievement Unlocked: {Name} - {Description}");
         }
     }
+
 }

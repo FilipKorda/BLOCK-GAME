@@ -3,7 +3,7 @@ public class StarAchievement : Achievement
 {
     private int starTarget;
 
-    public StarAchievement(int target) : base($"Get Star {target} Times", $"Get Star {target} times to unlock this achievement.")
+    public StarAchievement(AchievementData data, int target) : base(data)
     {
         starTarget = target;
     }

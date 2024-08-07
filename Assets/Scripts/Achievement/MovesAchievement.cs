@@ -2,7 +2,7 @@ public class MovesAchievement : Achievement
 {
     private int movesTarget;
 
-    public MovesAchievement(int target) : base($"Make move {target} times", $"Make move {target} times to unlock this achievement.")
+    public MovesAchievement(AchievementData data, int target) : base(data)
     {
         movesTarget = target;
     }
