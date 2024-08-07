@@ -57,9 +57,9 @@ public class LoadingSystem : MonoBehaviour
 
         if (sceneData.sceneName == "MainMenu")
         {
-            GameManager.Instance.moveCount = 0;
-            GameManager.Instance.starCount = 0;
-            GameManager.Instance.attemptsNumber = 1;
+            GameManager.Instance.MoveCount = 0;
+            GameManager.Instance.StarCount = 0;
+            GameManager.Instance.AttemptsNumber = 1;
             GameManager.Instance.realGameTime.ResetTime();
         }
 
@@ -85,9 +85,9 @@ public class LoadingSystem : MonoBehaviour
 
         if (sceneData.sceneName != "MainMenu" && sceneData.sceneName != "Tutorial")
         {
-            if (!GameManager.Instance.completedLevels.Contains(sceneData.stageNumber))
+            if (!GameManager.Instance.completedLevels.Contains(sceneData.numberElementToUnlock))
             {
-                GameManager.Instance.completedLevels.Add(sceneData.stageNumber);
+                GameManager.Instance.completedLevels.Add(sceneData.numberElementToUnlock);
 
                 GameManager.Instance.currentUnlockedAvailableCodesIndex++;
             }
@@ -138,9 +138,9 @@ public class LoadingSystem : MonoBehaviour
     private IEnumerator ReturnToMainMenu(SceneData mainMenuSceneData, SceneData thisSceneData)
     {
         GameManager.Instance.realGameTime.ResetTime();
-        GameManager.Instance.moveCount = 0;
-        GameManager.Instance.starCount = 0;
-        GameManager.Instance.attemptsNumber = 1;
+        GameManager.Instance.MoveCount = 0;
+        GameManager.Instance.StarCount = 0;
+        GameManager.Instance.AttemptsNumber = 1;
         returnToMainMenu = true;
         Time.timeScale = 1f;
         PauseMenu.GameIsPaused = false;

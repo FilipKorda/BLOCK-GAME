@@ -16,7 +16,7 @@ public class ResetCollider : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            previousStarCount = GameManager.Instance.starCount;
+            previousStarCount = GameManager.Instance.StarCount;
         }
     }
 
@@ -32,14 +32,14 @@ public class ResetCollider : MonoBehaviour
 
         if (GameManager.Instance != null)
         {
-            int starDifference = GameManager.Instance.starCount - previousStarCount;
+            int starDifference = GameManager.Instance.StarCount - previousStarCount;
 
             if (starDifference > 0)
             {
-                GameManager.Instance.starCount = Mathf.Max(0, GameManager.Instance.starCount - starDifference); 
+                GameManager.Instance.StarCount = Mathf.Max(0, GameManager.Instance.StarCount - starDifference); 
             }
 
-            previousStarCount = GameManager.Instance.starCount;
+            previousStarCount = GameManager.Instance.StarCount;
         }
 
     }

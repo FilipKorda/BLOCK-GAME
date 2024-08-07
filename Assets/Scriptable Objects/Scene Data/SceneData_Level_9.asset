@@ -17,3 +17,4 @@ MonoBehaviour:
   stageString: Stage 9
   stageNumber: 9
   levelCode: 123459
+  numberElementToUnlock: 8

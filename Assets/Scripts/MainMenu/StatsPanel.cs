@@ -27,27 +27,27 @@ public class StatsPanel : MonoBehaviour
     public void AddAttemptsNumber()
     {
         if (GameManager.Instance != null)
-            GameManager.Instance.attemptsNumber++;
+            GameManager.Instance.AddAchievementAttempts();
     }
 
     public void UpdateAttempts()
     {
         if (attemptsNumberText != null && GameManager.Instance != null)
         {
-            attemptsNumberText.text = $"{GameManager.Instance.attemptsNumber}";
+            attemptsNumberText.text = $"{GameManager.Instance.AttemptsNumber}";
         }
     }
 
     public void UpdateMoves()
     {
         if (movesNumberText != null && GameManager.Instance != null)
-            movesNumberText.text = $"{GameManager.Instance.moveCount}";
+            movesNumberText.text = $"{GameManager.Instance.MoveCount}";
     }
 
     public void UpdateStars()
     {
         if (starsNumberText && GameManager.Instance != null)
-            starsNumberText.text = $"{GameManager.Instance.starCount}";
+            starsNumberText.text = $"{GameManager.Instance.StarCount}";
     }
 
     public void ActiveStatsPanel()

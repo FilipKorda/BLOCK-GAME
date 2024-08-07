@@ -8,7 +8,14 @@ public class UnlockLevelCodesSystem : MonoBehaviour
     {
         for (int i = 0; i < elementsToUnlock.Length; i++)
         {
-            elementsToUnlock[i].SetActive(i <= GameManager.Instance.currentUnlockedAvailableCodesIndex);
+            if (GameManager.Instance.completedLevels.Contains(i))
+            {
+                elementsToUnlock[i].SetActive(true);
+            }
+            else
+            {
+                elementsToUnlock[i].SetActive(false);
+            }
         }
     }
 }

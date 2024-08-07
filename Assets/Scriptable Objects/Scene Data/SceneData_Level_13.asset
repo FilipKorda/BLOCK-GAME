@@ -17,3 +17,4 @@ MonoBehaviour:
   stageString: Stage 13
   stageNumber: 13
   levelCode: 123413
+  numberElementToUnlock: 12

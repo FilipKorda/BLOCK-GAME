@@ -15,5 +15,6 @@ MonoBehaviour:
   sceneName: TestScene
   sceneIndex: 2
   stageString: Test Scene
-  stageNumber: 0
+  stageNumber: 696969
   levelCode: 333333
+  numberElementToUnlock: 696969

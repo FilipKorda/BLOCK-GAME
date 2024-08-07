@@ -14,7 +14,7 @@ public class StarTracker : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.starCount++;
+            GameManager.Instance.AddAchievementStar();
         }
         UpdateStarCountUI();
     }
@@ -33,7 +33,7 @@ public class StarTracker : MonoBehaviour
     {
         if (starCountText != null && GameManager.Instance != null)
         {
-            starCountText.text = $"{GameManager.Instance.starCount}";
+            starCountText.text = $"{GameManager.Instance.StarCount}";
         }
     }
 }
