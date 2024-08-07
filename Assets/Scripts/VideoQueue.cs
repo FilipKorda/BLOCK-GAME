@@ -4,12 +4,17 @@ using UnityEngine.Video;
 
 public class VideoQueue : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
-    public VideoClip[] videoClips;
-    public TextMeshProUGUI numberText;
-    public LoadingSystem loadingSystem;
+    [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private VideoClip[] videoClips;
+    [SerializeField] private TextMeshProUGUI numberText;
+    [SerializeField] private LoadingSystem loadingSystem;
     private int currentVideoIndex = 0;
     private bool loadNextLevelCalled = false;
+
+
+    [SerializeField] private TextMeshProUGUI tutorialExplanationText;
+    [TextArea(3, 10)]
+    [SerializeField] private string[] tutorialExplanation;
 
     void Start()
     {
@@ -19,8 +24,23 @@ public class VideoQueue : MonoBehaviour
         {
             videoPlayer.clip = videoClips[currentVideoIndex];
             videoPlayer.Play();
+            tutorialExplanationText.text = tutorialExplanation[currentVideoIndex];
         }
-        videoPlayer.loopPointReached += OnVideoEnd;
+        videoPlayer.loopPointReached += OnVideoEnd;     
+    }
+
+    void StringInTables()
+    {
+        tutorialExplanation = new string[]
+         {
+            "Use the WASD keys to move the player.",
+            "To activate the button with the dashed circle, you need to stand on it vertically and use the TAB key on the keyboard to switch between blocks. You can move the blocks using the WASD keys.",
+            "You can activate the button with the circle by standing on it vertically or horizontally. This button can open and close your bridge.",
+            "The button with the cross can only be activated when you stand on it vertically. It also opens or closes your bridge.",
+            "Watch out for the orange tiles; they are very dangerous.",
+            "Be careful not to fall off the edge of the map.",
+            "Look for the open field on the ground on the map; it will take you to the next level."
+         };
     }
 
     void Update()
@@ -77,6 +97,7 @@ public class VideoQueue : MonoBehaviour
         videoPlayer.clip = videoClips[index];
         videoPlayer.Play();
         UpdateNumberText();
+        tutorialExplanationText.text = tutorialExplanation[index];
     }
 
     void OnVideoEnd(VideoPlayer vp)
