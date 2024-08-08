@@ -1923,6 +1923,7 @@ GameObject:
   - component: {fileID: 269133954}
   - component: {fileID: 269133956}
   - component: {fileID: 269133957}
+  - component: {fileID: 269133958}
   m_Layer: 5
   m_Name: Menu Panel
   m_TagString: Untagged
@@ -2060,11 +2061,50 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 269133958}
+        m_TargetAssemblyTypeName: ButtonUnlocker, Assembly-CSharp
+        m_MethodName: UnlockChooseLevelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 269133958}
+        m_TargetAssemblyTypeName: ButtonUnlocker, Assembly-CSharp
+        m_MethodName: UnlockSkins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
-  elementsToDisable: []
+  elementsToDisable:
+  - {fileID: 1670311734}
+  - {fileID: 1576565302}
+--- !u!114 &269133958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269133952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c1c8c7ebbc54543a826dfc508c80d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chooseLevelButton: {fileID: 1670311734}
+  skindButton: {fileID: 1576565302}
 --- !u!1 &282952079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,7 +2652,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &327357640
 MonoBehaviour:
@@ -2820,7 +2859,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &354370232
 MonoBehaviour:
@@ -3611,7 +3649,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &460580183
 MonoBehaviour:
@@ -8164,7 +8201,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &1202418594
 MonoBehaviour:
@@ -10391,7 +10427,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &1488952005
 MonoBehaviour:
@@ -10935,6 +10970,11 @@ PrefabInstance:
 --- !u!224 &1576565301 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3206505845366111599, guid: b76d9396ae70cb444943162359e23634, type: 3}
+  m_PrefabInstance: {fileID: 1576565300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1576565302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 780482615463725306, guid: b76d9396ae70cb444943162359e23634, type: 3}
   m_PrefabInstance: {fileID: 1576565300}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1603427746
@@ -11709,6 +11749,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3206505845366111599, guid: b76d9396ae70cb444943162359e23634, type: 3}
   m_PrefabInstance: {fileID: 1670311732}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1670311734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 780482615463725306, guid: b76d9396ae70cb444943162359e23634, type: 3}
+  m_PrefabInstance: {fileID: 1670311732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1674862735
 GameObject:
   m_ObjectHideFlags: 0
@@ -11921,7 +11966,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &1686815834
 MonoBehaviour:
@@ -13642,7 +13686,6 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  resetUsersToLastActive: 0
   elementsToDisable: []
 --- !u!114 &1932939827
 MonoBehaviour:
@@ -15564,6 +15607,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2026034941}
   - {fileID: 392686634}
+  - {fileID: 739873121}
   - {fileID: 1430711340}
   - {fileID: 1097757417}
-  - {fileID: 739873121}

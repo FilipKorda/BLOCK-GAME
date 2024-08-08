@@ -6,9 +6,10 @@ public class GameAchievementInitializer : MonoBehaviour
     private AchievementManager achievementManager;
 
     [SerializeField] private AchievementUI achievementUI;
-    public AchievementData moveAchievementData;
-    public AchievementData starAchievementData;
-    public AchievementData attemptAchievementData;
+    [SerializeField] private AchievementData moveAchievementData;
+    [SerializeField] private AchievementData starAchievementData;
+    [SerializeField] private AchievementData attemptAchievementData;
+    [SerializeField] private AchievementData levelTenAchievementData;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class GameAchievementInitializer : MonoBehaviour
         achievementManager.AddAchievement(new MovesAchievement(moveAchievementData, 100));
         achievementManager.AddAchievement(new StarAchievement(starAchievementData, 16));
         achievementManager.AddAchievement(new AttemptsAchievement(attemptAchievementData, 6));
+        achievementManager.AddAchievement(new LevelTenAchievement(levelTenAchievementData, 9));
 
         foreach (var achievement in achievementManager.Achievements)
         {

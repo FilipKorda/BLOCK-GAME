@@ -39,12 +39,8 @@ namespace UI
 
         }
 
-
-
         public void SetHeaderText(string text) => menuViewHeader.text = text;
 
-
-        //public void ExitGame() => UIMenuManager.Instance.ExitGame();
     }
 }
 

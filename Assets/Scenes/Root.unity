@@ -663,6 +663,7 @@ MonoBehaviour:
   moveAchievementData: {fileID: 11400000, guid: 342f1a11e98f9544c82482cf8938f3ca, type: 2}
   starAchievementData: {fileID: 11400000, guid: 52a6103fc0cde294481ab93415e2c5b9, type: 2}
   attemptAchievementData: {fileID: 11400000, guid: 69cb1b7cad8f5734cb567458f3b26a27, type: 2}
+  levelTenAchievementData: {fileID: 11400000, guid: 32028ab443916d84d90c41642f6cb4db, type: 2}
 --- !u!114 &1121549971
 MonoBehaviour:
   m_ObjectHideFlags: 0

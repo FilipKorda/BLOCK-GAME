@@ -14,8 +14,6 @@ namespace UI
         [SerializeField] private UnityEvent onActive;
         [SerializeField] private UnityEvent onDisable;
 
-        [SerializeField] private bool resetUsersToLastActive;
-
         [SerializeField] private GameObject[] elementsToDisable;
 
         public void OnEnable()
