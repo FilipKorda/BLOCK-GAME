@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform targetWhenFall;
     [SerializeField] private float attractionForce = 10f;
 
+    [Header("Skin Changer")]
+    private Renderer playerRenderer;
+
     void Start()
     {
         isRotating = false;
@@ -32,6 +35,9 @@ public class Player : MonoBehaviour
         scale = transform.localScale / 2f;
         rb = GetComponent<Rigidbody>();
         FreezeAllAxes();
+
+        playerRenderer = GetComponent<Renderer>();
+        playerRenderer.material = PlayerColorManager.Instance.SelectedMaterial;
     }
 
     void Update()

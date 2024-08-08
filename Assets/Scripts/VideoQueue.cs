@@ -1,9 +1,12 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoQueue : MonoBehaviour
 {
+    [Header("Video Managment")]
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private VideoClip[] videoClips;
     [SerializeField] private TextMeshProUGUI numberText;
@@ -11,14 +14,23 @@ public class VideoQueue : MonoBehaviour
     private int currentVideoIndex = 0;
     private bool loadNextLevelCalled = false;
 
-
+    [Header("Video Explanation Managment")]
     [SerializeField] private TextMeshProUGUI tutorialExplanationText;
     [TextArea(3, 10)]
     [SerializeField] private string[] tutorialExplanation;
 
+    [Header("Video Play/Pause Managment")]
+    [SerializeField] private Image playPauseImage;
+    [SerializeField] private Image playPauseV2Image;
+    [SerializeField] private Sprite playSprite;
+    [SerializeField] private Sprite pauseSprite;
+    [SerializeField] private float fadeDuration = 0.3f;
+
     void Start()
     {
         UpdateNumberText();
+
+        playPauseImage.color = new Color(0f, 0f, 0f, 0f);
 
         if (videoClips.Length > 0)
         {
@@ -26,7 +38,7 @@ public class VideoQueue : MonoBehaviour
             videoPlayer.Play();
             tutorialExplanationText.text = tutorialExplanation[currentVideoIndex];
         }
-        videoPlayer.loopPointReached += OnVideoEnd;     
+        videoPlayer.loopPointReached += OnVideoEnd;
     }
 
     void StringInTables()
@@ -57,6 +69,29 @@ public class VideoQueue : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.KeypadEnter) && !loadNextLevelCalled)
         {
             LoadNextLexelOnce();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            PlayPauseVideo();
+        }
+    }
+
+    void PlayPauseVideo()
+    {
+        StartCoroutine(ShowSign());
+
+        if (videoPlayer.isPlaying)
+        {
+            videoPlayer.Pause();
+            playPauseImage.sprite = playSprite;
+            playPauseV2Image.sprite = pauseSprite;
+        }
+        else
+        {
+            videoPlayer.Play();
+            playPauseImage.sprite = pauseSprite;
+            playPauseV2Image.sprite = playSprite;
         }
     }
 
@@ -108,5 +143,44 @@ public class VideoQueue : MonoBehaviour
     void UpdateNumberText()
     {
         numberText.text = (currentVideoIndex + 1).ToString();
+    }
+
+    private IEnumerator ShowSign()
+    {
+        StartCoroutine(FadeToBlack());
+        yield return new WaitForSeconds(0.3f);
+        StartCoroutine(FadeToClear());
+    }
+
+    private IEnumerator FadeToBlack()
+    {
+        if (playPauseImage != null)
+        {
+            float elapsedTime = 0f;
+
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
+                playPauseImage.color = new Color(0f, 0f, 0f, alpha);
+                yield return null;
+            }
+        }
+    }
+
+    private IEnumerator FadeToClear()
+    {
+        if (playPauseImage != null)
+        {
+            float elapsedTime = 0f;
+
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float alpha = Mathf.Clamp01(1f - (elapsedTime / fadeDuration));
+                playPauseImage.color = new Color(0f, 0f, 0f, alpha);
+                yield return null;
+            }
+        }
     }
 }
