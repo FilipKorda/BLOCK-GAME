@@ -333,6 +333,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6091106093451370927, guid: c6464d74173ad904bbe5548a24b4c5e8, type: 3}
+      propertyPath: currentStageNumber
+      value: 
+      objectReference: {fileID: 11400000, guid: ae3c74c209f46014eac07e3627fe0f17, type: 2}
+    - target: {fileID: 6915610368807177554, guid: c6464d74173ad904bbe5548a24b4c5e8, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b9e670033589df4b9bdb68992f6c584, type: 2}
     - target: {fileID: 8831766302756313385, guid: c6464d74173ad904bbe5548a24b4c5e8, type: 3}
       propertyPath: m_Name
       value: Level 24
