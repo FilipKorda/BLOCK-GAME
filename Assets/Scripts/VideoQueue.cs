@@ -66,7 +66,7 @@ public class VideoQueue : MonoBehaviour
             PlayNextVideo();
         }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && !loadNextLevelCalled)
+        if (Input.GetKeyDown(KeyCode.Return) && !loadNextLevelCalled)
         {
             LoadNextLexelOnce();
         }

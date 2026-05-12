@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 30;
     }
 
     public void AddAchievementMove()
