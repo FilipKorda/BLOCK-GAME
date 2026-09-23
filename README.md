@@ -55,7 +55,7 @@ The save system allows the player's progress through these levels to be preserve
 
 ---
 
-# 🔄 Remaster Approach
+# 🔄 Remaster/Remake Approach
 
 The project was created with the goal of preserving the original gameplay rather than redesigning it.
 
