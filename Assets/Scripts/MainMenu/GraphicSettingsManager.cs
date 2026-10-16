@@ -27,7 +27,7 @@ public class GraphicSettingsManager : MonoBehaviour
         UpdateQualityButtonLabel();
         toggleQualityButton.onClick.AddListener(ToggleQuality);
 
-        isFullscreen = Screen.fullScreen;
+        isFullscreen = ScreenSettings.Fullscreen;
         UpdateScreenButtonLabel();
         toggleScreenModeButton.onClick.AddListener(ToggleScreenMode);
 
@@ -51,7 +51,7 @@ public class GraphicSettingsManager : MonoBehaviour
     public void ToggleScreenMode()
     {
         isFullscreen = !isFullscreen;
-        Screen.fullScreen = isFullscreen;
+        ScreenSettings.Apply(ParseResolution(resolutionArray[currentResolutionIndex]), isFullscreen);
         UpdateScreenButtonLabel();
     }
 
@@ -62,7 +62,9 @@ public class GraphicSettingsManager : MonoBehaviour
 
     private int FindCurrentResolutionIndex()
     {
-        string currentResolution = Screen.width + "x" + Screen.height;
+        // Na pełnym ekranie okno ma zawsze natywną rozdzielczość, więc liczy się wybrana (renderowania).
+        Vector2Int chosen = ScreenSettings.ChosenResolution;
+        string currentResolution = chosen.x + "x" + chosen.y;
         for (int i = 0; i < resolutionArray.Length; i++)
         {
             if (resolutionArray[i] == currentResolution)
@@ -82,10 +84,13 @@ public class GraphicSettingsManager : MonoBehaviour
 
     private void ApplyResolution()
     {
-        string[] resolution = resolutionArray[currentResolutionIndex].Split('x');
-        int width = int.Parse(resolution[0]);
-        int height = int.Parse(resolution[1]);
-        Screen.SetResolution(width, height, Screen.fullScreen);
+        ScreenSettings.Apply(ParseResolution(resolutionArray[currentResolutionIndex]), isFullscreen);
+    }
+
+    private static Vector2Int ParseResolution(string resolution)
+    {
+        string[] parts = resolution.Split('x');
+        return new Vector2Int(int.Parse(parts[0]), int.Parse(parts[1]));
     }
 
     private void UpdateResolutionLabel()

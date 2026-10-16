@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.18431373}
+  m_Color: {r: 0.14150941, g: 0.13099633, b: 0.12348699, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -961,7 +961,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -1154,6 +1154,10 @@ MonoBehaviour:
   achievementTitle: {fileID: 1689713234}
   achievementImage: {fileID: 905188257}
   displayTime: 2
+  slideDistance: 260
+  slideInDuration: 0.45
+  slideOutDuration: 0.35
+  iconPunchScale: 0.25
 --- !u!224 &2091544131
 RectTransform:
   m_ObjectHideFlags: 0

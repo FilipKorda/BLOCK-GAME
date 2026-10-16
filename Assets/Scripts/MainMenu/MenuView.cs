@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -16,8 +17,13 @@ namespace UI
 
         [SerializeField] private GameObject[] elementsToDisable;
 
+        [Tooltip("Przycisk zaznaczany po wejściu w ten widok, gdy podłączony jest pad. Puste = najwyżej położony przycisk.")]
+        [SerializeField] private Selectable firstSelected;
+
         public void OnEnable()
         {
+            GamepadMenuSelection.Push(transform, firstSelected);
+
             if (setHeaderActive)
             {
                 menuViewsController.SetHeaderActive(true);
@@ -53,6 +59,8 @@ namespace UI
 
         public void OnDisable()
         {
+            GamepadMenuSelection.Pop(transform);
+
             if (setHeaderActive)
             {
                 menuViewsController.SetHeaderActive(false);

@@ -57,21 +57,21 @@ public class VideoQueue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (GameInput.PreviousVideo.WasPressedThisFrame())
         {
             PlayPreviousVideo();
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (GameInput.NextVideo.WasPressedThisFrame())
         {
             PlayNextVideo();
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) && !loadNextLevelCalled)
+        if (GameInput.Confirm.WasPressedThisFrame() && !loadNextLevelCalled)
         {
             LoadNextLexelOnce();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (GameInput.Click.WasPressedThisFrame())
         {
             PlayPauseVideo();
         }

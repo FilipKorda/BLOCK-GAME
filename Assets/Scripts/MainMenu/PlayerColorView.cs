@@ -8,12 +8,12 @@ public class PlayerColorView : MonoBehaviour
     void Start()
     {
         playerRenderer = GetComponent<Renderer>();
-        playerRenderer.material = PlayerColorManager.Instance.SelectedMaterial;
+        BlockSkin.Apply(playerRenderer, PlayerColorManager.Instance.SelectedMaterial);
     }
 
     public void ChangeColor()
     {
-        playerRenderer.material = PlayerColorManager.Instance.SelectedMaterial;
+        BlockSkin.Apply(playerRenderer, PlayerColorManager.Instance.SelectedMaterial);
     }
 
     private void Update()

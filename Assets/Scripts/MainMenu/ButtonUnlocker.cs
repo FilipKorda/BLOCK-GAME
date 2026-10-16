@@ -13,12 +13,11 @@ public class ButtonUnlocker : MonoBehaviour
         }
     }
 
+    // Wywoływane przez widok MAIN MENU zaraz po tym, jak schowa przycisk Skins.
+    // Zmiana koloru gracza jest dostępna od początku gry, bez ukończonych poziomów.
     public void UnlockSkins()
     {
-        if (GameManager.Instance.currentUnlockedAvailableCodesIndex >= 9)
-        {
-            skindButton.SetActive(true);
-        }
+        skindButton.SetActive(true);
     }
 
 }
