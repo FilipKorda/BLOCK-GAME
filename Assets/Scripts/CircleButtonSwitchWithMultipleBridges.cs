@@ -23,7 +23,7 @@ public class CircleButtonSwitchWithMultipleBridges : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isBridgeOpen && other.CompareTag("Player"))
+        if (!isBridgeOpen && other.CompareTag("Player") && other.gameObject.scene == gameObject.scene)
         {
             ToggleObject();
         }

@@ -118,6 +118,29 @@ public class ChooseLevel : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
+    // Tworzy w scenie klawiaturę numeryczną dla pada pod polem kodu. Potem wystarczy zapisać scenę.
+    [ContextMenu("Build Numeric Keypad")]
+    private void BuildNumericKeypad()
+    {
+        if (inputField == null)
+        {
+            Debug.LogWarning("Pole Input Field jest puste - nie wiadomo, gdzie postawić klawiaturę.", this);
+            return;
+        }
+
+        NumericKeypad existing = inputField.transform.parent.GetComponentInChildren<NumericKeypad>(true);
+        if (existing != null)
+        {
+            Debug.Log("Klawiatura numeryczna już istnieje.", existing);
+            UnityEditor.Selection.activeObject = existing.gameObject;
+            return;
+        }
+
+        UnityEditor.Selection.activeObject = NumericKeypad.Build(this, inputField).gameObject;
+    }
+#endif
+
     private IEnumerator Notification()
     {
         notificationText.gameObject.SetActive(true);

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Meta : VisableCollider
@@ -11,6 +12,14 @@ public class Meta : VisableCollider
     [SerializeField] private float tolerance = 0.01f;
     private bool fixRotation = false;
     private bool youWin = false;
+
+    // Aktywne mety w załadowanych scenach - Player traktuje pole mety jak podłoże,
+    // żeby nie spadać, zanim Meta wykryje wygraną.
+    public static readonly List<Meta> ActiveMetas = new();
+    public Vector3 HolePosition => metaCollider.transform.position;
+
+    private void OnEnable() => ActiveMetas.Add(this);
+    private void OnDisable() => ActiveMetas.Remove(this);
 
 
     private void Awake()
@@ -54,7 +63,13 @@ public class Meta : VisableCollider
         SoundManager.Instance.PlaySound(SoundClip.WinGameSound);
         Debug.Log(SoundClip.WinGameSound);
         spiralMovement.Play();
-        player.canMove = false;   
+        player.canMove = false;
+        player.EndLevel();
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.MarkLevelFinished(gameObject.scene.name);
+            GameManager.Instance.CommitLevelStars();
+        }
         disappearAnimation.PlayDisappearAnimation();
         Debug.Log("Win");
     }

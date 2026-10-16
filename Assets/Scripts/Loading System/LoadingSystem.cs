@@ -70,9 +70,7 @@ public class LoadingSystem : MonoBehaviour
 
         if (sceneData.sceneName == "MainMenu")
         {
-            GameManager.Instance.MoveCount = 0;
-            GameManager.Instance.StarCount = 0;
-            GameManager.Instance.AttemptsNumber = 1;
+            GameManager.Instance.ResetRunStats();
             GameManager.Instance.realGameTime.ResetTime();
         }
 
@@ -114,6 +112,8 @@ public class LoadingSystem : MonoBehaviour
     public void ResetThisLevel()
     {
         if (!TryBeginTransition()) return;
+        // Restart (R albo po spadnięciu) cofa gwiazdki zebrane w tym podejściu - pojawią się znowu w poziomie.
+        if (GameManager.Instance != null) GameManager.Instance.DiscardLevelStars();
         StartCoroutine(ResetThisLevel(thisSceneToLoad, thisSceneToUnload));
     }
 
@@ -154,9 +154,7 @@ public class LoadingSystem : MonoBehaviour
     private IEnumerator ReturnToMainMenu(SceneData mainMenuSceneData, SceneData thisSceneData)
     {
         GameManager.Instance.realGameTime.ResetTime();
-        GameManager.Instance.MoveCount = 0;
-        GameManager.Instance.StarCount = 0;
-        GameManager.Instance.AttemptsNumber = 1;
+        GameManager.Instance.ResetRunStats();
         returnToMainMenu = true;
         Time.timeScale = 1f;
         PauseMenu.GameIsPaused = false;

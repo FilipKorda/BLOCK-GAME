@@ -27,7 +27,7 @@ public class DisappearAnimation : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && player.transform.position.y < -2f)
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.scene == gameObject.scene && player.transform.position.y < -2f)
         {
             player.SetActive(false);
             loadingSystem.LoadNextLexel();         
