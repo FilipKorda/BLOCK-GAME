@@ -144,9 +144,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9171b126447bdac4f80b22c06d93be23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 107636562b1717f438204545ab45530a, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -222,9 +226,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f3bd4db0aa5ce0b4090b5222e997ff59, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 107636562b1717f438204545ab45530a, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: Crate (2)
@@ -333,9 +341,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f3bd4db0aa5ce0b4090b5222e997ff59, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 107636562b1717f438204545ab45530a, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d2dd75a40a16e448a8a602252bfe446, type: 3}
       propertyPath: m_Name
       value: Crate (1)
@@ -444,7 +456,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a26eb4acecc4b9143baf28cd9d389016, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 67c16053e6f1bf94690dd18051fd7387, type: 2}
     - target: {fileID: 919132149155446097, guid: a26eb4acecc4b9143baf28cd9d389016, type: 3}

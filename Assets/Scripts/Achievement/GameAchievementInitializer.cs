@@ -23,6 +23,8 @@ public class GameAchievementInitializer : MonoBehaviour
 
         foreach (var achievement in achievementManager.Achievements)
         {
+            // Osiągnięcia zdobyte w poprzednich sesjach nie wyskakują ponownie.
+            if (SaveSystem.IsAchievementUnlocked(achievement.AchievementData.name)) achievement.RestoreUnlocked();
             achievement.OnUnlock += AchievementUnlocked;
         }
     }
@@ -30,6 +32,7 @@ public class GameAchievementInitializer : MonoBehaviour
     private void AchievementUnlocked(Achievement achievement)
     {
         Debug.Log($"Achievement Unlocked: {achievement.AchievementData.achievementTitle}");
+        SaveSystem.SaveAchievement(achievement.AchievementData.name);
         achievementUI.ShowAchievement(achievement.AchievementData);
     }
 

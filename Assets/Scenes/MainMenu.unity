@@ -9521,7 +9521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2492422464076564190}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1430711340
@@ -11501,6 +11501,12 @@ MonoBehaviour:
   defaultPaletteSize: {x: 400, y: 315}
   swatchFrameColor: {r: 0.12, g: 0.12, b: 0.12, a: 1}
   swatchSelectedFrameColor: {r: 1, g: 0.6, b: 0.12, a: 1}
+  freeColors: 4
+  lockedHint: {fileID: 0}
+  lockedHintText: {fileID: 0}
+  lockedHintFormat: This skin will unlock after you complete {0} {1}.
+  lockIcon: {fileID: 0}
+  hintBackground: {fileID: 0}
 --- !u!1 &1723155047
 GameObject:
   m_ObjectHideFlags: 0
@@ -15096,6 +15102,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76d9396ae70cb444943162359e23634, type: 3}
+--- !u!1 &2492422464076564190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 780482615463725306, guid: b76d9396ae70cb444943162359e23634, type: 3}
+  m_PrefabInstance: {fileID: 2492422464076564189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

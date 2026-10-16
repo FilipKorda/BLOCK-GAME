@@ -14,6 +14,9 @@ public abstract class Achievement
 
     public abstract void CheckCriteria(GameManager playerStats);
 
+    // Przywrócenie osiągnięcia z zapisu - bez zdarzenia OnUnlock (bez powiadomienia).
+    public void RestoreUnlocked() => IsUnlocked = true;
+
     protected void Unlock()
     {
         if (!IsUnlocked)

@@ -23,6 +23,17 @@ public class LoadingSystem : MonoBehaviour
     public SceneData mainMenuToLoad;
     private bool returnToMainMenu;
 
+    // Każde przejście kończy się wyładowaniem tej sceny, więc po starcie jednego przejścia
+    // kolejne (np. menu z pauzy w trakcie wygranej albo R podczas spadania) są ignorowane.
+    private bool isTransitioning;
+
+    private bool TryBeginTransition()
+    {
+        if (isTransitioning) return false;
+        isTransitioning = true;
+        return true;
+    }
+
     public SceneData thisSceneToUnload;
 
     private void Start()
@@ -33,7 +44,7 @@ public class LoadingSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (GameInput.Restart.WasPressedThisFrame())
         {
             ResetThisLevel();
         }
@@ -41,11 +52,13 @@ public class LoadingSystem : MonoBehaviour
 
     public void LoadNextLexel()
     {
+        if (!TryBeginTransition()) return;
         StartCoroutine(LoadNextLevel(sceneToLoad, sceneToUnload));
     }
 
     public void LoadChoosenLexel(SceneData sceneDataToLoad, SceneData sceneToUnload)
     {
+        if (!TryBeginTransition()) return;
         StartCoroutine(LoadNextLevel(sceneDataToLoad, sceneToUnload));
     }
 
@@ -90,6 +103,7 @@ public class LoadingSystem : MonoBehaviour
                 GameManager.Instance.completedLevels.Add(sceneData.numberElementToUnlock);
 
                 GameManager.Instance.currentUnlockedAvailableCodesIndex++;
+                GameManager.Instance.SaveProgress();
             }
         }
 
@@ -99,6 +113,7 @@ public class LoadingSystem : MonoBehaviour
 
     public void ResetThisLevel()
     {
+        if (!TryBeginTransition()) return;
         StartCoroutine(ResetThisLevel(thisSceneToLoad, thisSceneToUnload));
     }
 
@@ -132,6 +147,7 @@ public class LoadingSystem : MonoBehaviour
 
     public void GoBackToMainMenu()
     {
+        if (!TryBeginTransition()) return;
         StartCoroutine(ReturnToMainMenu(mainMenuToLoad, thisSceneToUnload));
     }
 
