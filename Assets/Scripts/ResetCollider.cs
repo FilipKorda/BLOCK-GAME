@@ -9,39 +9,17 @@ public class ResetCollider : MonoBehaviour
     [SerializeField] private LoadingSystem loadingSystem;
     [SerializeField] private Player player;
     [SerializeField] private StatsPanel statsPanel;
-    private int previousStarCount = 0;
-
-
-    private void Start()
-    {
-        if (GameManager.Instance != null)
-        {
-            previousStarCount = GameManager.Instance.StarCount;
-        }
-    }
 
 
     private void OnCollisionEnter(Collision collision)
     {      
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.scene == gameObject.scene)
         {
             StartCoroutine(ResetDealy());
             collision.gameObject.SetActive(false);
             StartCoroutine(TriggerMovePlatesWithDelay());
         }
-
-        if (GameManager.Instance != null)
-        {
-            int starDifference = GameManager.Instance.StarCount - previousStarCount;
-
-            if (starDifference > 0)
-            {
-                GameManager.Instance.StarCount = Mathf.Max(0, GameManager.Instance.StarCount - starDifference); 
-            }
-
-            previousStarCount = GameManager.Instance.StarCount;
-        }
-
+        // Gwiazdki z nieudanego podejścia cofa restart poziomu (LoadingSystem.ResetThisLevel).
     }
 
     private IEnumerator TriggerMovePlatesWithDelay()
