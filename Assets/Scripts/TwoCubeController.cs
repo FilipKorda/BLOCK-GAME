@@ -46,7 +46,7 @@ public class TwoCubeController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (GameInput.SwitchCube.WasPressedThisFrame() && !cubeMovement1.IsFalling && !cubeMovement2.IsFalling)
         {
             SwitchCube();
         }

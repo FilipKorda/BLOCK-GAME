@@ -59,6 +59,8 @@ public class TrappedPlate : VisableCollider
     private void CheckForMatch()
     {
         player.canMove = false;
+        player.EndLevel();
+        SoundManager.Instance.PlaySound(SoundClip.LoseSound);
         Debug.Log("spadasz");
         MovePlateDown();
         MovePlayerDown();
